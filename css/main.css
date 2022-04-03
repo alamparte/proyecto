@@ -71,39 +71,6 @@ nav ul li{
 
 /*bio index*/
 /*propiedades del padre*/
-/*.gridIndex{
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas: "header        header        header        header        header"
-                         "bannerIn      bannerIn      bannerIn      bannerIn      bannerIn"
-                         "bioI          bioIn         bioIn         bioIn         bioIn"
-                         "productosIn   productosIn   productosIn   productosIn   productosIn"
-                         "portafolioIn  portafolioIn  portafolioIn  portafolioIn  portafolioIn"
-                         "footer        footer        footer        footer        footer";
-}
-/*propiedades de las areas*/
-/*
-header{
-    grid-area: header;
-}
-.banIndex{
-    grid-area: bannerIn;
-}
-.bioIndex{
-    grid-area: bioIn;
-}
-.productosIndex{
-    grid-area: productosIn;
-}
-.portafolioIndex{
-    grid-area: portafolioIn;
-}
-footer{
-    grid-area: footer;
-}
-*/
 
 
 
