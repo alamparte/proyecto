@@ -148,7 +148,6 @@ footer{
                          "containerLeft containerCenter containerRight"
                          "derechos derechos derechos"; 
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
 }
 .contact{
     grid-area: contact;
@@ -210,10 +209,17 @@ footer{
 footer h2, h3{
     text-transform: uppercase;
     font-weight: lighter;  
-    font-size:27px;  
+    font-size: 1.688rem;  
     color: blueviolet;
 }
-
+.containerLeft, .containerCenter, .containerRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.containerCenter{
+    align-items: center;
+}
 
 /*
 .contact{
