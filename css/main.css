@@ -8,7 +8,7 @@ body{
     font-family: 'Hubballi', sans-serif;
 }
 /* layout -> Grid */
-.layout{
+.layoutContacto{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -27,7 +27,6 @@ body{
     box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
     display: flex;
     justify-content:space-between;
-    flex-wrap: wrap;
     align-items: center;
     padding: 0rem 3.5rem;
 }
@@ -85,7 +84,7 @@ h1{
 .mainContacto{
     background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255,255,255,0.9)), url('../img/mandalaA.png') center center / cover no-repeat;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 
 /*propiedades del padre*/
@@ -143,7 +142,80 @@ form .contactoBoton:hover{
 
 
 /*footer*/
+footer{
+    display: grid;
+    grid-template-areas: "contact contact contact"
+                         "containerLeft containerCenter containerRight"
+                         "derechos derechos derechos"; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+.contact{
+    grid-area: contact;
+}
+.containerLeft{
+    grid-area: containerLeft;
+    background-color: lavender;
+    height: 18rem;
+}
+.containerCenter{
+    grid-area: containerCenter;
+    background-color: lavender;
+    height: 18rem;
+}
+.containerRight{
+    grid-area: containerRight;
+    background-color: lavender;
+    height: 18rem;
+}
+.derechos{
+    grid-area: derechos;
+    background-color: lavender;
+}
+.contact{
+    background-color: #CBB5F5;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15rem;
+}
+.contactP{
+    font-size: 1.313rem;
+    width: 25rem;
+    line-height: 1.813rem;
+    margin-left: 6.5rem;
+}
+.botonC{
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.438rem;
+}
+.botonC a{
+    color: #9DF5DD;
+}
+.email{
+    margin-right: 6.5rem;
+}
+.email a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.313rem;
+}
+.email span{
+    color: #9DF5DD;
+    font-size: 1.875rem;
+    padding: 0.313rem;
+}
+footer h2, h3{
+    text-transform: uppercase;
+    font-weight: lighter;  
+    font-size:27px;  
+    color: blueviolet;
+}
 
+
+/*
 .contact{
     background-color: #CBB5F5;
     color: white;
@@ -284,5 +356,12 @@ footer hr{
     border: none;
     background-color: blueviolet;
 }
+*/
 
+/*media queries*/
+
+@media only screen and (min-width: 600px){
+    
+    
+}
 
