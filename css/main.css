@@ -80,20 +80,13 @@ h1{
 
 
 /*contacto*/
-
+/*propiedades del padre*/
 .mainContacto{
     background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255,255,255,0.9)), url('../img/mandalaA.png') center center / cover no-repeat;
     height: 100vh;
     width: 100%;
-}
-
-/*propiedades del padre*/
-.formulario{
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -136,11 +129,6 @@ form .contactoBoton:hover{
 }
 
 
-
-
-
-
-
 /*footer*/
 footer{
     display: grid;
@@ -148,42 +136,56 @@ footer{
                          "containerLeft containerCenter containerRight"
                          "derechos derechos derechos"; 
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
 }
 .contact{
     grid-area: contact;
-}
-.containerLeft{
-    grid-area: containerLeft;
-    background-color: lavender;
-    height: 18rem;
-}
-.containerCenter{
-    grid-area: containerCenter;
-    background-color: lavender;
-    height: 18rem;
-}
-.containerRight{
-    grid-area: containerRight;
-    background-color: lavender;
-    height: 18rem;
-}
-.derechos{
-    grid-area: derechos;
-    background-color: lavender;
-}
-.contact{
     background-color: #CBB5F5;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 15rem;
+    padding: 0rem 7.5rem;
+}
+.containerLeft{
+    grid-area: containerLeft;
+    background-color: lavender;
+    height: 19rem;
+    row-gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem 0 5rem;
+}
+.containerCenter{
+    grid-area: containerCenter;
+    background-color: lavender;
+    height: 19rem;
+    row-gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.containerRight{
+    grid-area: containerRight;
+    background-color: lavender;
+    height: 19rem;
+    row-gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5rem 0 4rem;
+}
+.derechos{
+    grid-area: derechos;
+    background-color: lavender;
 }
 .contactP{
     font-size: 1.313rem;
     width: 25rem;
     line-height: 1.813rem;
-    margin-left: 6.5rem;
 }
 .botonC{
     margin-top: 1rem;
@@ -192,9 +194,6 @@ footer{
 }
 .botonC a{
     color: #9DF5DD;
-}
-.email{
-    margin-right: 6.5rem;
 }
 .email a{
     text-decoration: none;
@@ -212,162 +211,75 @@ footer h2, h3{
     font-size: 1.688rem;  
     color: blueviolet;
 }
-.containerLeft, .containerCenter, .containerRight{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.containerCenter{
-    align-items: center;
-}
-
-/*
-.contact{
-    background-color: #CBB5F5;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Hubballi', sans-serif;
-}
-.contactP{
-    font-size: 21px;
-    width: 400px;
-    line-height: 28px;
-    padding: 1em;
-    margin: 1em 0px;
-    margin-left: 90px;
-}
-.botonC{
-    margin-top: 16px;
-    font-weight: bold;
-    font-size: 23px;
-}
-.botonC a{
-    color: #9DF5DD;
-}
-.email{
-    width: 400px;
-    margin: 90px 20px;
-}
-.email a{
-    text-decoration: none;
-    color: white;
-    font-size: 21px;
-}
-.email span{
-    color: #9DF5DD;
-    font-size: 30px;
-    padding: 5px;
-}
-.infoFooter{
-    display: flex;
-    justify-content: space-between;
-    background-color: lavender;
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-bottom: 40px;
-    padding-top: 40px;
-    font-family: 'Hubballi', sans-serif;
-}
-.infoFooter h2{
-    text-transform: uppercase;
-    font-weight: lighter;  
-    font-size:27px;  
-    color: blueviolet;
-}
-.infoFooter h3{
-    text-transform: uppercase;
-    font-weight: lighter;  
-    font-size:27px;  
-    color: blueviolet;
-}
-.containerLeft{
-    width: 270px;
-    margin-top: 50px;
-}
 .containerLeft p{
-    font-size: 21px;
-    line-height: 28px;
-    margin-top: 20px;
-}
-.containerCenter{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+    font-size: 1.313rem;
+    line-height: 1.75rem;
 }
 .redesSociales a{
     text-decoration: none;
     color: blueviolet;
-    font-size: 28px;
-    width: 50px;
-    height: 50px;
+    font-size: 1.75rem;
     background: #CBB5F5;
     border-radius: 50%;
-    padding: 10px;
-    margin: 7px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0,.2);
+    width: 3.125rem;
+    height: 3.125rem;
+    margin: 0rem .5rem;
+    line-height: 3.125rem;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0,.05);
     transition: all .4s ease-in-out;
 }
 .redesSociales a:hover{
-    transform: scale(1.2);
-}
-.logoFooter{ 
-    padding-bottom: 20px;
+transform: scale(1.2);
 }
 .containerRight input{
-    margin-top: 20px;
-    height: 42px;
-    width: 300px;
-    font-size: 15px;
-    padding: 17px;
+    font-size: 0.938rem;
+    height: 2.75rem;
+    width: 100%;
+    padding: 1rem;
     border: #CBB5F5 solid .1rem;
-}
-.containerRight button{
-    margin-top: 20px;
-    text-transform: uppercase;
-    background-color: #CBB5F5;
-    color: blueviolet;
-    border: none;
-    padding: 11px 40px;
-    font-size: 0.9rem;
 }
 .containerRight input:focus{
     border-color: blueviolet;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     outline: 0 none;
 }
+.containerRight button{
+    text-transform: uppercase;
+    background-color: #CBB5F5;
+    color: blueviolet;
+    border: none;
+    padding: 0.688rem 2.5rem;
+    font-size: .9rem;
+    width: 50%;
+}
 .containerRight button:hover{
     color: lavender;
 }
-.containerRight{
-    margin-top: 35px;
-    width: 270px;
+.linie{
+    border-top: 0.063rem solid blueviolet;
+    height: 0.125rem;
+    max-width: 70%;
+    padding: 0;
+    margin: 0 auto 0 auto;
 }
-.derechos{
-    font-family: 'Hubballi', sans-serif;
-    background-color:lavender;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
+.derechos p{
+    padding: 1.3rem;
     font-size: large;
+    text-align: center;
 }
 .derechos a{
     text-decoration: none;
     list-style: none;
     color: black;
 }
-footer hr{
-    height: 0.06rem;
-    border: none;
-    background-color: blueviolet;
-}
-*/
+
+
 
 /*media queries*/
 
-@media only screen and (min-width: 600px){
-    
-    
+@media only screen and (max-width: 768px){
+    body{
+        background-color: rebeccapurple;
+    }
 }
-
