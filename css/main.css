@@ -22,7 +22,7 @@ body{
     position: fixed;
     top: 0;
     background-color: rgb(253, 253, 253);
-    width: 100vw;
+    width: 100%;
     height: 6.5rem;
     box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
     display: flex;
@@ -31,6 +31,9 @@ body{
     padding: 0rem 3.5rem;
 }
 /*propiedades del hijo*/
+.barsMenu{
+    display: none;
+}
 nav ul li{
     display: inline-block;    
     list-style: none;
@@ -88,6 +91,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 /*propiedades del hijo*/
@@ -95,11 +99,10 @@ h1{
     display: flex;
     flex-direction: column;
     gap: 1rem;    
-    font-family: 'Hubballi', sans-serif;
     font-size: 2rem;
     width: 70%;
 }
-.contacto input, .contacto textarea{
+.contacto input, .contacto textarea, .contactoBoton{
     padding: 1rem;
     font-size: 1.1rem;
     border: #CBB5F5 solid .1rem;
@@ -130,6 +133,7 @@ form .contactoBoton:hover{
 
 
 /*footer*/
+/*propiedades del padre*/
 footer{
     display: grid;
     grid-template-areas: "contact contact contact"
@@ -138,6 +142,7 @@ footer{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
 }
+/*propiedades de las areas*/
 .contact{
     grid-area: contact;
     background-color: #CBB5F5;
@@ -251,7 +256,7 @@ transform: scale(1.2);
     border: none;
     padding: 0.688rem 2.5rem;
     font-size: .9rem;
-    width: 50%;
+    width: 100%;
 }
 .containerRight button:hover{
     color: lavender;
@@ -278,8 +283,169 @@ transform: scale(1.2);
 
 /*media queries*/
 
-@media only screen and (max-width: 768px){
-    body{
-        background-color: rebeccapurple;
+@media only screen and (min-width: 320px) and (max-width: 767px){
+    nav ul{
+        display: none;
+    }
+    .barsMenu{
+        display: inline-block;
+        font-size: 2rem;
+        border: none;
+        background: none;
+        color: #CBB5F5;
+        text-align: right;  
+    }
+    h1{
+        font-size: 1.8rem;
+        padding: 1.2rem .625rem .7rem .625rem;
+    }
+    .contacto{
+        font-size: 1.6rem;
+    }
+    .contacto input, .contacto textarea{
+        font-size: .8rem;
+    }
+    .contacto .contactoBoton{
+        font-size: 1.3rem;
+        width: 100%;
+    }
+    .mainContacto{
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255,255,255,0.9)), url('../img/mandalaA.png') center center / cover no-repeat;
+        height: 100vh;
+        width: 100%;
+    }
+    footer{
+        display: grid;
+        grid-template-areas: "contact"
+                             "containerLeft"
+                             "containerCenter"
+                             "containerRight"
+                             "derechos"; 
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 100%;
+    }
+    .contact{
+        padding: 2rem;
+        justify-content: center;
+    }
+    .botonC{
+        font-size: 1.35rem;
+    }
+    .contactP{
+        text-align: center;
+        line-height: 2.1rem;
+    }
+    .email{
+        display: none; 
+    }
+    .containerLeft{
+        padding: 0 2rem;
+        text-align: center;
+        height: 12rem;
+    }
+    .containerLeft p{
+        line-height: 2.5rem;
+    }
+    .containerCenter{
+        padding: 0 2rem;
+        height: 17rem;
+    }
+    .containerRight{
+        padding: 0 2rem;
+        text-align: center;
+        height: 14rem;
+    }
+    .containerRight button{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    .containerMenu{
+        padding: 0 1.5rem;
+    }
+    nav ul li{
+        font-size: 1.3rem; 
+        margin: .6rem;
+    }
+    .shoppingBag{
+        display: none;
+    }
+    .contacto{
+        font-size: 1.8rem;
+    }
+    .contacto input, .contacto textarea{
+        font-size: .9rem;
+    }
+    .contacto .contactoBoton{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    .mainContacto{
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255,255,255,0.9)), url('../img/mandalaA.png') center center / cover no-repeat;
+        height: 100vh;
+        width: 100%;
+    }
+    footer{
+        display: grid;
+        grid-template-areas: "contact"
+                             "containerLeft"
+                             "containerCenter"
+                             "containerRight"
+                             "derechos"; 
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 100%;
+    }
+    .contact{
+        padding: 2rem;
+        justify-content: center;
+    }
+    .botonC{
+        font-size: 1.35rem;
+    }
+    .contactP{
+        text-align: center;
+        line-height: 2.1rem;
+    }
+    .email{
+        display: none; 
+    }
+    .containerLeft{
+        padding: 0 2rem;
+        text-align: center;
+        height: 12rem;
+    }
+    .containerLeft p{
+        line-height: 2.5rem;
+    }
+    .containerCenter{
+        padding: 0 2rem;
+        height: 17rem;
+    }
+    .containerRight{
+        padding: 0 2rem;
+        text-align: center;
+        height: 14rem;
+    }
+}
+
+@media only screen and (min-width: 1023px) and (max-width: 1199px){
+    nav ul li{
+        font-size: 1.3rem; 
+        margin: 1rem;
+    }
+    .contacto .contactoBoton{
+        font-size: 1.4rem;
+        width: 40%;
+    }
+    .contact{
+        padding: 0 2.5rem;
+    }
+    .containerLeft{
+        padding: 0 2.5rem;
+    }
+    .containerRight{
+        padding: 0 2.5rem;
     }
 }
