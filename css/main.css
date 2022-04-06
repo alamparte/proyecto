@@ -7,13 +7,6 @@
 body{
     font-family: 'Hubballi', sans-serif;
 }
-/* layout -> Grid */
-.layoutContacto{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    height: 100vh;
-}
 
 /*index*/
 /*nav bar*/
@@ -80,9 +73,147 @@ h1{
 /*propiedades del padre*/
 
 
+/*bolsas de tela*/
+/* layout -> Grid */
+.layoutBolsas{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 100vh;
+}
+.mainBolsas{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    justify-items: center;
+    margin: 4rem 0;
+    padding: 0 1rem 0 1rem; 
+}
+.mainBolsas div p{
+    width: 22.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.mainBolsas div button{
+    width: 100%;
+    font-size: 1.7rem;
+    font-family: 'Hubballi', sans-serif;
+    border: none;
+    background-color: #CBB5F5;
+    color: blueviolet;
+    padding: .7rem;
+    margin-top: .7rem;
+}
+.mainBolsas div button:hover{
+    color: lavender;
+}
+
+/*bolsas de stickers*/
+/* layout -> Grid */
+.layoutStickers{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 100vh;
+}
+.mainStickers{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    justify-items: center;
+    margin: 4rem 0;
+    padding: 0 1rem 0 1rem; 
+}
+.mainStickers div p{
+    width: 22.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.mainStickers div button{
+    width: 100%;
+    font-size: 1.7rem;
+    font-family: 'Hubballi', sans-serif;
+    border: none;
+    background-color: #CBB5F5;
+    color: blueviolet;
+    padding: .7rem;
+    margin-top: .7rem;
+}
+.mainStickers div button:hover{
+    color: lavender;
+}
+
+/*bolsas de tazas*/
+/* layout -> Grid */
+.layoutTazas{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 100vh;
+}
+.mainTazas{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    justify-items: center;
+    margin: 4rem 0;
+    padding: 0 1rem 0 1rem; 
+}
+.mainTazas div p{
+    width: 22.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.mainTazas div button{
+    width: 100%;
+    font-size: 1.7rem;
+    font-family: 'Hubballi', sans-serif;
+    border: none;
+    background-color: #CBB5F5;
+    color: blueviolet;
+    padding: .7rem;
+    margin-top: .7rem;
+}
+.mainTazas div button:hover{
+    color: lavender;
+}
+
+
+
+/*portafolio*/
+.layoutPortafolio{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 100vh;
+}
+.mainPortafolio{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4,1fr);
+    width: 100%;
+    row-gap: 4rem;
+    column-gap: 1.5rem;
+    justify-items: center;
+    margin: 4rem 0;
+    padding: 0 1rem 0 1rem; 
+}
+.imgA{
+    justify-self: flex-end;
+}
+.imgB{
+    justify-self: flex-start;
+}
 
 
 /*contacto*/
+/* layout -> Grid */
+.layoutContacto{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 100vh;
+}
 /*propiedades del padre*/
 .mainContacto{
     background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255,255,255,0.9)), url('../img/mandalaA.png') center center / cover no-repeat;
@@ -188,14 +319,18 @@ footer{
     background-color: lavender;
 }
 .contactP{
-    font-size: 1.313rem;
+    grid-area: contact;
+    font-size: 1.4rem;
     width: 25rem;
     line-height: 1.813rem;
+}
+.email{
+    grid-area: contact;
 }
 .botonC{
     margin-top: 1rem;
     font-weight: bold;
-    font-size: 1.438rem;
+    font-size: 1.5rem;
 }
 .botonC a{
     color: #9DF5DD;
@@ -203,7 +338,7 @@ footer{
 .email a{
     text-decoration: none;
     color: white;
-    font-size: 1.313rem;
+    font-size: 1.4rem;
 }
 .email span{
     color: #9DF5DD;
@@ -216,9 +351,16 @@ footer h2, h3{
     font-size: 1.688rem;  
     color: blueviolet;
 }
+.containerLeft h2{
+    grid-area: containerLeft;
+}
 .containerLeft p{
+    grid-area: containerLeft;
     font-size: 1.313rem;
     line-height: 1.75rem;
+}
+.logoFooter, .redesSociales{
+    grid-area: containerCenter;
 }
 .redesSociales a{
     text-decoration: none;
@@ -236,6 +378,9 @@ footer h2, h3{
 }
 .redesSociales a:hover{
 transform: scale(1.2);
+}
+.containerRight h3, .containerRight form, .containerRight button{
+    grid-area: containerRight;
 }
 .containerRight input{
     font-size: 0.938rem;
@@ -284,6 +429,7 @@ transform: scale(1.2);
 /*media queries*/
 
 @media only screen and (min-width: 320px) and (max-width: 767px){
+    /*Barra de navegación*/
     nav ul{
         display: none;
     }
@@ -299,6 +445,63 @@ transform: scale(1.2);
         font-size: 1.8rem;
         padding: 1.2rem .625rem .7rem .625rem;
     }
+    
+    /*bolsas de tela*/
+    .mainBolsas{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 3rem;
+    }
+    .mainBolsas div p{
+        font-size: 1.3rem;
+    }
+    .mainBolsas div button{
+        font-size: 1.5rem;
+    }
+    /*stickers*/
+    .mainStickers{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 3rem;
+    }
+    .mainStickers div p{
+        font-size: 1.3rem;
+    }
+    .mainStickers div button{
+        font-size: 1.5rem;
+    }
+
+    /*tazas*/
+    .mainTazas{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 3rem;
+    }
+    .mainTazas div p{
+        font-size: 1.3rem;
+    }
+    .mainTazas div button{
+        font-size: 1.5rem;
+    }
+
+    
+
+
+    /*portafolio*/
+    .mainPortafolio{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .imgA{
+        justify-self: center;
+    }
+    .imgB{
+        justify-self: center;
+    }
+
+
+    /*footer*/
     .contacto{
         font-size: 1.6rem;
     }
@@ -361,6 +564,7 @@ transform: scale(1.2);
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px){
+    /*barra de navegación*/
     .containerMenu{
         padding: 0 1.5rem;
     }
@@ -368,9 +572,46 @@ transform: scale(1.2);
         font-size: 1.3rem; 
         margin: .6rem;
     }
-    .shoppingBag{
-        display: none;
+
+    /*bolsas de tela*/
+    .mainBolsas{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 3rem;
+        column-gap: 2rem;
     }
+    /*stickers*/
+    .mainStickers{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 3rem;
+        column-gap: 2rem;
+    }
+
+    /*tazas*/
+    .mainTazas{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 3rem;
+        column-gap: 2rem;
+    }
+    
+
+    /*portafolio*/
+    .mainPortafolio{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 100%;
+    }
+    .imgA{
+        justify-self: center;
+    }
+    .imgB{
+        justify-self: center;
+    }
+
+
+    /*footer*/
     .contacto{
         font-size: 1.8rem;
     }
@@ -431,10 +672,46 @@ transform: scale(1.2);
 }
 
 @media only screen and (min-width: 1023px) and (max-width: 1199px){
+    /*barra de navegación*/
     nav ul li{
         font-size: 1.3rem; 
         margin: 1rem;
     }
+
+    /*bolsas de tela*/
+    .mainBolsas{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 3rem;
+    }
+    /*stickers*/
+    .mainStickers{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 3rem;
+    }
+
+    /*tazas*/
+    .mainTazas{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 3rem;
+    }
+
+    /*portafolio*/
+    .mainPortafolio{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 100%;
+    }
+    .imgA{
+        justify-self: center;
+    }
+    .imgB{
+        justify-self: center;
+    }
+    
+    /*footer*/
     .contacto .contactoBoton{
         font-size: 1.4rem;
         width: 40%;
