@@ -70,7 +70,22 @@ h1{
 }
 
 /*bio index*/
-/*propiedades del padre*/
+/* layout -> Grid */
+.layoutBio{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 100vh;
+}
+.mainBio{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    column-gap: 5rem;
+}
+.imgBio{
+    justify-self: end;
+}
 
 
 /*bolsas de tela*/
