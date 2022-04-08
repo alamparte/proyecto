@@ -22,6 +22,7 @@ body{
     justify-content:space-between;
     align-items: center;
     padding: 0rem 3.5rem;
+    z-index: 1;
 }
 /*propiedades del hijo*/
 .barsMenu{
@@ -102,7 +103,16 @@ h1{
     width: 100%;
     justify-items: center;
     margin: 4rem 0;
-    padding: 0 1rem 0 1rem; 
+    padding: 0 1rem 0 1rem;
+}
+.mainBolsas div{
+    transition: all .4s ease-in-out;   
+}
+.mainBolsas div:hover{
+    transform: scale(1.02);
+}
+.mainBolsas div img{
+    width: 360px;
 }
 .mainBolsas div p{
     width: 22.5rem;
@@ -111,9 +121,10 @@ h1{
 }
 .mainBolsas div button{
     width: 100%;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     font-family: 'Hubballi', sans-serif;
     border: none;
+    cursor: pointer;
     background-color: #CBB5F5;
     color: blueviolet;
     padding: .7rem;
@@ -123,7 +134,7 @@ h1{
     color: lavender;
 }
 
-/*bolsas de stickers*/
+/*stickers*/
 /* layout -> Grid */
 .layoutStickers{
     display: grid;
@@ -139,6 +150,15 @@ h1{
     margin: 4rem 0;
     padding: 0 1rem 0 1rem; 
 }
+.mainStickers div{
+    transition: all .4s ease-in-out;
+}
+.mainStickers div:hover{
+    transform: scale(1.02);
+}
+.mainStickers div img{
+    width: 360px;
+}
 .mainStickers div p{
     width: 22.5rem;
     font-size: 1.5rem;
@@ -146,9 +166,10 @@ h1{
 }
 .mainStickers div button{
     width: 100%;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     font-family: 'Hubballi', sans-serif;
     border: none;
+    cursor: pointer;
     background-color: #CBB5F5;
     color: blueviolet;
     padding: .7rem;
@@ -158,7 +179,7 @@ h1{
     color: lavender;
 }
 
-/*bolsas de tazas*/
+/*tazas*/
 /* layout -> Grid */
 .layoutTazas{
     display: grid;
@@ -174,6 +195,15 @@ h1{
     margin: 4rem 0;
     padding: 0 1rem 0 1rem; 
 }
+.mainTazas div{
+    transition: all .4s ease-in-out;
+}
+.mainTazas div:hover{
+    transform: scale(1.02);
+}
+.mainTazas div img{
+    width: 360px;
+}
 .mainTazas div p{
     width: 22.5rem;
     font-size: 1.5rem;
@@ -181,13 +211,15 @@ h1{
 }
 .mainTazas div button{
     width: 100%;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     font-family: 'Hubballi', sans-serif;
     border: none;
+    cursor: pointer;
     background-color: #CBB5F5;
     color: blueviolet;
     padding: .7rem;
     margin-top: .7rem;
+
 }
 .mainTazas div button:hover{
     color: lavender;
@@ -271,10 +303,11 @@ form .contactoBoton{
     font-family: 'Hubballi', sans-serif;
     border: none;
     background-color: #CBB5F5;
-    color: blueviolet;
+    color: lavender;
 }
 form .contactoBoton:hover{
-    color: lavender;
+    color: blueviolet;
+    background-color: lavender;
 }
 
 
