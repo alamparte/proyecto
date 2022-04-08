@@ -18,16 +18,19 @@
 </head>
 
 <body>
+    <div class="layoutContacto">
     <header>
         <!--empieza la barra de navegación-->
-        <nav>
-            <div class="containerMenu">
+        <nav class="containerMenu">
 
                 <div class="containerLogo">
                     <a href="../index.html">
                         <img class="logo" src="../img/logoH.png" alt="logo de un mandala con su nombre">
                     </a>
                 </div>
+                <button class="barsMenu" >
+                    <i class="fa fa-bars"></i>
+                </button>
     
                 <ul class="menu">
                     <li>
@@ -61,13 +64,14 @@
                         </a>
                     </li>               
                     <li class="shoppingBag">
-                        <a href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                        <a href="../index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
                             <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
-                          </svg>
+                            </svg>
                         </a>
                     </li>
-                </ul> 
-            </div>              
+                </ul>  
+
         </nav>
         <!--fin de la barra de navegación-->
 
@@ -80,14 +84,13 @@
     <!--info del sitio-->
     <main class="mainContacto">
 
-        <section class="formulario">
             <form action="" class="contacto">
                 
                     <label for="nombre">
                         <span>Nombre</span>
                     </label>
                     <input type="text" name="nombre">
-               
+
                     <label for="email">
                         <span>Correo electrónico</span>
                     </label>
@@ -97,17 +100,15 @@
                         <span>Mensaje</span>
                     </label>
                     <textarea name="mensaje" cols="30" rows="7" placeholder="Escribe tu consulta o pregunta aquí..."></textarea>
-                
-                    <input class="contactoBoton" type="submit" value="Enviar mensaje">
-                
+                    <button class="contactoBoton" type="submit">Enviar mensaje</button>
             </form>
-        </section>
-
+       
     </main>
     <!--termina info del sitio-->
 
     <!--empieza footer-->
     <footer>
+        
         <div class="contact">
             <div class="contactP">
                 <p>
@@ -124,11 +125,11 @@
             </div>
         </div>
 
-        <div class="infoFooter">
+        
             <div class="containerLeft">
                 <h2>kreislife</h2>
                 <p>
-                    Mandalas, zentangle arte y productos de edición limitada.
+                    Mandalas, zentangle arte y productos de edición limitada creados a través de la imaginación e intuición.
                 </p>
             </div>
 
@@ -161,20 +162,20 @@
                 </form>
                 <button type="submit">Suscríbete</button>
             </div>                
-        </div>    
+           
 
-        <hr>
+        
 
         <div class="derechos">
+            <div class="linie"></div>
             <p>
                 &copy; 2022 <a href="../index.html">kreislife</a>. Todos los derechos reservados.
             </p>     
         </div> 
         
     </footer>
-    
     <!--termina footer-->
-    
+    </div>
     
 </body>
 </html>

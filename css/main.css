@@ -1,7 +1,11 @@
+/*reset*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body{
+    font-family: 'Hubballi', sans-serif;
 }
 
 /*index*/
@@ -11,16 +15,19 @@
     position: fixed;
     top: 0;
     background-color: rgb(253, 253, 253);
-    width: 100vw;
-    height: 6rem;
+    width: 100%;
+    height: 6.5rem;
     box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
     display: flex;
     justify-content:space-between;
     align-items: center;
-    font-family: 'Hubballi', sans-serif;
     padding: 0rem 3.5rem;
+    z-index: 1;
 }
 /*propiedades del hijo*/
+.barsMenu{
+    display: none;
+}
 nav ul li{
     display: inline-block;    
     list-style: none;
@@ -28,13 +35,7 @@ nav ul li{
     font-size: 1.3rem; 
     margin: 2rem;
 }
-.submenu li{
-    margin: 1rem;
-}
-.containerMenu .menu .submenu li a{
-    display: inline-block;
-}
-.menu a, .submenu a{
+nav ul li a{
     text-decoration: none;
     color: black; 
 }
@@ -52,79 +53,223 @@ nav ul li{
     border-top: #CBB5F5 solid;
     margin-top: .15rem;
 }
+.submenu li{
+    margin: 1rem;
+}
 .menu li:hover .submenu{
     visibility: visible;
     opacity: 1;
 }
-.indexTitle{
-    font-family: 'Hubballi', sans-serif;
+h1{
     background-color: lavender;
     margin: 6rem 0 0 0;
-    padding: .625rem;
+    padding: 1.4rem .625rem 1rem .625rem;
     text-align: center;
     text-transform: uppercase;
     color: #CBB5F5;
-}
-.indexTitle span{
     font-weight: lighter;
 }
 
 /*bio index*/
-/*propiedades del padre*/
-/*.gridIndex{
-    height: 100vh;
+/* layout -> Grid */
+.layoutBio{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "header        header        header        header        header"
-                         "bannerIn      bannerIn      bannerIn      bannerIn      bannerIn"
-                         "bioI          bioIn         bioIn         bioIn         bioIn"
-                         "productosIn   productosIn   productosIn   productosIn   productosIn"
-                         "portafolioIn  portafolioIn  portafolioIn  portafolioIn  portafolioIn"
-                         "footer        footer        footer        footer        footer";
+    height: 100vh;
 }
-/*propiedades de las areas*/
-/*
-header{
-    grid-area: header;
+.mainBio{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    column-gap: 5rem;
 }
-.banIndex{
-    grid-area: bannerIn;
+.imgBio{
+    justify-self: end;
 }
-.bioIndex{
-    grid-area: bioIn;
-}
-.productosIndex{
-    grid-area: productosIn;
-}
-.portafolioIndex{
-    grid-area: portafolioIn;
-}
-footer{
-    grid-area: footer;
-}
-*/
 
+
+/*bolsas de tela*/
+/* layout -> Grid */
+.layoutBolsas{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 100vh;
+}
+.mainBolsas{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    justify-items: center;
+    margin: 4rem 0;
+    padding: 0 1rem 0 1rem;
+}
+.mainBolsas div{
+    transition: all .4s ease-in-out;   
+}
+.mainBolsas div:hover{
+    transform: scale(1.02);
+}
+.mainBolsas div img{
+    width: 360px;
+}
+.mainBolsas div p{
+    width: 22.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.mainBolsas div button{
+    width: 100%;
+    font-size: 1.8rem;
+    font-family: 'Hubballi', sans-serif;
+    border: none;
+    cursor: pointer;
+    background-color: #CBB5F5;
+    color: blueviolet;
+    padding: .7rem;
+    margin-top: .7rem;
+}
+.mainBolsas div button:hover{
+    color: lavender;
+}
+
+/*stickers*/
+/* layout -> Grid */
+.layoutStickers{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 100vh;
+}
+.mainStickers{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    justify-items: center;
+    margin: 4rem 0;
+    padding: 0 1rem 0 1rem; 
+}
+.mainStickers div{
+    transition: all .4s ease-in-out;
+}
+.mainStickers div:hover{
+    transform: scale(1.02);
+}
+.mainStickers div img{
+    width: 360px;
+}
+.mainStickers div p{
+    width: 22.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.mainStickers div button{
+    width: 100%;
+    font-size: 1.8rem;
+    font-family: 'Hubballi', sans-serif;
+    border: none;
+    cursor: pointer;
+    background-color: #CBB5F5;
+    color: blueviolet;
+    padding: .7rem;
+    margin-top: .7rem;
+}
+.mainStickers div button:hover{
+    color: lavender;
+}
+
+/*tazas*/
+/* layout -> Grid */
+.layoutTazas{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 100vh;
+}
+.mainTazas{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    justify-items: center;
+    margin: 4rem 0;
+    padding: 0 1rem 0 1rem; 
+}
+.mainTazas div{
+    transition: all .4s ease-in-out;
+}
+.mainTazas div:hover{
+    transform: scale(1.02);
+}
+.mainTazas div img{
+    width: 360px;
+}
+.mainTazas div p{
+    width: 22.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.mainTazas div button{
+    width: 100%;
+    font-size: 1.8rem;
+    font-family: 'Hubballi', sans-serif;
+    border: none;
+    cursor: pointer;
+    background-color: #CBB5F5;
+    color: blueviolet;
+    padding: .7rem;
+    margin-top: .7rem;
+
+}
+.mainTazas div button:hover{
+    color: lavender;
+}
+
+
+
+/*portafolio*/
+.layoutPortafolio{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 100vh;
+}
+.mainPortafolio{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4,1fr);
+    width: 100%;
+    row-gap: 4rem;
+    column-gap: 1.5rem;
+    justify-items: center;
+    margin: 4rem 0;
+    padding: 0 1rem 0 1rem; 
+}
+.imgA{
+    justify-self: flex-end;
+}
+.imgB{
+    justify-self: flex-start;
+}
 
 
 /*contacto*/
-
-.mainContacto{
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255,255,255,0.9)), url('../img/mandalaA.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
-
-/*propiedades del padre*/
-.formulario{
-    width: 100%;
-    height: 100%;
+/* layout -> Grid */
+.layoutContacto{
     display: grid;
     grid-template-columns: 1fr;
-    justify-items: center;
+    grid-template-rows: auto;
+    height: 100vh;
+}
+/*propiedades del padre*/
+.mainContacto{
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255,255,255,0.9)), url('../img/mandalaA.png') center center / cover no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 /*propiedades del hijo*/
@@ -132,11 +277,10 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 1rem;    
-    font-family: 'Hubballi', sans-serif;
     font-size: 2rem;
     width: 70%;
 }
-.contacto input, .contacto textarea{
+.contacto input, .contacto textarea, .contactoBoton{
     padding: 1rem;
     font-size: 1.1rem;
     border: #CBB5F5 solid .1rem;
@@ -159,159 +303,487 @@ form .contactoBoton{
     font-family: 'Hubballi', sans-serif;
     border: none;
     background-color: #CBB5F5;
-    color: blueviolet;
-}
-form .contactoBoton:hover{
     color: lavender;
 }
-
-
-
-
-
+form .contactoBoton:hover{
+    color: blueviolet;
+    background-color: lavender;
+}
 
 
 /*footer*/
-
+/*propiedades del padre*/
+footer{
+    display: grid;
+    grid-template-areas: "contact contact contact"
+                         "containerLeft containerCenter containerRight"
+                         "derechos derechos derechos"; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+/*propiedades de las areas*/
 .contact{
+    grid-area: contact;
     background-color: #CBB5F5;
     color: white;
     display: flex;
     justify-content: space-between;
-    font-family: 'Hubballi', sans-serif;
+    align-items: center;
+    height: 15rem;
+    padding: 0rem 7.5rem;
+}
+.containerLeft{
+    grid-area: containerLeft;
+    background-color: lavender;
+    height: 19rem;
+    row-gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem 0 5rem;
+}
+.containerCenter{
+    grid-area: containerCenter;
+    background-color: lavender;
+    height: 19rem;
+    row-gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.containerRight{
+    grid-area: containerRight;
+    background-color: lavender;
+    height: 19rem;
+    row-gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5rem 0 4rem;
+}
+.derechos{
+    grid-area: derechos;
+    background-color: lavender;
 }
 .contactP{
-    font-size: 21px;
-    width: 400px;
-    line-height: 28px;
-    padding: 1em;
-    margin: 1em 0px;
-    margin-left: 90px;
+    grid-area: contact;
+    font-size: 1.4rem;
+    width: 25rem;
+    line-height: 1.813rem;
+}
+.email{
+    grid-area: contact;
 }
 .botonC{
-    margin-top: 16px;
+    margin-top: 1rem;
     font-weight: bold;
-    font-size: 23px;
+    font-size: 1.5rem;
 }
 .botonC a{
     color: #9DF5DD;
 }
-.email{
-    width: 400px;
-    margin: 90px 20px;
-}
 .email a{
     text-decoration: none;
     color: white;
-    font-size: 21px;
+    font-size: 1.4rem;
 }
 .email span{
     color: #9DF5DD;
-    font-size: 30px;
-    padding: 5px;
+    font-size: 1.875rem;
+    padding: 0.313rem;
 }
-.infoFooter{
-    display: flex;
-    justify-content: space-between;
-    background-color: lavender;
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-bottom: 40px;
-    padding-top: 40px;
-    font-family: 'Hubballi', sans-serif;
-}
-.infoFooter h2{
+footer h2, h3{
     text-transform: uppercase;
     font-weight: lighter;  
-    font-size:27px;  
+    font-size: 1.688rem;  
     color: blueviolet;
 }
-.infoFooter h3{
-    text-transform: uppercase;
-    font-weight: lighter;  
-    font-size:27px;  
-    color: blueviolet;
-}
-.containerLeft{
-    width: 270px;
-    margin-top: 50px;
+.containerLeft h2{
+    grid-area: containerLeft;
 }
 .containerLeft p{
-    font-size: 21px;
-    line-height: 28px;
-    margin-top: 20px;
+    grid-area: containerLeft;
+    font-size: 1.313rem;
+    line-height: 1.75rem;
 }
-.containerCenter{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+.logoFooter, .redesSociales{
+    grid-area: containerCenter;
+}
+.logoFooter{
+    animation-name: girar;
+    animation-iteration-count: infinite ;
+    animation-duration: 98s;
+}
+@keyframes girar{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
 .redesSociales a{
     text-decoration: none;
     color: blueviolet;
-    font-size: 28px;
-    width: 50px;
-    height: 50px;
+    font-size: 1.75rem;
     background: #CBB5F5;
     border-radius: 50%;
-    padding: 10px;
-    margin: 7px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0,.2);
+    width: 3.125rem;
+    height: 3.125rem;
+    margin: 0rem .5rem;
+    line-height: 3.125rem;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0,.05);
     transition: all .4s ease-in-out;
 }
 .redesSociales a:hover{
-    transform: scale(1.2);
+transform: scale(1.2);
 }
-.logoFooter{ 
-    padding-bottom: 20px;
+.containerRight h3, .containerRight form, .containerRight button{
+    grid-area: containerRight;
 }
 .containerRight input{
-    margin-top: 20px;
-    height: 42px;
-    width: 300px;
-    font-size: 15px;
-    padding: 17px;
+    font-size: 0.938rem;
+    height: 2.75rem;
+    width: 100%;
+    padding: 1rem;
     border: #CBB5F5 solid .1rem;
-}
-.containerRight button{
-    margin-top: 20px;
-    text-transform: uppercase;
-    background-color: #CBB5F5;
-    color: blueviolet;
-    border: none;
-    padding: 11px 40px;
-    font-size: 0.9rem;
 }
 .containerRight input:focus{
     border-color: blueviolet;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     outline: 0 none;
 }
+.containerRight button{
+    text-transform: uppercase;
+    background-color: #CBB5F5;
+    color: blueviolet;
+    border: none;
+    padding: 0.688rem 2.5rem;
+    font-size: .9rem;
+    width: 100%;
+}
 .containerRight button:hover{
     color: lavender;
 }
-.containerRight{
-    margin-top: 35px;
-    width: 270px;
+.linie{
+    border-top: 0.063rem solid blueviolet;
+    height: 0.125rem;
+    max-width: 70%;
+    padding: 0;
+    margin: 0 auto 0 auto;
 }
-.derechos{
-    font-family: 'Hubballi', sans-serif;
-    background-color:lavender;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
+.derechos p{
+    padding: 1.3rem;
     font-size: large;
+    text-align: center;
 }
 .derechos a{
     text-decoration: none;
     list-style: none;
     color: black;
 }
-footer hr{
-    height: 0.7px;
-    border: none;
-    background-color: blueviolet;
+
+
+
+/*media queries*/
+
+@media only screen and (min-width: 320px) and (max-width: 767px){
+    /*Barra de navegación*/
+    nav ul{
+        display: none;
+    }
+    .barsMenu{
+        display: inline-block;
+        font-size: 2rem;
+        border: none;
+        background: none;
+        color: #CBB5F5;
+        text-align: right;  
+    }
+    h1{
+        font-size: 1.8rem;
+        padding: 1.2rem .625rem .7rem .625rem;
+    }
+    
+    /*bolsas de tela*/
+    .mainBolsas{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 3rem;
+    }
+    .mainBolsas div p{
+        font-size: 1.3rem;
+    }
+    .mainBolsas div button{
+        font-size: 1.5rem;
+    }
+    /*stickers*/
+    .mainStickers{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 3rem;
+    }
+    .mainStickers div p{
+        font-size: 1.3rem;
+    }
+    .mainStickers div button{
+        font-size: 1.5rem;
+    }
+
+    /*tazas*/
+    .mainTazas{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 3rem;
+    }
+    .mainTazas div p{
+        font-size: 1.3rem;
+    }
+    .mainTazas div button{
+        font-size: 1.5rem;
+    }
+
+    
+
+
+    /*portafolio*/
+    .mainPortafolio{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .imgA{
+        justify-self: center;
+    }
+    .imgB{
+        justify-self: center;
+    }
+
+
+    /*footer*/
+    .contacto{
+        font-size: 1.6rem;
+    }
+    .contacto input, .contacto textarea{
+        font-size: .8rem;
+    }
+    .contacto .contactoBoton{
+        font-size: 1.3rem;
+        width: 100%;
+    }
+    .mainContacto{
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255,255,255,0.9)), url('../img/mandalaA.png') center center / cover no-repeat;
+        height: 100vh;
+        width: 100%;
+    }
+    footer{
+        display: grid;
+        grid-template-areas: "contact"
+                             "containerLeft"
+                             "containerCenter"
+                             "containerRight"
+                             "derechos"; 
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 100%;
+    }
+    .contact{
+        padding: 2rem;
+        justify-content: center;
+    }
+    .botonC{
+        font-size: 1.35rem;
+    }
+    .contactP{
+        text-align: center;
+        line-height: 2.1rem;
+    }
+    .email{
+        display: none; 
+    }
+    .containerLeft{
+        padding: 0 2rem;
+        text-align: center;
+        height: 12rem;
+    }
+    .containerLeft p{
+        line-height: 2.5rem;
+    }
+    .containerCenter{
+        padding: 0 2rem;
+        height: 17rem;
+    }
+    .containerRight{
+        padding: 0 2rem;
+        text-align: center;
+        height: 14rem;
+    }
+    .containerRight button{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    /*barra de navegación*/
+    .containerMenu{
+        padding: 0 1.5rem;
+    }
+    nav ul li{
+        font-size: 1.3rem; 
+        margin: .6rem;
+    }
+
+    /*bolsas de tela*/
+    .mainBolsas{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 3rem;
+        column-gap: 2rem;
+    }
+    /*stickers*/
+    .mainStickers{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 3rem;
+        column-gap: 2rem;
+    }
+
+    /*tazas*/
+    .mainTazas{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 3rem;
+        column-gap: 2rem;
+    }
+    
+
+    /*portafolio*/
+    .mainPortafolio{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 100%;
+    }
+    .imgA{
+        justify-self: center;
+    }
+    .imgB{
+        justify-self: center;
+    }
+
+
+    /*footer*/
+    .contacto{
+        font-size: 1.8rem;
+    }
+    .contacto input, .contacto textarea{
+        font-size: .9rem;
+    }
+    .contacto .contactoBoton{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    .mainContacto{
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255,255,255,0.9)), url('../img/mandalaA.png') center center / cover no-repeat;
+        height: 100vh;
+        width: 100%;
+    }
+    footer{
+        display: grid;
+        grid-template-areas: "contact"
+                             "containerLeft"
+                             "containerCenter"
+                             "containerRight"
+                             "derechos"; 
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 100%;
+    }
+    .contact{
+        padding: 2rem;
+        justify-content: center;
+    }
+    .botonC{
+        font-size: 1.35rem;
+    }
+    .contactP{
+        text-align: center;
+        line-height: 2.1rem;
+    }
+    .email{
+        display: none; 
+    }
+    .containerLeft{
+        padding: 0 2rem;
+        text-align: center;
+        height: 12rem;
+    }
+    .containerLeft p{
+        line-height: 2.5rem;
+    }
+    .containerCenter{
+        padding: 0 2rem;
+        height: 17rem;
+    }
+    .containerRight{
+        padding: 0 2rem;
+        text-align: center;
+        height: 14rem;
+    }
 }
 
+@media only screen and (min-width: 1023px) and (max-width: 1199px){
+    /*barra de navegación*/
+    nav ul li{
+        font-size: 1.3rem; 
+        margin: 1rem;
+    }
 
+    /*bolsas de tela*/
+    .mainBolsas{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 3rem;
+    }
+    /*stickers*/
+    .mainStickers{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 3rem;
+    }
+
+    /*tazas*/
+    .mainTazas{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 3rem;
+    }
+
+    /*portafolio*/
+    .mainPortafolio{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 100%;
+    }
+    .imgA{
+        justify-self: center;
+    }
+    .imgB{
+        justify-self: center;
+    }
+    
+    /*footer*/
+    .contacto .contactoBoton{
+        font-size: 1.4rem;
+        width: 40%;
+    }
+    .contact{
+        padding: 0 2.5rem;
+    }
+    .containerLeft{
+        padding: 0 2.5rem;
+    }
+    .containerRight{
+        padding: 0 2.5rem;
+    }
+}
