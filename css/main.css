@@ -410,6 +410,19 @@ footer h2, h3{
 .logoFooter, .redesSociales{
     grid-area: containerCenter;
 }
+.logoFooter{
+    animation-name: girar;
+    animation-iteration-count: infinite ;
+    animation-duration: 98s;
+}
+@keyframes girar{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
 .redesSociales a{
     text-decoration: none;
     color: blueviolet;
