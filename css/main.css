@@ -9,6 +9,14 @@ body{
 }
 
 /*index*/
+/* layout -> Grid */
+.layoutIndex{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 100vh;
+}
+
 /*nav bar*/
 /*propiedades del padre*/
 .containerMenu{
@@ -71,6 +79,120 @@ h1{
 }
 
 /*bio index*/
+/*propiedades del padre*/
+.bioIndex{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    margin: 4rem 0 5rem 0;
+}
+/*propiedades del hijo*/
+.bioImagIndex{
+    justify-self: center;
+}
+.bioTextIndex{
+    margin-left: 7.5rem;
+}
+.bioTextIndex{
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.bioIndex h2{
+    font-size: 2.5rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    color: #cbbde2;
+    margin-bottom: 2rem;
+}
+.bioIndex button{
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-family: 'Hubballi', sans-serif;
+    border: none;
+    background-color: #CBB5F5;
+    color: lavender;
+    padding: .7rem 1.5rem .7rem 1.5rem;
+    margin-top: 2rem;
+}
+.bioIndex button:hover{
+    color: blueviolet;
+    background-color: lavender;
+}
+/*productos index*/
+.productosIndex{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+}
+.productosIndex img{
+    width: 28.5rem;
+}
+.productosIndex div button a{
+    text-decoration: none;
+    list-style: none;
+    color: lavender;
+}
+.productUno{
+    position: relative;
+}
+.productUno button{
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-family: 'Hubballi', sans-serif;
+    border: solid 0.09rem lavender;
+    background-color: #CBB5F5;
+    padding: .7rem 1.5rem .7rem 1.5rem;
+}
+.productDos{
+    position: relative;
+}
+.productDos button{
+    position: absolute;
+    top: 80%;
+    left: 33%;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-family: 'Hubballi', sans-serif;
+    border: solid 0.09rem lavender;
+    background-color: #CBB5F5;
+    padding: .7rem 1.5rem .7rem 1.5rem;
+}
+.productTres{
+    position: relative;
+}
+.productTres button{
+    position: absolute;
+    top: 80%;
+    left: 35%;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-family: 'Hubballi', sans-serif;
+    border: solid 0.09rem lavender;
+    background-color: #CBB5F5;
+    padding: .7rem 1.5rem .7rem 1.5rem;
+}
+
+/*portafolio index*/
+.portafolioIndex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 2.5rem 4rem 2.5rem;
+}
+.portafolioIndex img{
+    width: 17.5rem;
+    display: inline-block;
+    padding: 0.5rem;
+}
+
+
+/*bio*/
 /* layout -> Grid */
 .layoutBio{
     display: grid;
@@ -79,14 +201,23 @@ h1{
     height: 100vh;
 }
 .mainBio{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*.mainBio{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     width: 100%;
     column-gap: 5rem;
+}*/
+.mainBio img{
+  width: 50%;
+  display: inline-block;
 }
-.imgBio{
-    justify-self: end;
+.mainBio p{
+    display: inline-block;
 }
+
 
 
 /*bolsas de tela*/
@@ -112,7 +243,7 @@ h1{
     transform: scale(1.02);
 }
 .mainBolsas div img{
-    width: 360px;
+    width: 22.5rem;
 }
 .mainBolsas div p{
     width: 22.5rem;
@@ -157,7 +288,7 @@ h1{
     transform: scale(1.02);
 }
 .mainStickers div img{
-    width: 360px;
+    width: 22.5rem;
 }
 .mainStickers div p{
     width: 22.5rem;
@@ -202,7 +333,7 @@ h1{
     transform: scale(1.02);
 }
 .mainTazas div img{
-    width: 360px;
+    width: 22.5rem;
 }
 .mainTazas div p{
     width: 22.5rem;
@@ -304,6 +435,7 @@ form .contactoBoton{
     border: none;
     background-color: #CBB5F5;
     color: lavender;
+    cursor: pointer;
 }
 form .contactoBoton:hover{
     color: blueviolet;
