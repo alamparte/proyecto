@@ -201,23 +201,24 @@ h1{
     height: 100vh;
 }
 .mainBio{
-    display: flex;
-    flex-wrap: wrap;
-}
-/*.mainBio{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     width: 100%;
-    column-gap: 5rem;
-}*/
-.mainBio img{
-  width: 50%;
-  display: inline-block;
 }
-.mainBio p{
+.mainBio img{
     display: inline-block;
 }
-
+.textBio{
+    padding: 0 4.5rem 0 4.5rem;
+}
+.mainBio h2{
+    font-size: 2.5rem;
+    padding: 2rem 0 2rem 0;
+}
+.mainBio p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
 
 
 /*bolsas de tela*/
@@ -638,6 +639,15 @@ transform: scale(1.2);
         font-size: 1.8rem;
         padding: 1.2rem .625rem .7rem .625rem;
     }
+
+    /*bio*/
+    .mainBio{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        justify-items: center;
+        margin-bottom: 4rem;
+    }
     
     /*bolsas de tela*/
     .mainBolsas{
@@ -766,6 +776,15 @@ transform: scale(1.2);
         margin: .6rem;
     }
 
+    /*bio*/
+    .mainBio{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        justify-items: center;
+        margin: 4rem 0 4rem 0;
+    }
+
     /*bolsas de tela*/
     .mainBolsas{
         display: grid;
@@ -869,6 +888,15 @@ transform: scale(1.2);
     nav ul li{
         font-size: 1.3rem; 
         margin: 1rem;
+    }
+
+    /*bio*/
+    .mainBio{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        justify-items: center;
+        margin: 4rem 0 4rem 0;
     }
 
     /*bolsas de tela*/
