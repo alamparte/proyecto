@@ -58,11 +58,17 @@ nav ul li a{
     opacity: 0;
     transition: .5s;
     background-color: rgb(253, 253, 253);
-    border-top: #CBB5F5 solid;
-    margin-top: .15rem;
+    /*border-top: #CBB5F5 solid;*/
+    /*margin-top: .15rem;*/
+    padding-top: 1.5rem;
+    box-shadow: 0 1.5px 0 0 rgba(0,0,0,.1);
+}
+.outline{
+    padding-top: 1.5rem;
+    border-top: solid #CBB5F5 2px;
 }
 .submenu li{
-    margin: 1rem;
+    margin: 1.1rem;
 }
 .menu li:hover .submenu{
     visibility: visible;
@@ -220,6 +226,15 @@ h1{
     line-height: 2rem;
 }
 
+/*tienda*/
+/* layout -> Grid */
+.layoutTienda{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 100vh;
+}
+
 
 /*bolsas de tela*/
 /* layout -> Grid */
@@ -244,12 +259,22 @@ h1{
     transform: scale(1.02);
 }
 .mainBolsas div img{
-    width: 22.5rem;
+    width: 26.5rem;
+    border-radius: .25rem;
 }
 .mainBolsas div p{
     width: 22.5rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    padding: .5rem 0 .7rem 0;
+}
+.tituloProducto{
+    font-weight: lighter;
+    font-size: 2.1rem;
+    padding: 1.3rem 0 .4rem 0 ;
+}
+.mainBolsas .precio{
+    font-size: 1.6rem;
 }
 .mainBolsas div button{
     width: 100%;
@@ -261,6 +286,7 @@ h1{
     color: blueviolet;
     padding: .7rem;
     margin-top: .7rem;
+    border-radius: .25rem;
 }
 .mainBolsas div button:hover{
     color: lavender;
@@ -289,12 +315,22 @@ h1{
     transform: scale(1.02);
 }
 .mainStickers div img{
-    width: 22.5rem;
+    width: 26.5rem;
+    border-radius: .25rem;
 }
 .mainStickers div p{
     width: 22.5rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    padding: .5rem 0 .7rem 0;
+}
+.tituloProducto{
+    font-weight: lighter;
+    font-size: 2.1rem;
+    padding: 1.3rem 0 .4rem 0 ;
+}
+.mainStickers .precio{
+    font-size: 1.6rem;
 }
 .mainStickers div button{
     width: 100%;
@@ -306,6 +342,7 @@ h1{
     color: blueviolet;
     padding: .7rem;
     margin-top: .7rem;
+    border-radius: .25rem;
 }
 .mainStickers div button:hover{
     color: lavender;
@@ -334,12 +371,22 @@ h1{
     transform: scale(1.02);
 }
 .mainTazas div img{
-    width: 22.5rem;
+    width: 26.5rem;
+    border-radius: .25rem;
 }
 .mainTazas div p{
     width: 22.5rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    padding: .5rem 0 .7rem 0;
+}
+.tituloProducto{
+    font-weight: lighter;
+    font-size: 2.1rem;
+    padding: 1.3rem 0 .4rem 0 ;
+}
+.mainTazas .precio{
+    font-size: 1.6rem;
 }
 .mainTazas div button{
     width: 100%;
@@ -351,7 +398,7 @@ h1{
     color: blueviolet;
     padding: .7rem;
     margin-top: .7rem;
-
+    border-radius: .25rem;
 }
 .mainTazas div button:hover{
     color: lavender;
@@ -526,7 +573,7 @@ footer{
     font-size: 1.875rem;
     padding: 0.313rem;
 }
-footer h2, h3{
+footer h2, footer h3{
     text-transform: uppercase;
     font-weight: lighter;  
     font-size: 1.688rem;  
