@@ -227,13 +227,61 @@ h1{
 }
 
 /*tienda*/
-/* layout -> Grid */
+/* layout -> Grid *//* VER TIENDA
 .layoutTienda{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     height: 100vh;
 }
+.mainTienda{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+}
+.contenedorProducto{
+    transition: all .4s ease-in-out;   
+}
+.contenedorProducto:hover{
+    transform: scale(1.02);
+}
+.imagenProducto{
+    width: 26.5rem;
+    border-radius: .25rem;
+}
+.tituloProducto{
+    font-weight: lighter;
+    font-size: 2.1rem;
+    padding: 1.3rem 0 .4rem 0;
+}
+.parrafoProducto{
+    width: 22.5rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    padding: .5rem 0 .7rem 0;
+}
+.precio{
+    font-size: 1.6rem;
+}
+
+.botonProducto{
+    width: 100%;
+    font-size: 1.8rem;
+    font-family: 'Hubballi', sans-serif;
+    border: none;
+    cursor: pointer;
+    background-color: #CBB5F5;
+    color: blueviolet;
+    padding: .7rem;
+    margin-top: .7rem;
+    border-radius: .25rem;
+}
+.botonProducto:hover{
+    color: lavender;
+}
+
+
+
 
 
 /*bolsas de tela*/
@@ -271,7 +319,7 @@ h1{
 .tituloProducto{
     font-weight: lighter;
     font-size: 2.1rem;
-    padding: 1.3rem 0 .4rem 0 ;
+    padding: 1.3rem 0 .4rem 0;
 }
 .mainBolsas .precio{
     font-size: 1.6rem;
@@ -573,7 +621,7 @@ footer{
     font-size: 1.875rem;
     padding: 0.313rem;
 }
-footer h2, footer h3{
+footer h2, footer h3, footer h5{
     text-transform: uppercase;
     font-weight: lighter;  
     font-size: 1.688rem;  
