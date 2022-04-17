@@ -238,13 +238,14 @@ h1{
     padding: 0 1rem 0 1rem;
 }
 .mainBolsas div{
-    transition: all .4s ease-in-out;   
+    transition: all .4s ease-in-out;
 }
 .mainBolsas div:hover{
     transform: scale(1.02);
 }
 .mainBolsas div img{
     width: 22.5rem;
+    border-radius: .20rem;    
 }
 .mainBolsas div p{
     width: 22.5rem;
@@ -257,10 +258,11 @@ h1{
     font-family: 'Hubballi', sans-serif;
     border: none;
     cursor: pointer;
-    background-color: #CBB5F5;
+    background-color: #cbbde2;
     color: blueviolet;
     padding: .7rem;
     margin-top: .7rem;
+    border-radius: .20rem;
 }
 .mainBolsas div button:hover{
     color: lavender;
@@ -283,13 +285,14 @@ h1{
     padding: 0 1rem 0 1rem; 
 }
 .mainStickers div{
-    transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out; 
 }
 .mainStickers div:hover{
     transform: scale(1.02);
 }
 .mainStickers div img{
     width: 22.5rem;
+    border-radius: .20rem;
 }
 .mainStickers div p{
     width: 22.5rem;
@@ -306,6 +309,7 @@ h1{
     color: blueviolet;
     padding: .7rem;
     margin-top: .7rem;
+    border-radius: .20rem;
 }
 .mainStickers div button:hover{
     color: lavender;
@@ -335,6 +339,7 @@ h1{
 }
 .mainTazas div img{
     width: 22.5rem;
+    border-radius: .20rem;
 }
 .mainTazas div p{
     width: 22.5rem;
@@ -351,7 +356,7 @@ h1{
     color: blueviolet;
     padding: .7rem;
     margin-top: .7rem;
-
+    border-radius: .20rem;
 }
 .mainTazas div button:hover{
     color: lavender;
