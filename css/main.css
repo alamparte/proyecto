@@ -33,7 +33,13 @@ body{
 }
 /*propiedades del hijo*/
 .barsMenu{
-    display: none;
+    display: inline-block;
+    font-size: 2rem;
+    border: none;
+    background: none;
+    color: #CBB5F5;
+    text-align: right;
+    visibility: hidden; 
 }
 nav ul li{
     display: inline-block;    
@@ -41,6 +47,10 @@ nav ul li{
     z-index: 1;
     font-size: 1.3rem; 
     margin: 2rem;
+}
+nav ul{
+    margin-bottom: 0;
+    padding-left: 0;
 }
 nav ul li a{
     text-decoration: none;
@@ -74,7 +84,7 @@ nav ul li a{
 h1{
     background-color: lavender;
     margin: 6rem 0 0 0;
-    padding: 1.4rem .625rem 1rem .625rem;
+    padding: 1.3rem .625rem .7rem .625rem;
     text-align: center;
     text-transform: uppercase;
     color: #CBB5F5;
@@ -91,13 +101,6 @@ h1{
     margin: 4rem 0 5rem 8rem;
     column-gap: 6rem;
 }
-/*propiedades del hijo*/ /*
-.bioImagIndex{
-    justify-self: center;
-}
-.bioTextIndex{
-    margin-left: 7.5rem;
-}*/
 .bioTextIndex{
     font-size: 1.5rem;
     line-height: 2rem;
@@ -180,6 +183,9 @@ h1{
     background-color: #CBB5F5;
     padding: .7rem 1.5rem .7rem 1.5rem;
 }
+.productosIndex button:hover{
+    background-color: #c1a7f1;
+}
 
 /*portafolio index*/
 .portafolioIndex{
@@ -207,9 +213,6 @@ h1{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     width: 100%;
-}
-.mainBio img{
-    display: inline-block;
 }
 .textBio{
     padding: 0 4.5rem 0 4.5rem;
@@ -334,25 +337,18 @@ h1{
     grid-template-rows: auto;
     height: 100vh;
 }
+.mainPortafolio img{
+    width: 90%;
+}
 .mainPortafolio{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4,1fr);
-    width: 100%;
-    row-gap: 4rem;
-    column-gap: 1.5rem;
+    row-gap: 3rem;
     justify-items: center;
     margin: 4rem 0;
     padding: 0 1rem 0 1rem; 
 }
-.imgA{
-    justify-self: flex-end;
-}
-.imgB{
-    justify-self: flex-start;
-}
-
-
 /*contacto*/
 /* layout -> Grid */
 .layoutContacto{
@@ -452,6 +448,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-right: 1rem;
 }
 .containerRight{
     grid-area: containerRight;
@@ -505,7 +502,7 @@ footer h2, footer h3, footer h5{
 }
 .containerLeft p{
     grid-area: containerLeft;
-    font-size: 1.313rem;
+    font-size: 1.4rem;
     line-height: 1.75rem;
 }
 .logoFooter, .redesSociales{
@@ -545,7 +542,7 @@ transform: scale(1.2);
     grid-area: containerRight;
 }
 .containerRight input{
-    font-size: 0.938rem;
+    font-size: 0.94rem;
     height: 2.75rem;
     width: 100%;
     padding: 1rem;
@@ -562,7 +559,7 @@ transform: scale(1.2);
     color: blueviolet;
     border: none;
     padding: 0.688rem 2.5rem;
-    font-size: .9rem;
+    font-size: .915rem;
     width: 100%;
 }
 .containerRight button:hover{
@@ -577,7 +574,7 @@ transform: scale(1.2);
 }
 .derechos p{
     padding: 1.3rem;
-    font-size: large;
+    font-size: 1.25rem;
     text-align: center;
 }
 .derechos a{
@@ -587,11 +584,148 @@ transform: scale(1.2);
 }
 
 
+/*media queries*/
+@media only screen and (max-width: 480px){
+       /*Barra de navegación*/
+    nav ul{
+        display: none;
+    }
+    .barsMenu{
+        visibility: visible; 
+    }
+    .indexTitle{
+        font-size: 2.5rem;
+        padding: 2.3rem 0 2rem 0;
+    }
+    /*bio*/
+    .mainBio{
+        grid-template-columns: 1fr;
+        margin-bottom: 5rem;
+    }
+    .mainBio h2{
+        font-size: 2.8rem;
+    }
+    .mainBio p{
+        font-size: 2.3rem;
+        line-height: 2.8rem;
+    }    
+    
+    /*bolsas de tela*/
+    .mainBolsas{
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 3rem;
+    }
+    .mainBolsas div p{
+        font-size: 1.3rem;
+    }
+    .mainBolsas div button{
+        font-size: 1.5rem;
+    }
+    /*stickers*/
+    .mainStickers{
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 3rem;
+    }
+    .mainStickers div p{
+        font-size: 1.3rem;
+    }
+    .mainStickers div button{
+        font-size: 1.5rem;
+    }
+
+    /*tazas*/
+    .mainTazas{
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 3rem;
+    }
+    .mainTazas div p{
+        font-size: 1.3rem;
+    }
+    .mainTazas div button{
+        font-size: 1.5rem;
+    }
+
+
+    /*portafolio*/
+    .mainPortafolio{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .imgA{
+        justify-self: center;
+    }
+    .imgB{
+        justify-self: center;
+    }
+
+
+    /*contacto*/
+    .contacto{
+        font-size: 2.9rem;
+    }
+    .contacto input, .contacto textarea{
+        font-size: .8rem;
+    }
+    .contacto .contactoBoton{
+        font-size: 1.3rem;
+        width: 100%;
+    }
+    .mainContacto{
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255,255,255,0.9)), url('../img/mandalaA.png') center center / cover no-repeat;
+        height: 100vh;
+        width: 100%;
+    }
+    /*footer*/
+    footer{
+        grid-template-areas: "contact"
+                             "containerLeft"
+                             "containerCenter"
+                             "containerRight"
+                             "derechos"; 
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .botonC a{
+        font-size: 2.5rem;
+    }
+    .contactP{
+        text-align: center;
+        line-height: 2rem;
+        justify-content: center;
+    }
+    .contactP p{
+        font-size: 2.4rem;
+    }
+    .email{
+        display: none; 
+    }
+    .containerLeft{
+        padding: 0 2rem;
+        text-align: center;
+        height: 12rem;
+    }
+    .containerLeft p{
+        line-height: 2.5rem;
+    }
+    .containerCenter{
+        padding: 0 2rem;
+        height: 17rem;
+    }
+    .containerRight{
+        padding: 0 2rem;
+        text-align: center;
+        height: 14rem;
+    }
+    .containerRight button{
+        width: 100%;
+    }
+}
+
 
 /*media queries*/
-
+/*
 @media only screen and (min-width: 320px) and (max-width: 767px){
-    /*Barra de navegación*/
+    /*Barra de navegación*//*
     nav ul{
         display: none;
     }
@@ -607,17 +741,8 @@ transform: scale(1.2);
         font-size: 1.8rem;
         padding: 1.2rem .625rem .7rem .625rem;
     }
-
-    /*bio*/
-    .mainBio{
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 100%;
-        justify-items: center;
-        margin-bottom: 4rem;
-    }
     
-    /*bolsas de tela*/
+    /*bolsas de tela*//*
     .mainBolsas{
         display: grid;
         grid-template-columns: repeat(1,1fr);
@@ -629,7 +754,7 @@ transform: scale(1.2);
     .mainBolsas div button{
         font-size: 1.5rem;
     }
-    /*stickers*/
+    /*stickers*//*
     .mainStickers{
         display: grid;
         grid-template-columns: repeat(1,1fr);
@@ -642,7 +767,7 @@ transform: scale(1.2);
         font-size: 1.5rem;
     }
 
-    /*tazas*/
+    /*tazas*//*
     .mainTazas{
         display: grid;
         grid-template-columns: repeat(1,1fr);
@@ -658,7 +783,7 @@ transform: scale(1.2);
     
 
 
-    /*portafolio*/
+    /*portafolio*//*
     .mainPortafolio{
         display: grid;
         grid-template-columns: 1fr;
@@ -672,7 +797,7 @@ transform: scale(1.2);
     }
 
 
-    /*footer*/
+    /*footer*//*
     .contacto{
         font-size: 1.6rem;
     }
@@ -733,7 +858,7 @@ transform: scale(1.2);
     .containerRight button{
         width: 100%;
     }
-}
+}*/
 @media only screen and (min-width: 768px) and (max-width: 1023px){
     /*barra de navegación*/
     .containerMenu{
