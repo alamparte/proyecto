@@ -227,7 +227,7 @@ h1{
 }
 
 /*tienda*/
-/* layout -> Grid *//* VER TIENDA
+/* layout -> Grid */
 .layoutTienda{
     display: grid;
     grid-template-columns: 1fr;
@@ -236,8 +236,11 @@ h1{
 }
 .mainTienda{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 1fr 0.815fr 1fr;
     width: 100%;
+    justify-items: center;
+    row-gap: 4rem;
+    margin: 4rem 0 4rem 0;
 }
 .contenedorProducto{
     transition: all .4s ease-in-out;   
