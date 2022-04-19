@@ -599,6 +599,7 @@ transform: scale(1.2);
     }
     /*bio*/
     .mainBio{
+        display: grid;
         grid-template-columns: 1fr;
         margin-bottom: 5rem;
     }
@@ -657,8 +658,6 @@ transform: scale(1.2);
     .imgB{
         justify-self: center;
     }
-
-
     /*contacto*/
     .contacto{
         font-size: 2.9rem;
@@ -677,6 +676,7 @@ transform: scale(1.2);
     }
     /*footer*/
     footer{
+        display: grid;
         grid-template-areas: "contact"
                              "containerLeft"
                              "containerCenter"
@@ -685,39 +685,329 @@ transform: scale(1.2);
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
-    .botonC a{
+    .contact{
+        padding: 12rem 0 12rem 0;
+        justify-content: center;
+    }
+    .botonC, footer .parrafoFooter{
+        font-size: 2.4rem;
+    }
+    footer .tituloFooter{
         font-size: 2.5rem;
     }
     .contactP{
         text-align: center;
-        line-height: 2rem;
-        justify-content: center;
-    }
-    .contactP p{
-        font-size: 2.4rem;
+        line-height: 2.2rem;
     }
     .email{
         display: none; 
     }
     .containerLeft{
-        padding: 0 2rem;
+        padding: 0 5rem;
         text-align: center;
-        height: 12rem;
     }
     .containerLeft p{
         line-height: 2.5rem;
     }
     .containerCenter{
-        padding: 0 2rem;
-        height: 17rem;
+        padding: 0;
     }
     .containerRight{
         padding: 0 2rem;
         text-align: center;
-        height: 14rem;
     }
     .containerRight button{
         width: 100%;
+        font-size: 1.4rem;
+    }
+    .containerRight input{
+        font-size: 1.5rem;
+    }
+    .derechos p{
+        font-size: 1.7rem;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    nav ul{
+        display: none;
+    }
+    .barsMenu{
+        visibility: visible; 
+    }
+    .indexTitle{
+        font-size: 2.5rem;
+        padding: 2.3rem 0 2rem 0;
+    }
+    /*bio*/
+    .mainBio{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 5rem;
+    }
+    .mainBio h2{
+        font-size: 2.8rem;
+        margin-top: 1.2rem;
+    }
+    .mainBio p{
+        font-size: 2.3rem;
+        line-height: 2.8rem;
+    }    
+    
+    /*bolsas de tela*/
+    .mainBolsas{
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 3rem;
+    }
+    .mainBolsas div p{
+        font-size: 1.3rem;
+    }
+    .mainBolsas div button{
+        font-size: 1.5rem;
+    }
+    /*stickers*/
+    .mainStickers{
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 3rem;
+    }
+    .mainStickers div p{
+        font-size: 1.3rem;
+    }
+    .mainStickers div button{
+        font-size: 1.5rem;
+    }
+
+    /*tazas*/
+    .mainTazas{
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 3rem;
+    }
+    .mainTazas div p{
+        font-size: 1.3rem;
+    }
+    .mainTazas div button{
+        font-size: 1.5rem;
+    }
+
+
+    /*portafolio*/
+    .mainPortafolio{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .imgA{
+        justify-self: center;
+    }
+    .imgB{
+        justify-self: center;
+    }
+    /*contacto*/
+    .contacto{
+        font-size: 2.9rem;
+    }
+    .contacto input, .contacto textarea{
+        font-size: .8rem;
+    }
+    .contacto .contactoBoton{
+        font-size: 1.3rem;
+        width: 100%;
+    }
+    .mainContacto{
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255,255,255,0.9)), url('../img/mandalaA.png') center center / cover no-repeat;
+        height: 100vh;
+        width: 100%;
+    }
+    /*footer*/
+    footer{
+        display: grid;
+        grid-template-areas: "contact"
+                             "containerLeft"
+                             "containerCenter"
+                             "containerRight"
+                             "derechos"; 
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .contact{
+        padding: 12rem 0 12rem 0;
+        justify-content: center;
+    }
+    .botonC, footer .parrafoFooter{
+        font-size: 2.4rem;
+    }
+    footer .tituloFooter{
+        font-size: 2.5rem;
+    }
+    .contactP{
+        text-align: center;
+        line-height: 2.2rem;
+    }
+    .email{
+        display: none; 
+    }
+    .containerLeft{
+        padding: 0 5rem;
+        text-align: center;
+    }
+    .containerLeft p{
+        line-height: 2.5rem;
+    }
+    .containerCenter{
+        padding: 0;
+    }
+    .containerRight{
+        padding: 0 2rem;
+        text-align: center;
+    }
+    .containerRight button{
+        width: 100%;
+        font-size: 1.4rem;
+    }
+    .containerRight input{
+        font-size: 1.5rem;
+    }
+    .derechos p{
+        font-size: 1.7rem;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 1023px){
+    nav ul{
+        display: none;
+    }
+    .barsMenu{
+        visibility: visible; 
+    }
+    /*bio*/
+    .mainBio{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 5rem;
+        justify-items: center;
+        margin-top: 4rem;
+    }
+    .mainBio h2{
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+    .mainBio p{
+        font-size: 2rem;
+        line-height: 2.8rem;
+    }    
+    
+    /*bolsas de tela*/
+    .mainBolsas{
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 3rem;
+    }
+    .mainBolsas div p{
+        font-size: 1.3rem;
+    }
+    .mainBolsas div button{
+        font-size: 1.5rem;
+    }
+    /*stickers*/
+    .mainStickers{
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 3rem;
+    }
+    .mainStickers div p{
+        font-size: 1.3rem;
+    }
+    .mainStickers div button{
+        font-size: 1.5rem;
+    }
+
+    /*tazas*/
+    .mainTazas{
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 3rem;
+    }
+    .mainTazas div p{
+        font-size: 1.3rem;
+    }
+    .mainTazas div button{
+        font-size: 1.5rem;
+    }
+
+
+    /*portafolio*/
+    .mainPortafolio{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .imgA{
+        justify-self: center;
+    }
+    .imgB{
+        justify-self: center;
+    }
+    /*contacto*/
+    .contacto{
+        font-size: 2.9rem;
+    }
+    .contacto input, .contacto textarea{
+        font-size: .8rem;
+    }
+    .contacto .contactoBoton{
+        font-size: 1.3rem;
+        width: 100%;
+    }
+    .mainContacto{
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255,255,255,0.9)), url('../img/mandalaA.png') center center / cover no-repeat;
+        height: 100vh;
+        width: 100%;
+    }
+    /*footer*/
+    footer{
+        display: grid;
+        grid-template-areas: "contact"
+                             "containerLeft"
+                             "containerCenter"
+                             "containerRight"
+                             "derechos"; 
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .contact{
+        padding: 10rem 0 10rem 0;
+        justify-content: center;
+    }
+    .botonC, footer .parrafoFooter{
+        font-size: 1.8rem;
+    }
+    footer .tituloFooter{
+        font-size: 2.2rem;
+    }
+    .contactP{
+        text-align: center;
+        line-height: 2.2rem;
+    }
+    .email{
+        display: none; 
+    }
+    .containerLeft{
+        padding: 0 5rem;
+        text-align: center;
+    }
+    .containerLeft p{
+        line-height: 2.5rem;
+    }
+    .containerCenter{
+        padding: 0;
+    }
+    .containerRight{
+        padding: 0 2rem;
+        text-align: center;
+    }
+    .containerRight button{
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    .containerRight input{
+        font-size: 1.3rem;
+    }
+    .derechos p{
+        font-size: 1.5rem;
     }
 }
 
@@ -858,9 +1148,9 @@ transform: scale(1.2);
     .containerRight button{
         width: 100%;
     }
-}*/
+}*//*
 @media only screen and (min-width: 768px) and (max-width: 1023px){
-    /*barra de navegación*/
+    /*barra de navegación*//*
     .containerMenu{
         padding: 0 1.5rem;
     }
@@ -869,7 +1159,7 @@ transform: scale(1.2);
         margin: .6rem;
     }
 
-    /*bio*/
+    /*bio*//*
     .mainBio{
         display: grid;
         grid-template-columns: 1fr;
@@ -878,14 +1168,14 @@ transform: scale(1.2);
         margin: 4rem 0 4rem 0;
     }
 
-    /*bolsas de tela*/
+    /*bolsas de tela*//*
     .mainBolsas{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         row-gap: 3rem;
         column-gap: 2rem;
     }
-    /*stickers*/
+    /*stickers*//*
     .mainStickers{
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -893,7 +1183,7 @@ transform: scale(1.2);
         column-gap: 2rem;
     }
 
-    /*tazas*/
+    /*tazas*//*
     .mainTazas{
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -902,7 +1192,7 @@ transform: scale(1.2);
     }
     
 
-    /*portafolio*/
+    /*portafolio*//*
     .mainPortafolio{
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -916,7 +1206,7 @@ transform: scale(1.2);
     }
 
 
-    /*footer*/
+    /*footer*//*
     .contacto{
         font-size: 1.8rem;
     }
@@ -977,13 +1267,13 @@ transform: scale(1.2);
 }
 
 @media only screen and (min-width: 1023px) and (max-width: 1199px){
-    /*barra de navegación*/
+    /*barra de navegación*//*
     nav ul li{
         font-size: 1.3rem; 
         margin: 1rem;
     }
 
-    /*bio*/
+    /*bio*//*
     .mainBio{
         display: grid;
         grid-template-columns: 1fr;
@@ -992,27 +1282,27 @@ transform: scale(1.2);
         margin: 4rem 0 4rem 0;
     }
 
-    /*bolsas de tela*/
+    /*bolsas de tela*//*
     .mainBolsas{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         row-gap: 3rem;
     }
-    /*stickers*/
+    /*stickers*//*
     .mainStickers{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         row-gap: 3rem;
     }
 
-    /*tazas*/
+    /*tazas*//*
     .mainTazas{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         row-gap: 3rem;
     }
 
-    /*portafolio*/
+    /*portafolio*//*
     .mainPortafolio{
         display: grid;
         grid-template-columns: repeat(2,1fr);
@@ -1025,7 +1315,7 @@ transform: scale(1.2);
         justify-self: center;
     }
     
-    /*footer*/
+    /*footer*//*
     .contacto .contactoBoton{
         font-size: 1.4rem;
         width: 40%;
