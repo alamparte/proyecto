@@ -21,18 +21,19 @@
     <header>
         <!--empieza la barra de navegación-->
         <nav class="containerMenu">
-
-                <div class="containerLogo">
-                    <a href="../index.html">
-                        <img class="logo" src="../img/logoH.png" alt="logo de un mandala con su nombre">
-                    </a>
-                </div>
-
-                <button class="barsMenu" >
-                    <i class="fa fa-bars"></i>
-                </button>
-    
-                <ul class="menu">
+            <!--logo-->
+            <div class="containerLogo">
+                <a href="../index.html">
+                    <img class="logo" src="../img/logoH.png" alt="logo de un mandala con su nombre">
+                </a>
+            </div>
+            <!--menu mobile-->
+            <label for="menuH" class="navLabel">
+                <i class="fa fa-bars" style="font-size: 40px"></i>
+            </label>
+            <input type="checkbox" id="menuH" class="navInput" />
+            <!--comienza menu-->
+            <ul class="menu">
                     <li>
                         <a href="../index.html">
                             HOME
@@ -70,7 +71,7 @@
                         </a>
                     </li>
                 </ul> 
-                    
+            <!--fin de menu-->      
         </nav>
         <!--fin de la barra de navegación-->
 
@@ -109,9 +110,9 @@
     
     <!--empieza footer-->
     <footer>
-        <div class="contact">
+        <section class="contact">
             <div class="contactP">
-                <p>
+                <p class="parrafoFooter">
                     Si tienes dudas, preguntas o simplemente quieres saber más acerca del mundo de los mandalas, no dudes en contactarme.
                 </p>
                 <div class="botonC">
@@ -123,17 +124,17 @@
                 <span><i class="fa fa-envelope"></i></span>
                 <a href="mailto:contacto@kreislife.com">contacto@kreislife.com</a>
             </div>
-        </div>
+        </section>
 
         
-            <div class="containerLeft">
-                <h3>kreislife</h3>
-                <p>
-                    Mandalas, zentangle arte y productos de edición limitada.
+            <section class="containerLeft">
+                <h3 class="tituloFooter">kreislife</h3>
+                <p class="parrafoFooter">
+                    Mandalas, zentangle arte y productos de edición limitada creados a través de la imaginación e intuición.
                 </p>
-            </div>
+            </section>
 
-            <div class="containerCenter">
+            <section class="containerCenter">
                 <div class="logoFooter">
                     <a href="../index.html">
                         <img src="../img/logoV.png" alt="logo mandala" width="150px">
@@ -151,26 +152,26 @@
                     <a href="https://www.youtube.com/channel/UC9hHFRQOQWcz6Zf_IMpm7pw" class="fa fa-youtube-play" target="_blank"></a>
                     
                 </div>   
-            </div> 
+            </section> 
 
-            <div class="containerRight">
-                <h3>
+            <section class="containerRight">
+                <h3 class="tituloFooter">
                     newsletter
                 </h3>
                 <form action="#">
                     <input type="email" placeholder="Correo electrónico">
                 </form>
                 <button type="submit">Suscríbete</button>
-            </div>                
+            </section>                
            
 
 
-        <div class="derechos">
+        <section class="derechos">
             <div class="linie"></div>
             <p>
                 &copy; 2022 <a href="../index.html">kreislife</a>. Todos los derechos reservados. Ariadna Lamparte.
             </p>     
-        </div> 
+        </section> 
         
     </footer>
     <!--termina footer-->
