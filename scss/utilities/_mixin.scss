@@ -1,0 +1,43 @@
+@import "variables";
+@import "../base/typo";
+
+
+@mixin grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 100vh;    
+}
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+//boton principal
+@mixin btn-index {
+    font-family: $font-principal;
+    background-color: nth($colores,1);
+    cursor: pointer;
+    font-size: 1.7rem;
+    text-transform: $t-transform;
+    border: none;
+    border-radius: 0.20rem;
+    padding: 1.5rem;
+}
+
+@mixin cajaFooter {
+    background-color: lavender;
+    height: 19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin tFooter {
+    text-transform: uppercase;  
+    font-size: $s-subtitle;  
+    color: blueviolet; 
+    font-weight: 400;
+    margin-bottom: .8rem; 
+}

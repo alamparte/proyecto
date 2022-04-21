@@ -1,0 +1,167 @@
+@import "../utilities/variables";
+@import "../base/typo";
+@import "../utilities/mixin";
+
+footer{
+    display: grid;
+    grid-template-areas: "contact contact contact"
+                         "containerLeft containerCenter containerRight"
+                         "derechos derechos derechos"; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    .contact{
+        grid-area: contact;
+        @include flex;
+        background-color: nth($colores,1);
+        color: white;
+        height: 15rem;
+        padding: 0rem 7.5rem;
+        .contactP{
+            grid-area: contact;
+            width: 26.5rem;
+            p{
+            font-size: $s-text-large;
+            line-height: 2.2rem;
+                a{
+                    color: nth($colores,4);
+                    font-weight: bold;
+                }
+            }  
+        }
+        .email{
+            grid-area: contact;
+            span{
+                color: nth($colores,4);
+                font-size: 1.875rem;
+                padding: 0.313rem;
+            }
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: $s-text-large;
+            }
+        }
+    }
+    .containerLeft{
+        @include cajaFooter;
+        grid-area: containerLeft;
+        row-gap: 1.5rem;
+        padding: 0 1rem 0 5.8rem;
+        .tituloFooter{
+            @include tFooter;
+            grid-area: containerLeft;
+        }
+        p{
+            grid-area: containerLeft;
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+    }
+    .containerCenter{
+        @include cajaFooter;
+        grid-area: containerCenter;
+        row-gap: 2rem;
+        align-items: center;
+        padding-right: 1rem;
+        .logoFooter{
+            grid-area: containerCenter;
+            animation-name: girar;
+            animation-iteration-count: infinite ;
+            animation-duration: 98s;
+            @keyframes girar{
+                from{
+                    transform: rotate(0);
+                }
+                to{
+                    transform: rotate(360deg);
+                }
+            }                     
+        }
+        .redesSociales{
+            grid-area: containerCenter;
+            a{
+                text-decoration: none;
+                color: blueviolet;
+                font-size: 1.75rem;
+                background: #CBB5F5;
+                border-radius: 50%;
+                width: 3.125rem;
+                height: 3.125rem;
+                margin: 0rem .5rem;
+                line-height: 3.125rem;
+                text-align: center;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0,.05);
+                transition: all .4s ease-in-out;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }          
+        } 
+    }
+    .containerRight{
+        @include cajaFooter;
+        grid-area: containerRight;
+        row-gap: 1.5rem;
+        padding: 0 5rem 0 4rem;
+        .tituloFooter{
+            @include tFooter;
+            grid-area: containerRight;
+        }
+        form{
+            grid-area: containerRight;
+            font-family: $font-principal;
+            input{
+                width: $width-completo;
+                padding: 1rem;
+                border: #CBB5F5 solid .1rem;
+                font-size: 1.18rem;
+                font-family: $font-principal;
+                line-height: normal;
+                &:focus{
+                    border-color: blueviolet;
+                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                    outline: 0 none;
+                }
+            }
+        }
+        button{
+            grid-area: containerRight;
+            text-transform: $t-transform;
+            background-color: nth($colores,1);
+            color: blueviolet;
+            border: none;
+            padding: 1.3rem;
+            font-size: 1.4rem;
+            width: $width-completo;
+            font-family: $font-principal;
+            line-height: 0;
+            &:hover{
+                color: lavender;
+            }
+        }
+        
+    }
+    .derechos{
+        grid-area: derechos;
+        background-color: lavender;
+        .linie{
+            grid-area: derechos;
+            border-top: 0.063rem solid blueviolet;
+            height: 0.125rem;
+            max-width: 70%;
+            padding: 0;
+            margin: 0 auto 0 auto;
+        }
+        p{
+            grid-area: derechos;
+            padding: 1.3rem;
+            font-size: 1.25rem;
+            text-align: center;
+            a{
+                text-decoration: none;
+                list-style: none;
+                color: black;
+            }
+        }
+    }
+}

@@ -1,1162 +1,348 @@
-/*reset*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: 'Hubballi', sans-serif;
-}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-/*index*/
-/* layout -> Grid */
-.layoutIndex{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    height: 100vh;
-}
-/*nav bar*/
-/*propiedades del padre*/
-.containerMenu{
-    position: fixed;
-    top: 0;
-    background-color: rgb(253, 253, 253);
-    width: 100%;
-    height: 6.5rem;
-    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    padding: 0rem 3.5rem;
-    z-index: 1;
-}
-/*propiedades del hijo*/
-.barsMenu{
-    display: inline-block;
-    font-size: 2rem;
-    border: none;
-    background: none;
-    color: #CBB5F5;
-    text-align: right;
-    visibility: hidden; 
-}
-nav ul li{
-    display: inline-block;    
-    list-style: none;
-    z-index: 1;
-    font-size: 1.3rem; 
-    margin: 2rem;
-}
-nav ul{
+body {
+  font-family: "Hubballi", sans-serif;
+  margin-bottom: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  line-height: 0; }
+  body p {
+    margin-block-start: 0;
+    margin-block-end: 0; }
+  body .h1, body .h2, body .h3, body .h4, body .h5, body .h6, body h1, body h2, body h3, body h4, body h5, body h6 {
+    margin-top: 0;
     margin-bottom: 0;
+    font-weight: 0;
+    line-height: 0; }
+
+header .containerMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: #fdfdfd;
+  width: 100%;
+  height: 6.5rem;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  padding: 0rem 3.5rem;
+  z-index: 1; }
+  header .containerMenu .navLabel, header .containerMenu .navInput {
+    display: none; }
+  header .containerMenu .navInput:checked + .menu {
+    background-color: lavender; }
+  header .containerMenu .menu {
+    margin-bottom: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    line-height: normal;
     padding-left: 0;
-}
-nav ul li a{
-    text-decoration: none;
-    color: black; 
-}
-.menu a:hover{
-    color: #CBB5F5;
-}
-.submenu{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    visibility: hidden;
-    opacity: 0;
-    transition: .5s;
-    background-color: rgb(253, 253, 253);
-    padding-top: 1.5rem;
-    box-shadow: 0 1.5px 0 0 rgba(0,0,0,.1);
-}
-.outline{
-    padding-top: 1.5rem;
-    border-top: solid #CBB5F5 2px;
-}
-.submenu li{
-    margin: 1.1rem;
-}
-.menu li:hover .submenu{
-    visibility: visible;
-    opacity: 1;
-}
-h1{
-    background-color: lavender;
-    margin: 6rem 0 0 0;
-    padding: 1.3rem .625rem .7rem .625rem;
-    text-align: center;
-    text-transform: uppercase;
-    color: #CBB5F5;
-    font-weight: lighter;
-}
-.navLabel, .navInput{
-    display: none;
-}
-.navInput:checked + .menu{
-    background-color: lavender;
-}
+    list-style-type: none; }
+    header .containerMenu .menu li {
+      display: inline-block;
+      list-style: none;
+      z-index: 1;
+      font-size: 1.3rem;
+      margin: 2rem; }
+      header .containerMenu .menu li a {
+        text-decoration: none;
+        color: black; }
+        header .containerMenu .menu li a:hover {
+          color: #CBB5F5; }
+      header .containerMenu .menu li:hover .submenu {
+        visibility: visible;
+        opacity: 1; }
+      header .containerMenu .menu li .submenu {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        visibility: hidden;
+        opacity: 0;
+        transition: .5s;
+        background-color: #fdfdfd;
+        padding-top: 1.5rem;
+        padding-left: 0;
+        box-shadow: 0 1.5px 0 0 rgba(0, 0, 0, 0.1);
+        padding-inline-start: 0; }
+        header .containerMenu .menu li .submenu .outline {
+          padding-top: 1.5rem;
+          border-top: solid #CBB5F5 2px; }
+        header .containerMenu .menu li .submenu li {
+          margin: 1.1rem; }
+        header .containerMenu .menu li .submenu #liSub {
+          line-height: normal; }
 
-/*bio index*/
-/*propiedades del padre*/
-.bioIndex{
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: 1fr;
-    align-items: center;
-    margin: 4rem 0 5rem 8rem;
-    column-gap: 6rem;
-}
-.bioTextIndex{
-    font-size: 1.5rem;
-    line-height: 2rem;
-    margin: 2rem 0 2.2rem 0;
-}
-.bioIndex h2{
-    font-size: 2.5rem;
-    font-weight: lighter;
-    text-transform: uppercase;
-    color: #cbbde2;
-}
-.bioIndex button{
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 1.7rem;
-    font-family: 'Hubballi', sans-serif;
-    border: none;
-    border-radius: 0.20rem;
-    background-color: #CBB5F5;
-    padding: .7rem 1.5rem .7rem 1.5rem;
-}
-.bioIndex a{
-    text-decoration: none;
-    color: lavender;
-}
-.bioIndex button:hover, .bioIndex a:hover{
-    color: blueviolet;
-    background-color: lavender;
-}
-/*productos index*/
-.productosIndex{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-bottom: 4rem;
-}
-.productosIndex img{
-    width: 28.5rem;
-}
-.productosIndex div button a{
-    text-decoration: none;
-    color: lavender;
-}
-.productUno, .productDos, .productTres{
-    position: relative;
-}
-.productUno button{
-    position: absolute;
-    top: 80%;
-    left: 23%;
-    text-transform: uppercase;
-    font-size: 1.7rem;
-    font-family: 'Hubballi', sans-serif;
-    border: solid 0.09rem lavender;
-    border-radius: 0.20rem;
-    background-color: #CBB5F5;
-    padding: .7rem 1.5rem .7rem 1.5rem;
-}
-.productDos button{
-    position: absolute;
-    top: 80%;
-    left: 33%;
-    text-transform: uppercase;
-    font-size: 1.7rem;
-    font-family: 'Hubballi', sans-serif;
-    border: solid 0.09rem lavender;
-    border-radius: 0.20rem;
-    background-color: #CBB5F5;
-    padding: .7rem 1.5rem .7rem 1.5rem;
-}
-.productTres button{
-    position: absolute;
-    top: 80%;
-    left: 35%;
-    text-transform: uppercase;
-    font-size: 1.7rem;
-    font-family: 'Hubballi', sans-serif;
-    border: solid 0.09rem lavender;
-    border-radius: 0.20rem;
-    background-color: #CBB5F5;
-    padding: .7rem 1.5rem .7rem 1.5rem;
-}
-.productosIndex button:hover{
-    background-color: #c1a7f1;
-}
+header h1 {
+  background-color: lavender;
+  margin: 6rem 0 0 0;
+  padding: 1.3rem .625rem .7rem .625rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #CBB5F5;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 2.35rem; }
 
-/*portafolio index*/
-.portafolioIndex{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 2.5rem 4rem 2.5rem;
-}
-.portafolioIndex img{
-    width: 17.5rem;
-    display: inline-block;
-    padding: 0.5rem;
-}
-
-/*bio*/
-/* layout -> Grid */
-.layoutBio{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    height: 100vh;
-}
-.mainBio{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    width: 100%;
-}
-.textBio{
-    padding: 0 4.5rem 0 4.5rem;
-}
-.mainBio h2{
-    font-size: 2.5rem;
-    padding: 2rem 0 2rem 0;
-}
-.mainBio p{
-    font-size: 1.5rem;
-    line-height: 2rem;
-}
-
-/*tienda*/
-/* layout -> Grid */
-.layoutTienda{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    height: 100vh;
-}
-.mainTienda{
-    display: grid;
-    grid-template-columns: 1fr 0.8fr 1fr;
-    width: 100%;
-    justify-items: center;
-    row-gap: 4rem;
-    margin: 4rem 0 4rem 0;
-}
-.contenedorProducto{
-    transition: all .4s ease-in-out;   
-}
-.contenedorProducto:hover{
-    transform: scale(1.02);
-}
-.imagenProducto{
-    width: 26.5rem;
-    border-radius: .25rem;
-}
-.tituloProducto{
-    font-weight: lighter;
-    font-size: 2.1rem;
-    padding: 1.3rem 0 .4rem 0;
-}
-.parrafoProducto{
-    width: 22.5rem;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    padding: .5rem 0 .7rem 0;
-}
-.precio{
-    font-size: 1.6rem;
-}
-.botonProducto{
-    width: 100%;
-    font-size: 1.8rem;
-    font-family: 'Hubballi', sans-serif;
-    border: none;
-    cursor: pointer;
-    background-color: #CBB5F5;
-    color: blueviolet;
-    padding: .7rem;
-    margin-top: .7rem;
-    border-radius: .25rem;
-}
-.botonProducto:hover{
-    color: lavender;
-}
-/*bolsas de tela*/
-/* layout -> Grid */
-.layoutBolsas{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    height: 100vh;
-}
-.mainBolsas{
-    display: grid;
-    grid-template-columns: 1fr 0.8fr 1fr;
-    width: 100%;
-    justify-items: center;
-    row-gap: 4rem;
-    margin: 4rem 0 4rem 0;
-}
-/*stickers*/
-/* layout -> Grid */
-.layoutStickers{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    height: 100vh;
-}
-.mainStickers{
-    display: grid;
-    grid-template-columns: 1fr 0.8fr 1fr;
-    width: 100%;
-    justify-items: center;
-    row-gap: 4rem;
-    margin: 4rem 0 4rem 0; 
-}
-/*tazas*/
-/* layout -> Grid */
-.layoutTazas{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    height: 100vh;
-}
-.mainTazas{
-    display: grid;
-    grid-template-columns: 1fr 0.8fr 1fr;
-    width: 100%;
-    justify-items: center;
-    row-gap: 4rem;
-    margin: 4rem 0 4rem 0;
-}
-
-/*portafolio*/
-.layoutPortafolio{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    height: 100vh;
-}
-.mainPortafolio img{
-    width: 90%;
-}
-.mainPortafolio{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4,1fr);
-    row-gap: 3rem;
-    justify-items: center;
-    margin: 4rem 0;
-    padding: 0 1rem 0 1rem; 
-}
-/*contacto*/
-/* layout -> Grid */
-.layoutContacto{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    height: 100vh;
-}
-/*propiedades del padre*/
-.mainContacto{
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255,255,255,0.9)), url('../img/mandalaA.png') center center / cover no-repeat;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-/*propiedades del hijo*/
-.contacto{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;    
-    font-size: 2rem;
-    width: 70%;
-}
-.contacto input, .contacto textarea, .contactoBoton{
-    padding: 1rem;
-    font-size: 1.1rem;
-    border: #CBB5F5 solid .1rem;
-}
-.contacto label span{
-    background-color: rgb(255, 255, 255, 0.8);
-    border-radius: 1rem;
-    color: rgba(114, 36, 145, 0.993);
-    padding: .3rem 0rem;
-}
-.contacto textarea:focus,.contacto input:focus{
-    border-color: blueviolet;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    outline: 0 none;
-}
-form .contactoBoton{
-    width: 35%;
-    font-size: 1.7rem;
-    text-transform: uppercase;
-    font-family: 'Hubballi', sans-serif;
-    border: none;
-    background-color: #CBB5F5;
-    color: lavender;
-    cursor: pointer;
-}
-form .contactoBoton:hover{
-    color: blueviolet;
-    background-color: lavender;
-}
-
-/*footer*/
-/*propiedades del padre*/
-footer{
-    display: grid;
-    grid-template-areas: "contact contact contact"
-                         "containerLeft containerCenter containerRight"
-                         "derechos derechos derechos"; 
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-}
-/*propiedades de las areas*/
-.contact{
+footer {
+  display: grid;
+  grid-template-areas: "contact contact contact" "containerLeft containerCenter containerRight" "derechos derechos derechos";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto; }
+  footer .contact {
     grid-area: contact;
-    background-color: #CBB5F5;
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 15rem;
-    padding: 0rem 7.5rem;
-}
-.containerLeft{
-    grid-area: containerLeft;
-    background-color: lavender;
-    height: 19rem;
-    row-gap: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 1rem 0 5rem;
-}
-.containerCenter{
-    grid-area: containerCenter;
-    background-color: lavender;
-    height: 19rem;
-    row-gap: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-right: 1rem;
-}
-.containerRight{
-    grid-area: containerRight;
-    background-color: lavender;
-    height: 19rem;
-    row-gap: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 5rem 0 4rem;
-}
-.derechos{
-    grid-area: derechos;
-    background-color: lavender;
-}
-.contactP{
-    grid-area: contact;
-    font-size: 1.4rem;
-    width: 25rem;
-    line-height: 1.813rem;
-}
-.email{
-    grid-area: contact;
-}
-.botonC{
-    margin-top: 1rem;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-.botonC a{
-    color: #9DF5DD;
-}
-.email a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.4rem;
-}
-.email span{
-    color: #9DF5DD;
-    font-size: 1.875rem;
-    padding: 0.313rem;
-}
-.tituloFooter{
-    text-transform: uppercase;
-    font-weight: lighter;  
-    font-size: 1.688rem;  
-    color: blueviolet;
-}
-.containerLeft h2{
-    grid-area: containerLeft;
-}
-.containerLeft p{
-    grid-area: containerLeft;
-    font-size: 1.4rem;
-    line-height: 1.75rem;
-}
-.logoFooter, .redesSociales{
-    grid-area: containerCenter;
-}
-.logoFooter{
-    animation-name: girar;
-    animation-iteration-count: infinite ;
-    animation-duration: 98s;
-}
-@keyframes girar{
-    from{
-        transform: rotate(0);
-    }
-    to{
-        transform: rotate(360deg);
-    }
-}
-.redesSociales a{
-    text-decoration: none;
-    color: blueviolet;
-    font-size: 1.75rem;
-    background: #CBB5F5;
-    border-radius: 50%;
-    width: 3.125rem;
-    height: 3.125rem;
-    margin: 0rem .5rem;
-    line-height: 3.125rem;
-    text-align: center;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0,.05);
-    transition: all .4s ease-in-out;
-}
-.redesSociales a:hover{
-transform: scale(1.2);
-}
-.containerRight h3, .containerRight form, .containerRight button{
-    grid-area: containerRight;
-}
-.containerRight input{
-    font-size: 0.94rem;
-    height: 2.75rem;
-    width: 100%;
-    padding: 1rem;
-    border: #CBB5F5 solid .1rem;
-}
-.containerRight input:focus{
-    border-color: blueviolet;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    outline: 0 none;
-}
-.containerRight button{
-    text-transform: uppercase;
     background-color: #CBB5F5;
-    color: blueviolet;
+    color: white;
+    height: 15rem;
+    padding: 0rem 7.5rem; }
+    footer .contact .contactP {
+      grid-area: contact;
+      width: 26.5rem; }
+      footer .contact .contactP p {
+        font-size: 1.5rem;
+        line-height: 2.2rem; }
+        footer .contact .contactP p a {
+          color: #9DF5DD;
+          font-weight: bold; }
+    footer .contact .email {
+      grid-area: contact; }
+      footer .contact .email span {
+        color: #9DF5DD;
+        font-size: 1.875rem;
+        padding: 0.313rem; }
+      footer .contact .email a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem; }
+  footer .containerLeft {
+    background-color: lavender;
+    height: 19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: containerLeft;
+    row-gap: 1.5rem;
+    padding: 0 1rem 0 5.8rem; }
+    footer .containerLeft .tituloFooter {
+      text-transform: uppercase;
+      font-size: 2.1rem;
+      color: blueviolet;
+      font-weight: 400;
+      margin-bottom: .8rem;
+      grid-area: containerLeft; }
+    footer .containerLeft p {
+      grid-area: containerLeft;
+      font-size: 1.4rem;
+      line-height: 2rem; }
+  footer .containerCenter {
+    background-color: lavender;
+    height: 19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: containerCenter;
+    row-gap: 2rem;
+    align-items: center;
+    padding-right: 1rem; }
+    footer .containerCenter .logoFooter {
+      grid-area: containerCenter;
+      animation-name: girar;
+      animation-iteration-count: infinite;
+      animation-duration: 98s; }
+
+@keyframes girar {
+  from {
+    transform: rotate(0); }
+  to {
+    transform: rotate(360deg); } }
+    footer .containerCenter .redesSociales {
+      grid-area: containerCenter; }
+      footer .containerCenter .redesSociales a {
+        text-decoration: none;
+        color: blueviolet;
+        font-size: 1.75rem;
+        background: #CBB5F5;
+        border-radius: 50%;
+        width: 3.125rem;
+        height: 3.125rem;
+        margin: 0rem .5rem;
+        line-height: 3.125rem;
+        text-align: center;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+        transition: all .4s ease-in-out; }
+        footer .containerCenter .redesSociales a:hover {
+          transform: scale(1.2); }
+  footer .containerRight {
+    background-color: lavender;
+    height: 19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: containerRight;
+    row-gap: 1.5rem;
+    padding: 0 5rem 0 4rem; }
+    footer .containerRight .tituloFooter {
+      text-transform: uppercase;
+      font-size: 2.1rem;
+      color: blueviolet;
+      font-weight: 400;
+      margin-bottom: .8rem;
+      grid-area: containerRight; }
+    footer .containerRight form {
+      grid-area: containerRight;
+      font-family: "Hubballi", sans-serif; }
+      footer .containerRight form input {
+        width: 100%;
+        padding: 1rem;
+        border: #CBB5F5 solid .1rem;
+        font-size: 1.18rem;
+        font-family: "Hubballi", sans-serif;
+        line-height: normal; }
+        footer .containerRight form input:focus {
+          border-color: blueviolet;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          outline: 0 none; }
+    footer .containerRight button {
+      grid-area: containerRight;
+      text-transform: uppercase;
+      background-color: #CBB5F5;
+      color: blueviolet;
+      border: none;
+      padding: 1.3rem;
+      font-size: 1.4rem;
+      width: 100%;
+      font-family: "Hubballi", sans-serif;
+      line-height: 0; }
+      footer .containerRight button:hover {
+        color: lavender; }
+  footer .derechos {
+    grid-area: derechos;
+    background-color: lavender; }
+    footer .derechos .linie {
+      grid-area: derechos;
+      border-top: 0.063rem solid blueviolet;
+      height: 0.125rem;
+      max-width: 70%;
+      padding: 0;
+      margin: 0 auto 0 auto; }
+    footer .derechos p {
+      grid-area: derechos;
+      padding: 1.3rem;
+      font-size: 1.25rem;
+      text-align: center; }
+      footer .derechos p a {
+        text-decoration: none;
+        list-style: none;
+        color: black; }
+
+.layoutBio {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: 100vh; }
+
+.layoutIndex {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: 100vh; }
+
+.bioIndex {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  margin: 4rem 0 5rem 8rem;
+  column-gap: 6rem; }
+  .bioIndex h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #cbbde2; }
+  .bioIndex .bioTextIndex {
+    font-size: 1.5rem;
+    margin: 2.3rem 0 1.6rem 0;
+    line-height: 2rem; }
+  .bioIndex button {
+    font-family: "Hubballi", sans-serif;
+    background-color: #CBB5F5;
+    cursor: pointer;
+    font-size: 1.7rem;
+    text-transform: uppercase;
     border: none;
-    padding: 0.688rem 2.5rem;
-    font-size: .915rem;
-    width: 100%;
-}
-.containerRight button:hover{
-    color: lavender;
-}
-.linie{
-    border-top: 0.063rem solid blueviolet;
-    height: 0.125rem;
-    max-width: 70%;
-    padding: 0;
-    margin: 0 auto 0 auto;
-}
-.derechos p{
-    padding: 1.3rem;
-    font-size: 1.25rem;
-    text-align: center;
-}
-.derechos a{
+    border-radius: 0.20rem;
+    padding: 1.5rem; }
+    .bioIndex button:hover {
+      background-color: lavender; }
+    .bioIndex button a {
+      text-decoration: none;
+      color: lavender; }
+      .bioIndex button a:hover {
+        color: blueviolet; }
+
+.productosIndex {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 4rem; }
+  .productosIndex img {
+    width: 28.5rem; }
+  .productosIndex .productA, .productosIndex .productB, .productosIndex .productC {
+    position: relative; }
+  .productosIndex .productA button {
+    position: absolute;
+    top: 80%;
+    left: 23%;
+    font-family: "Hubballi", sans-serif;
+    background-color: #CBB5F5;
+    cursor: pointer;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0.20rem;
+    padding: 1.5rem; }
+  .productosIndex .productB button {
+    position: absolute;
+    top: 80%;
+    left: 33%;
+    font-family: "Hubballi", sans-serif;
+    background-color: #CBB5F5;
+    cursor: pointer;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0.20rem;
+    padding: 1.5rem; }
+  .productosIndex .productC button {
+    position: absolute;
+    top: 80%;
+    left: 35%;
+    font-family: "Hubballi", sans-serif;
+    background-color: #CBB5F5;
+    cursor: pointer;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0.20rem;
+    padding: 1.5rem; }
+  .productosIndex button:hover {
+    background-color: #c1a7f1; }
+  .productosIndex button a {
     text-decoration: none;
-    list-style: none;
-    color: black;
-}
+    color: lavender; }
 
-/*media queries*/
-@media only screen and (max-width: 468px){
-    /*barra de navegación*/
-    .menu{
-        display: none;
-    }
-    /*menu mobile*/
-    .navLabel{
-        display: block;
-        cursor: pointer;
-    }
-    .menu{
-        position: fixed;
-        top: 100px;
-        background-color: lavender;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        clip-path: circle(0 at center);
-        transition: clip-path 1s ease-in-out;
-    }
-    .menu li{
-        margin: 1.3rem;
-    }
-    .navInput:checked + .menu{
-        clip-path: circle(100% at center);
-    }
-    .submenu{
-        top: 0;
-        left: 0;
-        right: 70;
-        background-color: transparent;
-        box-shadow: none;
-    }
-    .submenu li{
-        padding: 0;
-    }
-    .menu > li:hover > .submenu{
-        position: relative;
-    }
-    .fa-bars{
-        color: #c1a7f1;
-    }
-    h1{
-        font-size: 2.3rem;
-        padding: 1.6rem 0;
-    }
-    /*bio*/
-    .mainBio{
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 100%;
-        justify-items: center;
-        margin: 4rem 0 4rem 0;
-    }
-    .textBio h2{
-        font-size: 3rem;
-    }
-    .textBio p{
-        font-size: 2.3rem;
-        line-height: 2.5rem;
-    }
-    /*tienda*/
-    .mainTienda{
-        display: grid;
-        grid-template-columns: 1fr;       
-    }
-    /*bolsas de tela*/
-    .mainBolsas{
-        display: grid;
-        grid-template-columns: 1fr;       
-    }
-    .imagenProducto{
-        width: 25rem;
-    }
-    .parrafoProducto, .precio{
-        font-size: 1.7rem;
-    }
-    .tituloProducto{
-        font-size: 2.4rem;
-    }
-    .precio{
-        padding: .6rem 0 .6rem 0;
-    }
-    /*stickers*/
-    .mainStickers{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    /*tazas*/
-    .mainTazas{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    /*portafolio*/
-    .mainPortafolio{
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 100%;
-    }
-
-    /*contacto*/
-    .contacto{
-        font-size: 1.9rem;
-    }
-    .contacto input, .contacto textarea{
-        font-size: 1.1rem;
-    }
-    .contacto .contactoBoton{
-        font-size: 1.7rem;
-        width: 100%;
-    }
-    /*footer*/
-    footer{
-        display: grid;
-        grid-template-areas: "contact"
-                             "containerLeft"
-                             "containerCenter"
-                             "containerRight"
-                             "derechos"; 
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        width: 100%;
-    }
-    .contact{
-        padding: 2rem;
-        justify-content: center;
-    }
-    .botonC{
-        font-size: 1.6rem;
-    }
-    .contactP{
-        text-align: center;
-        line-height: 2.1rem;
-        font-size: 1.75rem;
-    }
-    .email{
-        display: none; 
-    }
-    .containerLeft{
-        padding: 0 2rem;
-        text-align: center;
-        height: 15rem;
-    }
-    .containerLeft p{
-        line-height: 2.5rem;
-        font-size: 1.75rem;
-    }
-    .containerCenter{
-        padding: 0 2rem;
-        height: 17rem;
-    }
-    .containerRight{
-        padding: 0 2rem;
-        text-align: center;
-        height: 14rem;
-    }
-    .containerRight button, .containerRight input{
-        width: 100%;
-        font-size: 1.2rem;
-    }
-    .tituloFooter{
-        font-size: 2.2rem;
-    }
-    .derechos p{
-        font-size: 1.5rem;
-        padding: 2rem;
-    }
-}
-
-@media only screen and (min-width: 469px) and (max-width: 767px){
-    /*barra de navegación*/
-    .menu{
-        display: none;
-    }
-    /*menu mobile*/
-    .navLabel{
-        display: block;
-        cursor: pointer;
-    }
-    .menu{
-        position: fixed;
-        top: 100px;
-        background-color: lavender;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        clip-path: circle(0 at center);
-        transition: clip-path 1s ease-in-out;
-    }
-    .menu li{
-        margin: 1.3rem;
-    }
-    .navInput:checked + .menu{
-        clip-path: circle(100% at center);
-    }
-    .submenu{
-        top: 0;
-        left: 0;
-        right: 70;
-        background-color: transparent;
-        box-shadow: none;
-    }
-    .submenu li{
-        padding: 0;
-    }
-    .menu > li:hover > .submenu{
-        position: relative;
-    }
-    .fa-bars{
-        color: #c1a7f1;
-        width: 3rem;
-        height: 3rem;
-    }
-    h1{
-        font-size: 2.4rem;
-        padding: 1.8rem 0;
-    }
-    /*bio*/
-    .mainBio{
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 100%;
-        justify-items: center;
-        margin: 4rem 0 4rem 0;
-    }
-    .textBio h2{
-        font-size: 3rem;
-    }
-    .textBio p{
-        font-size: 2.1rem;
-        line-height: 2.4rem;
-    }
-    /*tienda*/
-    .mainTienda{
-        display: grid;
-        grid-template-columns: 1fr;       
-    }    
-    /*bolsas de tela*/
-    .mainBolsas{
-        display: grid;
-        grid-template-columns: 1fr;       
-    }
-    .imagenProducto{
-        width: 26rem;
-    }
-    /*stickers*/
-    .mainStickers{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    /*tazas*/
-    .mainTazas{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    /*portafolio*/
-    .mainPortafolio{
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 100%;
-    }
-
-    /*contacto*/
-    .contacto{
-        font-size: 1.8rem;
-    }
-    .contacto input, .contacto textarea{
-        font-size: 1rem;
-    }
-    .contacto .contactoBoton{
-        font-size: 1.6rem;
-        width: 100%;
-    }
-    /*footer*/
-    footer{
-        display: grid;
-        grid-template-areas: "contact"
-                             "containerLeft"
-                             "containerCenter"
-                             "containerRight"
-                             "derechos"; 
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        width: 100%;
-    }
-    .contact{
-        padding: 2rem;
-        justify-content: center;
-    }
-    .botonC{
-        font-size: 1.6rem;
-    }
-    .contactP{
-        text-align: center;
-        line-height: 2.1rem;
-        font-size: 1.75rem;
-    }
-    .email{
-        display: none; 
-    }
-    .containerLeft{
-        padding: 0 2rem;
-        text-align: center;
-        height: 15rem;
-    }
-    .containerLeft p{
-        line-height: 2.5rem;
-        font-size: 1.75rem;
-    }
-    .containerCenter{
-        padding: 0 2rem;
-        height: 17rem;
-    }
-    .containerRight{
-        padding: 0 2rem;
-        text-align: center;
-        height: 14rem;
-    }
-    .containerRight button, .containerRight input{
-        width: 100%;
-        font-size: 1.2rem;
-    }
-    .tituloFooter{
-        font-size: 2.2rem;
-    }
-    .derechos p{
-        font-size: 1.5rem;
-        padding: 2rem;
-    }
-}
-@media only screen and (min-width: 768px) and (max-width: 1023px){
-    /*barra de navegación*/
-    .menu{
-        display: none;
-    }
-    /*menu mobile*/
-    .navLabel{
-        display: block;
-        cursor: pointer;
-    }
-    .menu{
-        position: fixed;
-        top: 100px;
-        background-color: lavender;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        clip-path: circle(0 at center);
-        transition: clip-path 1s ease-in-out;
-    }
-    .menu li{
-        margin: 1rem;
-    }
-    .navInput:checked + .menu{
-        clip-path: circle(100% at center);
-    }
-    .submenu{
-        top: 0;
-        left: 0;
-        right: 70;
-        background-color: transparent;
-        box-shadow: none;
-    }
-    .menu > li:hover > .submenu{
-        position: relative;
-    }
-    .fa-bars{
-        color: #c1a7f1;
-        width: 3rem;
-        height: 3rem;
-    }
-    h1{
-        font-size: 2.4rem;
-        padding: 1.8rem 0;
-    }
-    /*bio*/
-    .mainBio{
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 100%;
-        justify-items: center;
-        margin: 4rem 0 4rem 0;
-    }
-    /*tienda*/
-    .mainTienda{
-        display: grid;
-        grid-template-columns: 1fr;       
-    }
-    /*bolsas de tela*/
-    .mainBolsas{
-        display: grid;
-        grid-template-columns: 1fr;       
-    }
-    .imagenProducto{
-        width: 35rem;
-    }
-    /*stickers*/
-    .mainStickers{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    /*tazas*/
-    .mainTazas{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    /*portafolio*/
-    .mainPortafolio{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        width: 100%;
-    }
-    /*contacto*/
-    .contacto{
-        font-size: 1.8rem;
-    }
-    .contacto .contactoBoton{
-        width: 100%;
-    }
-    /*footer*/
-    footer{
-        display: grid;
-        grid-template-areas: "contact"
-                             "containerLeft"
-                             "containerCenter"
-                             "containerRight"
-                             "derechos"; 
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        width: 100%;
-    }
-    .contact{
-        padding: 2rem;
-        justify-content: center;
-    }
-    .botonC{
-        font-size: 1.5rem;
-    }
-    .contactP{
-        text-align: center;
-        line-height: 2.1rem;
-        font-size: 1.65rem;
-    }
-    .email{
-        display: none; 
-    }
-    .containerLeft{
-        padding: 0 2rem;
-        text-align: center;
-        height: 12rem;
-    }
-    .containerLeft p{
-        line-height: 2.5rem;
-        font-size: 1.65rem;
-        padding: 0 4rem 0 4rem;
-    }
-    .containerCenter{
-        padding: 0 2rem;
-        height: 17rem;
-    }
-    .containerRight{
-        padding: 0 2rem;
-        text-align: center;
-        height: 14rem;
-    }
-    .tituloFooter{
-        font-size: 2rem;
-    }
-}
-
-@media only screen and (min-width: 1023px) and (max-width: 1199px){
-    /*barra de navegación*/
-    nav ul li{
-        font-size: 1.3rem; 
-        margin: 1rem;
-    }
-
-    /*bio*/
-    .mainBio{
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 100%;
-        justify-items: center;
-        margin: 4rem 0 4rem 0;
-    }
-
-    /*tienda*/
-    .mainTienda{
-        display: grid;
-        grid-template-columns: 1fr 1fr;       
-    }
-    .imagenProducto{
-        width: 30rem;
-    }
-
-    /*bolsas de tela*/
-    .mainBolsas{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    /*stickers*/
-    .mainStickers{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    /*tazas*/
-    .mainTazas{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    /*portafolio*/
-    .mainPortafolio{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-    }
-    /*contacto*/
-    .contacto .contactoBoton{
-        font-size: 1.5rem;
-        width: 40%;
-    }
-    /*footer*/
-    .contact{
-        padding: 0 5rem;
-    }
-    .containerLeft{
-        padding: 0 4rem;
-    }
-    .containerRight{
-        padding: 0 4rem;
-    }
-}
-@media only screen and (min-width: 1199px) and (max-width: 1400px){
-    /*tienda*/
-    .mainTienda{
-        display: grid;
-        grid-template-columns: 1fr 1fr;       
-    }
-    .imagenProducto{
-        width: 35rem;
-    }
-    /*bolsas de tela*/
-    .mainBolsas{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    /*stickers*/
-    .mainStickers{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    /*tazas*/
-    .mainTazas{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-}
+.portafolioIndex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 2.5rem 4rem 2.5rem; }
+  .portafolioIndex img {
+    width: 17.5rem;
+    display: inline-block;
+    padding: 0.5rem; }

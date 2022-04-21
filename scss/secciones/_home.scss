@@ -1,0 +1,100 @@
+@import "../utilities/mixin";
+@import "../utilities/variables";
+@import "../base/typo";
+
+// layout -> Grid
+.layoutIndex{
+    @include grid;
+}
+//bio index
+.bioIndex{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    margin: 4rem 0 5rem 8rem;
+    column-gap: 6rem;
+    h2{
+        font-size: 2.5rem;
+        text-transform: $t-transform;
+        color: nth($colores,2);
+    }
+    .bioTextIndex{
+        font-size: $s-text-large;
+        margin: 2.3rem 0 1.6rem 0;
+        line-height: 2rem;
+    }
+    button{
+        @include btn-index;
+        &:hover{
+            background-color: lavender;
+        }
+        a{
+            text-decoration: none;
+            color: lavender;
+            &:hover{
+                color: blueviolet;
+            }
+        }
+    }
+}
+//productos index
+.productosIndex{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+    img{
+        width: 28.5rem;
+    }
+    .productA, .productB, .productC{
+        position: relative;
+    }
+    .productA{
+        button{
+            position: absolute;
+            top: 80%;
+            left: 23%;
+            @include btn-index;
+        }
+    }
+    .productB{
+        button{
+            position: absolute;
+            top: 80%;
+            left: 33%;
+            @include btn-index;
+        }
+    }
+    .productC{
+        button{
+            position: absolute;
+            top: 80%;
+            left: 35%;
+            @include btn-index;
+        }
+    }
+    button{
+        &:hover{
+            background-color: nth($colores,3);
+        }
+        a{
+            text-decoration: none;
+            color: lavender;
+        }
+    }
+}
+//portafolio index
+.portafolioIndex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 2.5rem 4rem 2.5rem;
+    img{
+        width: 17.5rem;
+        display: inline-block;
+        padding: 0.5rem;
+    }
+}
+
+

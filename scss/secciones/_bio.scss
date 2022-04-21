@@ -1,0 +1,9 @@
+@import "../utilities/mixin";
+@import "../utilities/variables";
+
+// layout -> Grid
+.layoutBio{
+    @include grid;
+}
+
+

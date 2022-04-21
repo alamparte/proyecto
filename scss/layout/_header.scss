@@ -1,0 +1,88 @@
+@import "../utilities/variables";
+@import "../base/typo";
+@import "../utilities/mixin";
+
+header{
+    .containerMenu{
+        @include flex;
+        position: fixed;
+        top: 0;
+        background-color: $color-nav;
+        width: $width-completo;
+        height: 6.5rem;
+        box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+        padding: 0rem 3.5rem;
+        z-index: 1;
+        .navLabel, .navInput{
+            display: none;
+        }
+        .navInput{
+            &:checked + .menu{
+                background-color: lavender;
+            }
+        }
+        .menu{
+            margin-bottom: 0;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-inline-start: 0;
+            line-height: normal;
+            padding-left: 0;
+            list-style-type: none;
+            li{
+                display: inline-block;
+                list-style: none;
+                z-index: 1;
+                font-size: 1.3rem;
+                margin: 2rem;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    &:hover{
+                        color:nth($colores,1) ;
+                    }
+                }
+                &:hover .submenu{
+                    visibility: visible;
+                    opacity: 1;
+                }
+                .submenu{
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: .5s;
+                    background-color: $color-nav;
+                    padding-top: 1.5rem;
+                    padding-left: 0;
+                    box-shadow: 0 1.5px 0 0 rgba(0,0,0,.1);
+                    padding-inline-start: 0;
+                    .outline{
+                        padding-top: 1.5rem;
+                        border-top: solid #CBB5F5 2px;
+                    }
+                    li{
+                        margin: 1.1rem;
+                    }
+                    #liSub{
+                        line-height: normal;
+                    }
+                }
+            }
+        }  
+    }
+    h1{
+        background-color: lavender;
+        margin: 6rem 0 0 0;
+        padding: 1.3rem .625rem .7rem .625rem;
+        text-align: center;
+        text-transform: $t-transform;
+        color: nth($colores,1);
+        font-weight: 400;
+        font-size: $s-title;
+        line-height: 2.35rem;
+    }
+}
+
+

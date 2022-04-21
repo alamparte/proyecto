@@ -1,1 +1,19 @@
+@import "base/reset";
+@import "base/typo";
+@import "base/body";
+
+@import "layout/header";
+@import "layout/footer";
+
+@import "secciones/bio";
+@import "secciones/bolsas";
+@import "secciones/contacto";
+@import "secciones/home";
+@import "secciones/portafolio";
+@import "secciones/stickers";
+@import "secciones/tazas";
+@import "secciones/tienda";
+
+@import "utilities/mixin";
+@import "utilities/variables";
 
