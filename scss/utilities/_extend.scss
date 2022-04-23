@@ -1,0 +1,13 @@
+@import "utilities/maps";
+
+%btn-index{
+    font-family: $font-principal;
+    background-color: map-get($map: $colores, $key: primario );
+    cursor: pointer;
+    font-size: 1.7rem;
+    text-transform: $t-transform;
+    border: none;
+    border-radius: 0.20rem;
+    padding: 1.5rem;
+    line-height: .35rem;
+}

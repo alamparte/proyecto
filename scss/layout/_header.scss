@@ -1,6 +1,8 @@
 @import "../utilities/variables";
-@import "../base/typo";
 @import "../utilities/mixin";
+@import "../utilities/maps";
+@import "../utilities/extend";
+
 
 header{
     .containerMenu{
@@ -18,7 +20,7 @@ header{
         }
         .navInput{
             &:checked + .menu{
-                background-color: lavender;
+                background-color: map-get($map: $colores, $key: lavanda );;
             }
         }
         .menu{
@@ -39,7 +41,7 @@ header{
                     text-decoration: none;
                     color: black;
                     &:hover{
-                        color:nth($colores,1) ;
+                        color: map-get($map: $colores, $key: primario );
                     }
                 }
                 &:hover .submenu{
@@ -73,12 +75,12 @@ header{
         }  
     }
     h1{
-        background-color: lavender;
+        background-color: map-get($map: $colores, $key: lavanda );;
         margin: 6rem 0 0 0;
         padding: 1.3rem .625rem .7rem .625rem;
         text-align: center;
         text-transform: $t-transform;
-        color: nth($colores,1);
+        color: map-get($map: $colores, $key: primario );
         font-weight: 400;
         font-size: $s-title;
         line-height: 2.35rem;

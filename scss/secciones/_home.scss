@@ -1,6 +1,7 @@
 @import "../utilities/mixin";
 @import "../utilities/variables";
-@import "../base/typo";
+@import "../utilities/maps";
+@import "../utilities/extend";
 
 // layout -> Grid
 .layoutIndex{
@@ -17,7 +18,7 @@
     h2{
         font-size: 2.5rem;
         text-transform: $t-transform;
-        color: nth($colores,2);
+        color: map-get($map: $colores, $key: secund );
     }
     .bioTextIndex{
         font-size: $s-text-large;
@@ -25,15 +26,15 @@
         line-height: 2rem;
     }
     button{
-        @include btn-index;
+        @extend %btn-index;
         &:hover{
-            background-color: lavender;
+            background-color: map-get($map: $colores, $key: lavanda );
         }
         a{
             text-decoration: none;
-            color: lavender;
+            color: map-get($map: $colores, $key: lavanda );
             &:hover{
-                color: blueviolet;
+                color: map-get($map: $colores, $key: viole );
             }
         }
     }
@@ -55,7 +56,10 @@
             position: absolute;
             top: 80%;
             left: 23%;
-            @include btn-index;
+            @extend %btn-index;
+            &:hover{
+                background-color: map-get($map: $colores, $key: sombra );
+            }
         }
     }
     .productB{
@@ -63,7 +67,10 @@
             position: absolute;
             top: 80%;
             left: 33%;
-            @include btn-index;
+            @extend %btn-index;
+            &:hover{
+                background-color: map-get($map: $colores, $key: sombra );
+            }
         }
     }
     .productC{
@@ -71,16 +78,16 @@
             position: absolute;
             top: 80%;
             left: 35%;
-            @include btn-index;
+            @extend %btn-index;
+            &:hover{
+                background-color: map-get($map: $colores, $key: sombra );
+            }
         }
     }
     button{
-        &:hover{
-            background-color: nth($colores,3);
-        }
         a{
             text-decoration: none;
-            color: lavender;
+            color: map-get($map: $colores, $key: lavanda );
         }
     }
 }

@@ -19,6 +19,17 @@ body {
     font-weight: 0;
     line-height: 0; }
 
+.bioIndex button, .productosIndex .productA button, .productosIndex .productB button, .productosIndex .productC button {
+  font-family: "Hubballi", sans-serif;
+  background-color: #c7aef5;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.20rem;
+  padding: 1.5rem;
+  line-height: .35rem; }
+
 header .containerMenu {
   display: flex;
   justify-content: space-between;
@@ -34,7 +45,7 @@ header .containerMenu {
   header .containerMenu .navLabel, header .containerMenu .navInput {
     display: none; }
   header .containerMenu .navInput:checked + .menu {
-    background-color: lavender; }
+    background-color: #e4e4f7; }
   header .containerMenu .menu {
     margin-bottom: 0;
     margin-block-start: 0;
@@ -53,7 +64,7 @@ header .containerMenu {
         text-decoration: none;
         color: black; }
         header .containerMenu .menu li a:hover {
-          color: #CBB5F5; }
+          color: #c7aef5; }
       header .containerMenu .menu li:hover .submenu {
         visibility: visible;
         opacity: 1; }
@@ -78,12 +89,12 @@ header .containerMenu {
           line-height: normal; }
 
 header h1 {
-  background-color: lavender;
+  background-color: #e4e4f7;
   margin: 6rem 0 0 0;
   padding: 1.3rem .625rem .7rem .625rem;
   text-align: center;
   text-transform: uppercase;
-  color: #CBB5F5;
+  color: #c7aef5;
   font-weight: 400;
   font-size: 2.4rem;
   line-height: 2.35rem; }
@@ -98,7 +109,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #CBB5F5;
+    background-color: #c7aef5;
     color: white;
     height: 15rem;
     padding: 0rem 7.5rem; }
@@ -166,7 +177,7 @@ footer {
       grid-area: containerCenter; }
       footer .containerCenter .redesSociales a {
         text-decoration: none;
-        color: blueviolet;
+        color: #872bdd;
         font-size: 1.75rem;
         background: #CBB5F5;
         border-radius: 50%;
@@ -206,13 +217,13 @@ footer {
         font-family: "Hubballi", sans-serif;
         line-height: normal; }
         footer .containerRight form input:focus {
-          border-color: blueviolet;
+          border-color: #872bdd;
           box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
           outline: 0 none; }
     footer .containerRight button {
       grid-area: containerRight;
       text-transform: uppercase;
-      background-color: #CBB5F5;
+      background-color: #c7aef5;
       color: blueviolet;
       border: none;
       padding: 1.3rem;
@@ -221,10 +232,10 @@ footer {
       font-family: "Hubballi", sans-serif;
       line-height: 0; }
       footer .containerRight button:hover {
-        color: lavender; }
+        color: #e4e4f7; }
   footer .derechos {
     grid-area: derechos;
-    background-color: lavender; }
+    background-color: #e4e4f7; }
     footer .derechos .linie {
       grid-area: derechos;
       border-top: 0.063rem solid blueviolet;
@@ -248,6 +259,17 @@ footer {
   grid-template-rows: auto;
   height: 100vh; }
 
+.bioIndex button, .productosIndex .productA button, .productosIndex .productB button, .productosIndex .productC button {
+  font-family: "Hubballi", sans-serif;
+  background-color: #c7aef5;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.20rem;
+  padding: 1.5rem;
+  line-height: .35rem; }
+
 .layoutIndex {
   display: grid;
   grid-template-columns: 1fr;
@@ -269,22 +291,13 @@ footer {
     font-size: 1.5rem;
     margin: 2.3rem 0 1.6rem 0;
     line-height: 2rem; }
-  .bioIndex button {
-    font-family: "Hubballi", sans-serif;
-    background-color: #CBB5F5;
-    cursor: pointer;
-    font-size: 1.7rem;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 0.20rem;
-    padding: 1.5rem; }
-    .bioIndex button:hover {
-      background-color: lavender; }
-    .bioIndex button a {
-      text-decoration: none;
-      color: lavender; }
-      .bioIndex button a:hover {
-        color: blueviolet; }
+  .bioIndex button:hover {
+    background-color: #e4e4f7; }
+  .bioIndex button a {
+    text-decoration: none;
+    color: #e4e4f7; }
+    .bioIndex button a:hover {
+      color: #872bdd; }
 
 .productosIndex {
   display: flex;
@@ -298,44 +311,24 @@ footer {
   .productosIndex .productA button {
     position: absolute;
     top: 80%;
-    left: 23%;
-    font-family: "Hubballi", sans-serif;
-    background-color: #CBB5F5;
-    cursor: pointer;
-    font-size: 1.7rem;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 0.20rem;
-    padding: 1.5rem; }
+    left: 23%; }
+    .productosIndex .productA button:hover {
+      background-color: #bda1f0; }
   .productosIndex .productB button {
     position: absolute;
     top: 80%;
-    left: 33%;
-    font-family: "Hubballi", sans-serif;
-    background-color: #CBB5F5;
-    cursor: pointer;
-    font-size: 1.7rem;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 0.20rem;
-    padding: 1.5rem; }
+    left: 33%; }
+    .productosIndex .productB button:hover {
+      background-color: #bda1f0; }
   .productosIndex .productC button {
     position: absolute;
     top: 80%;
-    left: 35%;
-    font-family: "Hubballi", sans-serif;
-    background-color: #CBB5F5;
-    cursor: pointer;
-    font-size: 1.7rem;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 0.20rem;
-    padding: 1.5rem; }
-  .productosIndex button:hover {
-    background-color: #c1a7f1; }
+    left: 35%; }
+    .productosIndex .productC button:hover {
+      background-color: #bda1f0; }
   .productosIndex button a {
     text-decoration: none;
-    color: lavender; }
+    color: #e4e4f7; }
 
 .portafolioIndex {
   display: flex;
@@ -346,3 +339,14 @@ footer {
     width: 17.5rem;
     display: inline-block;
     padding: 0.5rem; }
+
+.bioIndex button, .productosIndex .productA button, .productosIndex .productB button, .productosIndex .productC button {
+  font-family: "Hubballi", sans-serif;
+  background-color: #c7aef5;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.20rem;
+  padding: 1.5rem;
+  line-height: .35rem; }
