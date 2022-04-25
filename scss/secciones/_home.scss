@@ -15,35 +15,32 @@
     align-items: center;
     margin: 4rem 0 5rem 8rem;
     column-gap: 6rem;
-    h2{
-        font-size: 2.5rem;
-        text-transform: $t-transform;
-        color: map-get($map: $colores, $key: secund );
-    }
-    .bioTextIndex{
-        font-size: $s-text-large;
-        margin: 2.3rem 0 1.6rem 0;
-        line-height: 2rem;
-    }
-    button{
-        @extend %btn-index;
-        &:hover{
-            background-color: map-get($map: $colores, $key: lavanda );
+    div{
+        h2{
+            font-size: 2.5rem;
+            text-transform: $t-transform;
+            color: map-get($map: $colores, $key: secund );
         }
-        a{
-            text-decoration: none;
-            color: map-get($map: $colores, $key: lavanda );
-            &:hover{
-                color: map-get($map: $colores, $key: viole );
+        .bioTextIndex{
+            font-size: $s-text-large;
+            margin: 2.3rem 0 1.6rem 0;
+            line-height: 2rem;
+        }
+        button{
+            @extend %btn-index;
+            a{
+                text-decoration: none;
+                color: map-get($map: $colores, $key: lavanda );
+                &:hover{
+                    color: map-get($map: $colores, $key: viole );
+                }
             }
         }
     }
 }
 //productos index
 .productosIndex{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    @include flex (space-evenly, center, wrap);
     margin-bottom: 4rem;
     img{
         width: 28.5rem;
@@ -93,9 +90,7 @@
 }
 //portafolio index
 .portafolioIndex{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    @include flex (center, center, wrap);
     margin: 0 2.5rem 4rem 2.5rem;
     img{
         width: 17.5rem;

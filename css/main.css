@@ -19,7 +19,7 @@ body {
     font-weight: 0;
     line-height: 0; }
 
-.bioIndex button, .productosIndex .productA button, .productosIndex .productB button, .productosIndex .productC button {
+.bioIndex div button, .productosIndex .productA button, .productosIndex .productB button, .productosIndex .productC button {
   font-family: "Hubballi", sans-serif;
   background-color: #c7aef5;
   cursor: pointer;
@@ -27,13 +27,13 @@ body {
   text-transform: uppercase;
   border: none;
   border-radius: 0.20rem;
-  padding: 1.5rem;
-  line-height: .35rem; }
+  padding: 1.5rem; }
 
 header .containerMenu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
   position: fixed;
   top: 0;
   background-color: #fdfdfd;
@@ -109,6 +109,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
     background-color: #c7aef5;
     color: white;
     height: 15rem;
@@ -117,9 +118,11 @@ footer {
       grid-area: contact;
       width: 26.5rem; }
       footer .contact .contactP p {
+        grid-area: contact;
         font-size: 1.5rem;
         line-height: 2.2rem; }
         footer .contact .contactP p a {
+          grid-area: contact;
           color: #9DF5DD;
           font-weight: bold; }
     footer .contact .email {
@@ -129,6 +132,7 @@ footer {
         font-size: 1.875rem;
         padding: 0.313rem; }
       footer .contact .email a {
+        grid-area: contact;
         text-decoration: none;
         color: white;
         font-size: 1.5rem; }
@@ -176,6 +180,7 @@ footer {
     footer .containerCenter .redesSociales {
       grid-area: containerCenter; }
       footer .containerCenter .redesSociales a {
+        grid-area: containerCenter;
         text-decoration: none;
         color: #872bdd;
         font-size: 1.75rem;
@@ -249,6 +254,7 @@ footer {
       font-size: 1.25rem;
       text-align: center; }
       footer .derechos p a {
+        grid-area: derechos;
         text-decoration: none;
         list-style: none;
         color: black; }
@@ -259,7 +265,7 @@ footer {
   grid-template-rows: auto;
   height: 100vh; }
 
-.bioIndex button, .productosIndex .productA button, .productosIndex .productB button, .productosIndex .productC button {
+.bioIndex div button, .productosIndex .productA button, .productosIndex .productB button, .productosIndex .productC button {
   font-family: "Hubballi", sans-serif;
   background-color: #c7aef5;
   cursor: pointer;
@@ -267,8 +273,7 @@ footer {
   text-transform: uppercase;
   border: none;
   border-radius: 0.20rem;
-  padding: 1.5rem;
-  line-height: .35rem; }
+  padding: 1.5rem; }
 
 .layoutIndex {
   display: grid;
@@ -283,25 +288,24 @@ footer {
   align-items: center;
   margin: 4rem 0 5rem 8rem;
   column-gap: 6rem; }
-  .bioIndex h2 {
+  .bioIndex div h2 {
     font-size: 2.5rem;
     text-transform: uppercase;
     color: #cbbde2; }
-  .bioIndex .bioTextIndex {
+  .bioIndex div .bioTextIndex {
     font-size: 1.5rem;
     margin: 2.3rem 0 1.6rem 0;
     line-height: 2rem; }
-  .bioIndex button:hover {
-    background-color: #e4e4f7; }
-  .bioIndex button a {
+  .bioIndex div button a {
     text-decoration: none;
     color: #e4e4f7; }
-    .bioIndex button a:hover {
+    .bioIndex div button a:hover {
       color: #872bdd; }
 
 .productosIndex {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   flex-wrap: wrap;
   margin-bottom: 4rem; }
   .productosIndex img {
@@ -332,15 +336,16 @@ footer {
 
 .portafolioIndex {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   margin: 0 2.5rem 4rem 2.5rem; }
   .portafolioIndex img {
     width: 17.5rem;
     display: inline-block;
     padding: 0.5rem; }
 
-.bioIndex button, .productosIndex .productA button, .productosIndex .productB button, .productosIndex .productC button {
+.bioIndex div button, .productosIndex .productA button, .productosIndex .productB button, .productosIndex .productC button {
   font-family: "Hubballi", sans-serif;
   background-color: #c7aef5;
   cursor: pointer;
@@ -348,5 +353,4 @@ footer {
   text-transform: uppercase;
   border: none;
   border-radius: 0.20rem;
-  padding: 1.5rem;
-  line-height: .35rem; }
+  padding: 1.5rem; }

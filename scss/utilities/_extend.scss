@@ -1,4 +1,5 @@
 @import "utilities/maps";
+@import "utilities/variables";
 
 %btn-index{
     font-family: $font-principal;
@@ -9,5 +10,4 @@
     border: none;
     border-radius: 0.20rem;
     padding: 1.5rem;
-    line-height: .35rem;
 }
