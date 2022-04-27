@@ -80,11 +80,27 @@ header{
         padding: 1.3rem .625rem .7rem .625rem;
         text-align: center;
         text-transform: $t-transform;
-        color: map-get($map: $colores, $key: primario );
-        font-weight: 400;
+        color: map-get($map: $colores, $key: h1 );
+        font-weight: 450;
         font-size: $s-title;
         line-height: 2.35rem;
     }
+    // input[type="checkbox"]{
+    //     @extend %hamburguesa;
+    //     opacity: 0;
+    // }
+    // .fa-bars{
+    //     @extend %hamburguesa;
+    //     font-size: 48px;
+    //     pointer-events: none;
+    //     color: aqua;
+    // }
+    // .fa-times{
+    //     @extend %hamburguesa;
+    //     font-size: 48px;
+    //     pointer-events: none;
+    //     color: aqua;
+    // }
 }
 
 

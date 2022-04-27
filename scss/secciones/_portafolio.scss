@@ -1,0 +1,21 @@
+@import "../utilities/maps";
+@import "../utilities/variables";
+@import "../utilities/extend";
+@import "../utilities/mixin";
+
+// layout -> Grid
+.layoutPortafolio{
+    @include grid;
+    .mainPortafolio{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4,1fr);
+        row-gap: 3rem;
+        justify-items: center;
+        margin: 4rem 0;
+        padding: 0 1rem 0 1rem;
+        img{
+            width: 90%;
+        }
+    }
+}

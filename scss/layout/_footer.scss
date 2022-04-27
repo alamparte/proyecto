@@ -131,9 +131,11 @@ footer{
         button{
             grid-area: containerRight;
             text-transform: $t-transform;
+            cursor: pointer;
             background-color: map-get($map: $colores, $key: primario );
             color: blueviolet;
             border: none;
+            border-radius: 0.20rem;
             padding: 1.3rem;
             font-size: 1.4rem;
             width: $width-completo;

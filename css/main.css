@@ -19,7 +19,7 @@ body {
     font-weight: 0;
     line-height: 0; }
 
-.bioIndex div button, .productosIndex .productA button, .productosIndex .productB button, .productosIndex .productC button {
+.layoutIndex .bioIndex div button, .layoutIndex .productosIndex .productA button, .layoutIndex .productosIndex .productB button, .layoutIndex .productosIndex .productC button {
   font-family: "Hubballi", sans-serif;
   background-color: #c7aef5;
   cursor: pointer;
@@ -28,6 +28,48 @@ body {
   border: none;
   border-radius: 0.20rem;
   padding: 1.5rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto, .layoutStickers .mainStickers .contenedorProducto, .layoutTazas .mainTazas .contenedorProducto, .layoutTienda .mainTienda .contenedorProducto {
+  transition: all .4s ease-in-out; }
+  .layoutBolsas .mainBolsas .contenedorProducto:hover, .layoutStickers .mainStickers .contenedorProducto:hover, .layoutTazas .mainTazas .contenedorProducto:hover, .layoutTienda .mainTienda .contenedorProducto:hover {
+    transform: scale(1.01); }
+
+.layoutBolsas .mainBolsas .contenedorProducto .imagenProducto, .layoutStickers .mainStickers .contenedorProducto .imagenProducto, .layoutTazas .mainTazas .contenedorProducto .imagenProducto, .layoutTienda .mainTienda .contenedorProducto .imagenProducto {
+  width: 26.5rem;
+  border-radius: .25rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .tituloProducto, .layoutStickers .mainStickers .contenedorProducto .tituloProducto, .layoutTazas .mainTazas .contenedorProducto .tituloProducto, .layoutTienda .mainTienda .contenedorProducto .tituloProducto {
+  font-weight: 600;
+  font-size: 1.9rem;
+  margin: 1.3rem 0 .8rem 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .parrafoProducto, .layoutStickers .mainStickers .contenedorProducto .parrafoProducto, .layoutTazas .mainTazas .contenedorProducto .parrafoProducto, .layoutTienda .mainTienda .contenedorProducto .parrafoProducto {
+  width: 22.5rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  padding: .5rem 0 0 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .precio, .layoutStickers .mainStickers .contenedorProducto .precio, .layoutTazas .mainTazas .contenedorProducto .precio, .layoutTienda .mainTienda .contenedorProducto .precio {
+  font-size: 1.6rem;
+  margin: 1.3rem 0 1.6rem 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .botonProducto, .layoutStickers .mainStickers .contenedorProducto .botonProducto, .layoutTazas .mainTazas .contenedorProducto .botonProducto, .layoutTienda .mainTienda .contenedorProducto .botonProducto {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: 'Hubballi', sans-serif;
+  border: none;
+  cursor: pointer;
+  background-color: #CBB5F5;
+  color: blueviolet;
+  padding: .7rem;
+  border-radius: .25rem; }
+  .layoutBolsas .mainBolsas .contenedorProducto .botonProducto:hover, .layoutStickers .mainStickers .contenedorProducto .botonProducto:hover, .layoutTazas .mainTazas .contenedorProducto .botonProducto:hover, .layoutTienda .mainTienda .contenedorProducto .botonProducto:hover {
+    color: lavender; }
+
+.layoutContacto .mainContacto .contacto input, .layoutContacto .mainContacto .contacto textarea {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: #CBB5F5 solid .1rem; }
 
 header .containerMenu {
   display: flex;
@@ -94,8 +136,8 @@ header h1 {
   padding: 1.3rem .625rem .7rem .625rem;
   text-align: center;
   text-transform: uppercase;
-  color: #c7aef5;
-  font-weight: 400;
+  color: #b99def;
+  font-weight: 450;
   font-size: 2.4rem;
   line-height: 2.35rem; }
 
@@ -228,9 +270,11 @@ footer {
     footer .containerRight button {
       grid-area: containerRight;
       text-transform: uppercase;
+      cursor: pointer;
       background-color: #c7aef5;
       color: blueviolet;
       border: none;
+      border-radius: 0.20rem;
       padding: 1.3rem;
       font-size: 1.4rem;
       width: 100%;
@@ -264,8 +308,24 @@ footer {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   height: 100vh; }
+  .layoutBio .mainBio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    align-items: center; }
+    .layoutBio .mainBio .textBio {
+      padding: 0 4.5rem 0 4.5rem; }
+      .layoutBio .mainBio .textBio h2 {
+        font-size: 2.5rem;
+        padding: 0 0 2.5rem 0;
+        color: #c7aef5; }
+      .layoutBio .mainBio .textBio p {
+        font-size: 1.5rem;
+        line-height: 2rem; }
+        .layoutBio .mainBio .textBio p a {
+          color: #c7aef5; }
 
-.bioIndex div button, .productosIndex .productA button, .productosIndex .productB button, .productosIndex .productC button {
+.layoutIndex .bioIndex div button, .layoutIndex .productosIndex .productA button, .layoutIndex .productosIndex .productB button, .layoutIndex .productosIndex .productC button {
   font-family: "Hubballi", sans-serif;
   background-color: #c7aef5;
   cursor: pointer;
@@ -274,78 +334,285 @@ footer {
   border: none;
   border-radius: 0.20rem;
   padding: 1.5rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto, .layoutStickers .mainStickers .contenedorProducto, .layoutTazas .mainTazas .contenedorProducto, .layoutTienda .mainTienda .contenedorProducto {
+  transition: all .4s ease-in-out; }
+  .layoutBolsas .mainBolsas .contenedorProducto:hover, .layoutStickers .mainStickers .contenedorProducto:hover, .layoutTazas .mainTazas .contenedorProducto:hover, .layoutTienda .mainTienda .contenedorProducto:hover {
+    transform: scale(1.01); }
+
+.layoutBolsas .mainBolsas .contenedorProducto .imagenProducto, .layoutStickers .mainStickers .contenedorProducto .imagenProducto, .layoutTazas .mainTazas .contenedorProducto .imagenProducto, .layoutTienda .mainTienda .contenedorProducto .imagenProducto {
+  width: 26.5rem;
+  border-radius: .25rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .tituloProducto, .layoutStickers .mainStickers .contenedorProducto .tituloProducto, .layoutTazas .mainTazas .contenedorProducto .tituloProducto, .layoutTienda .mainTienda .contenedorProducto .tituloProducto {
+  font-weight: 600;
+  font-size: 1.9rem;
+  margin: 1.3rem 0 .8rem 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .parrafoProducto, .layoutStickers .mainStickers .contenedorProducto .parrafoProducto, .layoutTazas .mainTazas .contenedorProducto .parrafoProducto, .layoutTienda .mainTienda .contenedorProducto .parrafoProducto {
+  width: 22.5rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  padding: .5rem 0 0 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .precio, .layoutStickers .mainStickers .contenedorProducto .precio, .layoutTazas .mainTazas .contenedorProducto .precio, .layoutTienda .mainTienda .contenedorProducto .precio {
+  font-size: 1.6rem;
+  margin: 1.3rem 0 1.6rem 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .botonProducto, .layoutStickers .mainStickers .contenedorProducto .botonProducto, .layoutTazas .mainTazas .contenedorProducto .botonProducto, .layoutTienda .mainTienda .contenedorProducto .botonProducto {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: 'Hubballi', sans-serif;
+  border: none;
+  cursor: pointer;
+  background-color: #CBB5F5;
+  color: blueviolet;
+  padding: .7rem;
+  border-radius: .25rem; }
+  .layoutBolsas .mainBolsas .contenedorProducto .botonProducto:hover, .layoutStickers .mainStickers .contenedorProducto .botonProducto:hover, .layoutTazas .mainTazas .contenedorProducto .botonProducto:hover, .layoutTienda .mainTienda .contenedorProducto .botonProducto:hover {
+    color: lavender; }
+
+.layoutContacto .mainContacto .contacto input, .layoutContacto .mainContacto .contacto textarea {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: #CBB5F5 solid .1rem; }
+
+.layoutBolsas {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: 100vh; }
+  .layoutBolsas .mainBolsas {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 1fr;
+    width: 100%;
+    justify-items: center;
+    row-gap: 4rem;
+    margin: 4rem 0 4rem 0; }
+
+.layoutIndex .bioIndex div button, .layoutIndex .productosIndex .productA button, .layoutIndex .productosIndex .productB button, .layoutIndex .productosIndex .productC button {
+  font-family: "Hubballi", sans-serif;
+  background-color: #c7aef5;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.20rem;
+  padding: 1.5rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto, .layoutStickers .mainStickers .contenedorProducto, .layoutTazas .mainTazas .contenedorProducto, .layoutTienda .mainTienda .contenedorProducto {
+  transition: all .4s ease-in-out; }
+  .layoutBolsas .mainBolsas .contenedorProducto:hover, .layoutStickers .mainStickers .contenedorProducto:hover, .layoutTazas .mainTazas .contenedorProducto:hover, .layoutTienda .mainTienda .contenedorProducto:hover {
+    transform: scale(1.01); }
+
+.layoutBolsas .mainBolsas .contenedorProducto .imagenProducto, .layoutStickers .mainStickers .contenedorProducto .imagenProducto, .layoutTazas .mainTazas .contenedorProducto .imagenProducto, .layoutTienda .mainTienda .contenedorProducto .imagenProducto {
+  width: 26.5rem;
+  border-radius: .25rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .tituloProducto, .layoutStickers .mainStickers .contenedorProducto .tituloProducto, .layoutTazas .mainTazas .contenedorProducto .tituloProducto, .layoutTienda .mainTienda .contenedorProducto .tituloProducto {
+  font-weight: 600;
+  font-size: 1.9rem;
+  margin: 1.3rem 0 .8rem 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .parrafoProducto, .layoutStickers .mainStickers .contenedorProducto .parrafoProducto, .layoutTazas .mainTazas .contenedorProducto .parrafoProducto, .layoutTienda .mainTienda .contenedorProducto .parrafoProducto {
+  width: 22.5rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  padding: .5rem 0 0 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .precio, .layoutStickers .mainStickers .contenedorProducto .precio, .layoutTazas .mainTazas .contenedorProducto .precio, .layoutTienda .mainTienda .contenedorProducto .precio {
+  font-size: 1.6rem;
+  margin: 1.3rem 0 1.6rem 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .botonProducto, .layoutStickers .mainStickers .contenedorProducto .botonProducto, .layoutTazas .mainTazas .contenedorProducto .botonProducto, .layoutTienda .mainTienda .contenedorProducto .botonProducto {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: 'Hubballi', sans-serif;
+  border: none;
+  cursor: pointer;
+  background-color: #CBB5F5;
+  color: blueviolet;
+  padding: .7rem;
+  border-radius: .25rem; }
+  .layoutBolsas .mainBolsas .contenedorProducto .botonProducto:hover, .layoutStickers .mainStickers .contenedorProducto .botonProducto:hover, .layoutTazas .mainTazas .contenedorProducto .botonProducto:hover, .layoutTienda .mainTienda .contenedorProducto .botonProducto:hover {
+    color: lavender; }
+
+.layoutContacto .mainContacto .contacto input, .layoutContacto .mainContacto .contacto textarea {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: #CBB5F5 solid .1rem; }
+
+.layoutContacto {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: 100vh; }
+  .layoutContacto .mainContacto {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/mandalaA.png") center center/cover no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    .layoutContacto .mainContacto .contacto {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-size: 2rem;
+      width: 70%;
+      line-height: normal; }
+      .layoutContacto .mainContacto .contacto label span {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 1rem;
+        color: rgba(114, 36, 145, 0.993);
+        padding: .3rem 0rem; }
+      .layoutContacto .mainContacto .contacto input:focus {
+        border-color: blueviolet;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        outline: 0 none; }
+      .layoutContacto .mainContacto .contacto textarea:focus {
+        border-color: blueviolet;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        outline: 0 none; }
+      .layoutContacto .mainContacto .contacto .contactoBoton {
+        width: 35%;
+        font-size: 1.7rem;
+        padding: 1rem;
+        text-transform: uppercase;
+        font-family: 'Hubballi', sans-serif;
+        border: none;
+        border-radius: 0.20rem;
+        background-color: #CBB5F5;
+        color: lavender;
+        cursor: pointer; }
+        .layoutContacto .mainContacto .contacto .contactoBoton:hover {
+          color: blueviolet;
+          background-color: lavender; }
+
+.layoutIndex .bioIndex div button, .layoutIndex .productosIndex .productA button, .layoutIndex .productosIndex .productB button, .layoutIndex .productosIndex .productC button {
+  font-family: "Hubballi", sans-serif;
+  background-color: #c7aef5;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.20rem;
+  padding: 1.5rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto, .layoutStickers .mainStickers .contenedorProducto, .layoutTazas .mainTazas .contenedorProducto, .layoutTienda .mainTienda .contenedorProducto {
+  transition: all .4s ease-in-out; }
+  .layoutBolsas .mainBolsas .contenedorProducto:hover, .layoutStickers .mainStickers .contenedorProducto:hover, .layoutTazas .mainTazas .contenedorProducto:hover, .layoutTienda .mainTienda .contenedorProducto:hover {
+    transform: scale(1.01); }
+
+.layoutBolsas .mainBolsas .contenedorProducto .imagenProducto, .layoutStickers .mainStickers .contenedorProducto .imagenProducto, .layoutTazas .mainTazas .contenedorProducto .imagenProducto, .layoutTienda .mainTienda .contenedorProducto .imagenProducto {
+  width: 26.5rem;
+  border-radius: .25rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .tituloProducto, .layoutStickers .mainStickers .contenedorProducto .tituloProducto, .layoutTazas .mainTazas .contenedorProducto .tituloProducto, .layoutTienda .mainTienda .contenedorProducto .tituloProducto {
+  font-weight: 600;
+  font-size: 1.9rem;
+  margin: 1.3rem 0 .8rem 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .parrafoProducto, .layoutStickers .mainStickers .contenedorProducto .parrafoProducto, .layoutTazas .mainTazas .contenedorProducto .parrafoProducto, .layoutTienda .mainTienda .contenedorProducto .parrafoProducto {
+  width: 22.5rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  padding: .5rem 0 0 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .precio, .layoutStickers .mainStickers .contenedorProducto .precio, .layoutTazas .mainTazas .contenedorProducto .precio, .layoutTienda .mainTienda .contenedorProducto .precio {
+  font-size: 1.6rem;
+  margin: 1.3rem 0 1.6rem 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .botonProducto, .layoutStickers .mainStickers .contenedorProducto .botonProducto, .layoutTazas .mainTazas .contenedorProducto .botonProducto, .layoutTienda .mainTienda .contenedorProducto .botonProducto {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: 'Hubballi', sans-serif;
+  border: none;
+  cursor: pointer;
+  background-color: #CBB5F5;
+  color: blueviolet;
+  padding: .7rem;
+  border-radius: .25rem; }
+  .layoutBolsas .mainBolsas .contenedorProducto .botonProducto:hover, .layoutStickers .mainStickers .contenedorProducto .botonProducto:hover, .layoutTazas .mainTazas .contenedorProducto .botonProducto:hover, .layoutTienda .mainTienda .contenedorProducto .botonProducto:hover {
+    color: lavender; }
+
+.layoutContacto .mainContacto .contacto input, .layoutContacto .mainContacto .contacto textarea {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: #CBB5F5 solid .1rem; }
 
 .layoutIndex {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   height: 100vh; }
+  .layoutIndex .bioIndex {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    margin: 4rem 0 5rem 8rem;
+    column-gap: 6rem; }
+    .layoutIndex .bioIndex div h2 {
+      font-size: 2.9rem;
+      color: #c7aef5; }
+    .layoutIndex .bioIndex div .bioTextIndex {
+      font-size: 1.5rem;
+      margin: 2.3rem 0 1.6rem 0;
+      line-height: 2rem; }
+    .layoutIndex .bioIndex div button a {
+      text-decoration: none;
+      color: #e4e4f7; }
+      .layoutIndex .bioIndex div button a:hover {
+        color: #872bdd; }
+  .layoutIndex .productosIndex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 4rem; }
+    .layoutIndex .productosIndex img {
+      width: 28.5rem; }
+    .layoutIndex .productosIndex .productA {
+      position: relative; }
+      .layoutIndex .productosIndex .productA button {
+        position: absolute;
+        top: 80%;
+        left: 23%; }
+        .layoutIndex .productosIndex .productA button:hover {
+          background-color: #bda1f0; }
+    .layoutIndex .productosIndex .productB {
+      position: relative; }
+      .layoutIndex .productosIndex .productB button {
+        position: absolute;
+        top: 80%;
+        left: 33%; }
+        .layoutIndex .productosIndex .productB button:hover {
+          background-color: #bda1f0; }
+    .layoutIndex .productosIndex .productC {
+      position: relative; }
+      .layoutIndex .productosIndex .productC button {
+        position: absolute;
+        top: 80%;
+        left: 35%; }
+        .layoutIndex .productosIndex .productC button:hover {
+          background-color: #bda1f0; }
+    .layoutIndex .productosIndex button a {
+      text-decoration: none;
+      color: #e4e4f7; }
+  .layoutIndex .portafolioIndex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 2.5rem 4rem 2.5rem; }
+    .layoutIndex .portafolioIndex img {
+      width: 17.5rem;
+      display: inline-block;
+      padding: 0.5rem; }
 
-.bioIndex {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  grid-template-rows: 1fr;
-  align-items: center;
-  margin: 4rem 0 5rem 8rem;
-  column-gap: 6rem; }
-  .bioIndex div h2 {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    color: #cbbde2; }
-  .bioIndex div .bioTextIndex {
-    font-size: 1.5rem;
-    margin: 2.3rem 0 1.6rem 0;
-    line-height: 2rem; }
-  .bioIndex div button a {
-    text-decoration: none;
-    color: #e4e4f7; }
-    .bioIndex div button a:hover {
-      color: #872bdd; }
-
-.productosIndex {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 4rem; }
-  .productosIndex img {
-    width: 28.5rem; }
-  .productosIndex .productA, .productosIndex .productB, .productosIndex .productC {
-    position: relative; }
-  .productosIndex .productA button {
-    position: absolute;
-    top: 80%;
-    left: 23%; }
-    .productosIndex .productA button:hover {
-      background-color: #bda1f0; }
-  .productosIndex .productB button {
-    position: absolute;
-    top: 80%;
-    left: 33%; }
-    .productosIndex .productB button:hover {
-      background-color: #bda1f0; }
-  .productosIndex .productC button {
-    position: absolute;
-    top: 80%;
-    left: 35%; }
-    .productosIndex .productC button:hover {
-      background-color: #bda1f0; }
-  .productosIndex button a {
-    text-decoration: none;
-    color: #e4e4f7; }
-
-.portafolioIndex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 0 2.5rem 4rem 2.5rem; }
-  .portafolioIndex img {
-    width: 17.5rem;
-    display: inline-block;
-    padding: 0.5rem; }
-
-.bioIndex div button, .productosIndex .productA button, .productosIndex .productB button, .productosIndex .productC button {
+.layoutIndex .bioIndex div button, .layoutIndex .productosIndex .productA button, .layoutIndex .productosIndex .productB button, .layoutIndex .productosIndex .productC button {
   font-family: "Hubballi", sans-serif;
   background-color: #c7aef5;
   cursor: pointer;
@@ -354,3 +621,308 @@ footer {
   border: none;
   border-radius: 0.20rem;
   padding: 1.5rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto, .layoutStickers .mainStickers .contenedorProducto, .layoutTazas .mainTazas .contenedorProducto, .layoutTienda .mainTienda .contenedorProducto {
+  transition: all .4s ease-in-out; }
+  .layoutBolsas .mainBolsas .contenedorProducto:hover, .layoutStickers .mainStickers .contenedorProducto:hover, .layoutTazas .mainTazas .contenedorProducto:hover, .layoutTienda .mainTienda .contenedorProducto:hover {
+    transform: scale(1.01); }
+
+.layoutBolsas .mainBolsas .contenedorProducto .imagenProducto, .layoutStickers .mainStickers .contenedorProducto .imagenProducto, .layoutTazas .mainTazas .contenedorProducto .imagenProducto, .layoutTienda .mainTienda .contenedorProducto .imagenProducto {
+  width: 26.5rem;
+  border-radius: .25rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .tituloProducto, .layoutStickers .mainStickers .contenedorProducto .tituloProducto, .layoutTazas .mainTazas .contenedorProducto .tituloProducto, .layoutTienda .mainTienda .contenedorProducto .tituloProducto {
+  font-weight: 600;
+  font-size: 1.9rem;
+  margin: 1.3rem 0 .8rem 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .parrafoProducto, .layoutStickers .mainStickers .contenedorProducto .parrafoProducto, .layoutTazas .mainTazas .contenedorProducto .parrafoProducto, .layoutTienda .mainTienda .contenedorProducto .parrafoProducto {
+  width: 22.5rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  padding: .5rem 0 0 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .precio, .layoutStickers .mainStickers .contenedorProducto .precio, .layoutTazas .mainTazas .contenedorProducto .precio, .layoutTienda .mainTienda .contenedorProducto .precio {
+  font-size: 1.6rem;
+  margin: 1.3rem 0 1.6rem 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .botonProducto, .layoutStickers .mainStickers .contenedorProducto .botonProducto, .layoutTazas .mainTazas .contenedorProducto .botonProducto, .layoutTienda .mainTienda .contenedorProducto .botonProducto {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: 'Hubballi', sans-serif;
+  border: none;
+  cursor: pointer;
+  background-color: #CBB5F5;
+  color: blueviolet;
+  padding: .7rem;
+  border-radius: .25rem; }
+  .layoutBolsas .mainBolsas .contenedorProducto .botonProducto:hover, .layoutStickers .mainStickers .contenedorProducto .botonProducto:hover, .layoutTazas .mainTazas .contenedorProducto .botonProducto:hover, .layoutTienda .mainTienda .contenedorProducto .botonProducto:hover {
+    color: lavender; }
+
+.layoutContacto .mainContacto .contacto input, .layoutContacto .mainContacto .contacto textarea {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: #CBB5F5 solid .1rem; }
+
+.layoutPortafolio {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: 100vh; }
+  .layoutPortafolio .mainPortafolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 3rem;
+    justify-items: center;
+    margin: 4rem 0;
+    padding: 0 1rem 0 1rem; }
+    .layoutPortafolio .mainPortafolio img {
+      width: 90%; }
+
+.layoutIndex .bioIndex div button, .layoutIndex .productosIndex .productA button, .layoutIndex .productosIndex .productB button, .layoutIndex .productosIndex .productC button {
+  font-family: "Hubballi", sans-serif;
+  background-color: #c7aef5;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.20rem;
+  padding: 1.5rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto, .layoutStickers .mainStickers .contenedorProducto, .layoutTazas .mainTazas .contenedorProducto, .layoutTienda .mainTienda .contenedorProducto {
+  transition: all .4s ease-in-out; }
+  .layoutBolsas .mainBolsas .contenedorProducto:hover, .layoutStickers .mainStickers .contenedorProducto:hover, .layoutTazas .mainTazas .contenedorProducto:hover, .layoutTienda .mainTienda .contenedorProducto:hover {
+    transform: scale(1.01); }
+
+.layoutBolsas .mainBolsas .contenedorProducto .imagenProducto, .layoutStickers .mainStickers .contenedorProducto .imagenProducto, .layoutTazas .mainTazas .contenedorProducto .imagenProducto, .layoutTienda .mainTienda .contenedorProducto .imagenProducto {
+  width: 26.5rem;
+  border-radius: .25rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .tituloProducto, .layoutStickers .mainStickers .contenedorProducto .tituloProducto, .layoutTazas .mainTazas .contenedorProducto .tituloProducto, .layoutTienda .mainTienda .contenedorProducto .tituloProducto {
+  font-weight: 600;
+  font-size: 1.9rem;
+  margin: 1.3rem 0 .8rem 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .parrafoProducto, .layoutStickers .mainStickers .contenedorProducto .parrafoProducto, .layoutTazas .mainTazas .contenedorProducto .parrafoProducto, .layoutTienda .mainTienda .contenedorProducto .parrafoProducto {
+  width: 22.5rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  padding: .5rem 0 0 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .precio, .layoutStickers .mainStickers .contenedorProducto .precio, .layoutTazas .mainTazas .contenedorProducto .precio, .layoutTienda .mainTienda .contenedorProducto .precio {
+  font-size: 1.6rem;
+  margin: 1.3rem 0 1.6rem 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .botonProducto, .layoutStickers .mainStickers .contenedorProducto .botonProducto, .layoutTazas .mainTazas .contenedorProducto .botonProducto, .layoutTienda .mainTienda .contenedorProducto .botonProducto {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: 'Hubballi', sans-serif;
+  border: none;
+  cursor: pointer;
+  background-color: #CBB5F5;
+  color: blueviolet;
+  padding: .7rem;
+  border-radius: .25rem; }
+  .layoutBolsas .mainBolsas .contenedorProducto .botonProducto:hover, .layoutStickers .mainStickers .contenedorProducto .botonProducto:hover, .layoutTazas .mainTazas .contenedorProducto .botonProducto:hover, .layoutTienda .mainTienda .contenedorProducto .botonProducto:hover {
+    color: lavender; }
+
+.layoutContacto .mainContacto .contacto input, .layoutContacto .mainContacto .contacto textarea {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: #CBB5F5 solid .1rem; }
+
+.layoutStickers {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: 100vh; }
+  .layoutStickers .mainStickers {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 1fr;
+    width: 100%;
+    justify-items: center;
+    row-gap: 4rem;
+    margin: 4rem 0 4rem 0; }
+
+.layoutIndex .bioIndex div button, .layoutIndex .productosIndex .productA button, .layoutIndex .productosIndex .productB button, .layoutIndex .productosIndex .productC button {
+  font-family: "Hubballi", sans-serif;
+  background-color: #c7aef5;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.20rem;
+  padding: 1.5rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto, .layoutStickers .mainStickers .contenedorProducto, .layoutTazas .mainTazas .contenedorProducto, .layoutTienda .mainTienda .contenedorProducto {
+  transition: all .4s ease-in-out; }
+  .layoutBolsas .mainBolsas .contenedorProducto:hover, .layoutStickers .mainStickers .contenedorProducto:hover, .layoutTazas .mainTazas .contenedorProducto:hover, .layoutTienda .mainTienda .contenedorProducto:hover {
+    transform: scale(1.01); }
+
+.layoutBolsas .mainBolsas .contenedorProducto .imagenProducto, .layoutStickers .mainStickers .contenedorProducto .imagenProducto, .layoutTazas .mainTazas .contenedorProducto .imagenProducto, .layoutTienda .mainTienda .contenedorProducto .imagenProducto {
+  width: 26.5rem;
+  border-radius: .25rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .tituloProducto, .layoutStickers .mainStickers .contenedorProducto .tituloProducto, .layoutTazas .mainTazas .contenedorProducto .tituloProducto, .layoutTienda .mainTienda .contenedorProducto .tituloProducto {
+  font-weight: 600;
+  font-size: 1.9rem;
+  margin: 1.3rem 0 .8rem 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .parrafoProducto, .layoutStickers .mainStickers .contenedorProducto .parrafoProducto, .layoutTazas .mainTazas .contenedorProducto .parrafoProducto, .layoutTienda .mainTienda .contenedorProducto .parrafoProducto {
+  width: 22.5rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  padding: .5rem 0 0 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .precio, .layoutStickers .mainStickers .contenedorProducto .precio, .layoutTazas .mainTazas .contenedorProducto .precio, .layoutTienda .mainTienda .contenedorProducto .precio {
+  font-size: 1.6rem;
+  margin: 1.3rem 0 1.6rem 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .botonProducto, .layoutStickers .mainStickers .contenedorProducto .botonProducto, .layoutTazas .mainTazas .contenedorProducto .botonProducto, .layoutTienda .mainTienda .contenedorProducto .botonProducto {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: 'Hubballi', sans-serif;
+  border: none;
+  cursor: pointer;
+  background-color: #CBB5F5;
+  color: blueviolet;
+  padding: .7rem;
+  border-radius: .25rem; }
+  .layoutBolsas .mainBolsas .contenedorProducto .botonProducto:hover, .layoutStickers .mainStickers .contenedorProducto .botonProducto:hover, .layoutTazas .mainTazas .contenedorProducto .botonProducto:hover, .layoutTienda .mainTienda .contenedorProducto .botonProducto:hover {
+    color: lavender; }
+
+.layoutContacto .mainContacto .contacto input, .layoutContacto .mainContacto .contacto textarea {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: #CBB5F5 solid .1rem; }
+
+.layoutTazas {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: 100vh; }
+  .layoutTazas .mainTazas {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 1fr;
+    width: 100%;
+    justify-items: center;
+    row-gap: 4rem;
+    margin: 4rem 0 4rem 0; }
+
+.layoutIndex .bioIndex div button, .layoutIndex .productosIndex .productA button, .layoutIndex .productosIndex .productB button, .layoutIndex .productosIndex .productC button {
+  font-family: "Hubballi", sans-serif;
+  background-color: #c7aef5;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.20rem;
+  padding: 1.5rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto, .layoutStickers .mainStickers .contenedorProducto, .layoutTazas .mainTazas .contenedorProducto, .layoutTienda .mainTienda .contenedorProducto {
+  transition: all .4s ease-in-out; }
+  .layoutBolsas .mainBolsas .contenedorProducto:hover, .layoutStickers .mainStickers .contenedorProducto:hover, .layoutTazas .mainTazas .contenedorProducto:hover, .layoutTienda .mainTienda .contenedorProducto:hover {
+    transform: scale(1.01); }
+
+.layoutBolsas .mainBolsas .contenedorProducto .imagenProducto, .layoutStickers .mainStickers .contenedorProducto .imagenProducto, .layoutTazas .mainTazas .contenedorProducto .imagenProducto, .layoutTienda .mainTienda .contenedorProducto .imagenProducto {
+  width: 26.5rem;
+  border-radius: .25rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .tituloProducto, .layoutStickers .mainStickers .contenedorProducto .tituloProducto, .layoutTazas .mainTazas .contenedorProducto .tituloProducto, .layoutTienda .mainTienda .contenedorProducto .tituloProducto {
+  font-weight: 600;
+  font-size: 1.9rem;
+  margin: 1.3rem 0 .8rem 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .parrafoProducto, .layoutStickers .mainStickers .contenedorProducto .parrafoProducto, .layoutTazas .mainTazas .contenedorProducto .parrafoProducto, .layoutTienda .mainTienda .contenedorProducto .parrafoProducto {
+  width: 22.5rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  padding: .5rem 0 0 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .precio, .layoutStickers .mainStickers .contenedorProducto .precio, .layoutTazas .mainTazas .contenedorProducto .precio, .layoutTienda .mainTienda .contenedorProducto .precio {
+  font-size: 1.6rem;
+  margin: 1.3rem 0 1.6rem 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .botonProducto, .layoutStickers .mainStickers .contenedorProducto .botonProducto, .layoutTazas .mainTazas .contenedorProducto .botonProducto, .layoutTienda .mainTienda .contenedorProducto .botonProducto {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: 'Hubballi', sans-serif;
+  border: none;
+  cursor: pointer;
+  background-color: #CBB5F5;
+  color: blueviolet;
+  padding: .7rem;
+  border-radius: .25rem; }
+  .layoutBolsas .mainBolsas .contenedorProducto .botonProducto:hover, .layoutStickers .mainStickers .contenedorProducto .botonProducto:hover, .layoutTazas .mainTazas .contenedorProducto .botonProducto:hover, .layoutTienda .mainTienda .contenedorProducto .botonProducto:hover {
+    color: lavender; }
+
+.layoutContacto .mainContacto .contacto input, .layoutContacto .mainContacto .contacto textarea {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: #CBB5F5 solid .1rem; }
+
+.layoutTienda {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: 100vh; }
+  .layoutTienda .mainTienda {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 1fr;
+    width: 100%;
+    justify-items: center;
+    row-gap: 4rem;
+    margin: 4rem 0 4rem 0; }
+
+.layoutIndex .bioIndex div button, .layoutIndex .productosIndex .productA button, .layoutIndex .productosIndex .productB button, .layoutIndex .productosIndex .productC button {
+  font-family: "Hubballi", sans-serif;
+  background-color: #c7aef5;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.20rem;
+  padding: 1.5rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto, .layoutStickers .mainStickers .contenedorProducto, .layoutTazas .mainTazas .contenedorProducto, .layoutTienda .mainTienda .contenedorProducto {
+  transition: all .4s ease-in-out; }
+  .layoutBolsas .mainBolsas .contenedorProducto:hover, .layoutStickers .mainStickers .contenedorProducto:hover, .layoutTazas .mainTazas .contenedorProducto:hover, .layoutTienda .mainTienda .contenedorProducto:hover {
+    transform: scale(1.01); }
+
+.layoutBolsas .mainBolsas .contenedorProducto .imagenProducto, .layoutStickers .mainStickers .contenedorProducto .imagenProducto, .layoutTazas .mainTazas .contenedorProducto .imagenProducto, .layoutTienda .mainTienda .contenedorProducto .imagenProducto {
+  width: 26.5rem;
+  border-radius: .25rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .tituloProducto, .layoutStickers .mainStickers .contenedorProducto .tituloProducto, .layoutTazas .mainTazas .contenedorProducto .tituloProducto, .layoutTienda .mainTienda .contenedorProducto .tituloProducto {
+  font-weight: 600;
+  font-size: 1.9rem;
+  margin: 1.3rem 0 .8rem 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .parrafoProducto, .layoutStickers .mainStickers .contenedorProducto .parrafoProducto, .layoutTazas .mainTazas .contenedorProducto .parrafoProducto, .layoutTienda .mainTienda .contenedorProducto .parrafoProducto {
+  width: 22.5rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  padding: .5rem 0 0 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .precio, .layoutStickers .mainStickers .contenedorProducto .precio, .layoutTazas .mainTazas .contenedorProducto .precio, .layoutTienda .mainTienda .contenedorProducto .precio {
+  font-size: 1.6rem;
+  margin: 1.3rem 0 1.6rem 0; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .botonProducto, .layoutStickers .mainStickers .contenedorProducto .botonProducto, .layoutTazas .mainTazas .contenedorProducto .botonProducto, .layoutTienda .mainTienda .contenedorProducto .botonProducto {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: 'Hubballi', sans-serif;
+  border: none;
+  cursor: pointer;
+  background-color: #CBB5F5;
+  color: blueviolet;
+  padding: .7rem;
+  border-radius: .25rem; }
+  .layoutBolsas .mainBolsas .contenedorProducto .botonProducto:hover, .layoutStickers .mainStickers .contenedorProducto .botonProducto:hover, .layoutTazas .mainTazas .contenedorProducto .botonProducto:hover, .layoutTienda .mainTienda .contenedorProducto .botonProducto:hover {
+    color: lavender; }
+
+.layoutContacto .mainContacto .contacto input, .layoutContacto .mainContacto .contacto textarea {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: #CBB5F5 solid .1rem; }

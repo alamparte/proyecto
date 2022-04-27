@@ -1,13 +1,14 @@
 @import "variables";
 @import "maps";
 
-
+//grid general
 @mixin grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     height: 100vh;    
 }
+//flex
 @mixin flex($x, $y, $wrap){
     display: flex;
     justify-content: $x;
@@ -15,6 +16,36 @@
     flex-wrap: $wrap;
 }
 
+//grid interior de tienda, bolsas, stickers, tazas
+@mixin grid-productos {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 1fr;
+    width: 100%;
+    justify-items: center;
+    row-gap: 4rem;
+    margin: 4rem 0 4rem 0;  
+}
+
+//btn contacto
+@mixin btn-contacto {
+    width: 35%;
+    font-size: 1.7rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-family: 'Hubballi', sans-serif;
+    border: none;
+    border-radius: 0.20rem;
+    background-color: #CBB5F5;
+    color: lavender;
+    cursor: pointer;
+    &:hover{
+        color: blueviolet;
+        background-color: lavender;
+    }  
+}
+
+
+//footer
 @mixin cajaFooter {
     background-color: lavender;
     height: 19rem;

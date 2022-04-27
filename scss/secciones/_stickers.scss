@@ -1,0 +1,29 @@
+@import "../utilities/maps";
+@import "../utilities/variables";
+@import "../utilities/extend";
+@import "../utilities/mixin";
+// layout -> Grid
+.layoutStickers{
+    @include grid;
+    .mainStickers{
+        @include grid-productos;
+        .contenedorProducto{
+            @extend %contenedor-producto;
+            .imagenProducto{
+                @extend %imagen-producto;
+            }
+            .tituloProducto{
+                @extend %titulo-producto;
+            }
+            .parrafoProducto{
+                @extend %parrafo-producto;
+            }
+            .precio{
+                @extend %precio;
+            }            
+            .botonProducto{
+                @extend %boton-producto;
+            }                        
+        }
+    }
+}
