@@ -14,19 +14,20 @@
 
 //productos de tienda, bolsas, stickers, tazas
 %contenedor-producto{
+    width: 90%;
     transition: all .4s ease-in-out;
             &:hover{
                 transform: scale(1.01);
             }
 }
 %imagen-producto{
-    width: 26.5rem;
+    width: 100%;
     border-radius: .25rem;
 }
 %titulo-producto{
     font-weight: 600;
     font-size: 1.9rem;
-    margin: 1.3rem 0 .8rem 0;
+    margin: 1.5rem 0 .8rem 0;
 }
 %parrafo-producto{
     width: 22.5rem;
@@ -60,18 +61,3 @@
     border: #CBB5F5 solid .1rem;
 }
 
-
-
-
-
-//menu mobile
-%hamburguesa{
-  position: absolute;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  right: 0;
-  top: 0;
-  width: 48px;
-  height: 48px;
-}

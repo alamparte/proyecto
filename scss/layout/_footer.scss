@@ -136,8 +136,8 @@ footer{
             color: blueviolet;
             border: none;
             border-radius: 0.20rem;
-            padding: 1.3rem;
-            font-size: 1.4rem;
+            padding: 1.5rem;
+            font-size: $s-text-large;
             width: $width-completo;
             font-family: $font-principal;
             line-height: 0;
@@ -169,6 +169,88 @@ footer{
                 list-style: none;
                 color: black;
             }
+        }
+    }
+    @media only screen and (max-width: 68.68rem){
+        
+            display: grid;
+            grid-template-areas: "contact"
+                                 "containerLeft"
+                                 "containerCenter"
+                                 "containerRight"
+                                 "derechos"; 
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            width: 100%;
+            .contact{
+                justify-content: center;
+                height: 20rem;
+                .contactP{
+                    padding: 3rem 0 3rem 0;
+                    p{
+                        text-align: center;
+                        font-size: $s-text-small;
+                        line-height: $l-height-small;
+                    }
+                    a{
+                        padding-top: 1rem;
+                        display: block;
+                    }
+                }
+                .email{
+                    display: none;
+                }
+            }
+            .containerLeft{
+                padding: 0 5rem;
+                align-items: center;
+                height: 18rem;
+                .tituloFooter{
+                    font-size: $s-title-footer;
+                }
+                p{
+                    text-align: center;
+                    font-size: $s-text-small;
+                    line-height: $l-height-small;
+                }
+            }
+            .containerCenter{
+                padding: 0 2rem 1rem 2rem;
+                height: 15rem;
+            }
+            .containerRight{
+                padding: 4rem;
+                text-align: center;
+                height: 18rem;
+                .tituloFooter{
+                    font-size: $s-title-footer;
+                }
+                form{
+                    input{font-size: $s-text-medium;
+                    }
+                }
+                button{
+                    font-size: $s-text-medium;
+                    padding: 1.8rem;
+                }
+            }
+            .derechos{
+                p{
+                    font-size: 1.7rem;
+                    padding: 1.8rem;
+                    line-height: $l-height-small;
+                }
+            }
+    }
+    @media only screen and (min-width: 68.69rem) and (max-width: 87.44rem){
+        .containerLeft{
+            padding: 3rem .5rem 3rem 4rem;
+        }
+        .containerRight{
+            padding: 1.5rem 2.5rem 1.5rem 2.1rem;
+        }
+        .containerCenter{
+            padding: 0;
         }
     }
 }
