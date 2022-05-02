@@ -9,7 +9,7 @@
     text-transform: $t-transform;
     border: none;
     border-radius: 0.20rem;
-    padding: 1.5rem;
+    padding: .9rem 1.4rem .9rem 1.4rem;
 }
 
 //productos de tienda, bolsas, stickers, tazas
@@ -26,18 +26,15 @@
 }
 %titulo-producto{
     font-weight: 600;
-    font-size: 1.9rem;
     margin: 1.5rem 0 .8rem 0;
+    padding-left: .2rem;
 }
 %parrafo-producto{
-    width: 22.5rem;
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-    padding: .5rem 0 0 0;
+    line-height: 1.9rem;
 }
 %precio{
-    font-size: 1.6rem;
-    margin: 1.3rem 0 1.6rem 0;
+    margin: 1rem 0 1.5rem 0;
+    padding-left: .2rem;
 }
 %boton-producto{
     width: $width-completo;

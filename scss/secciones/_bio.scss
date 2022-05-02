@@ -9,6 +9,11 @@
         grid-template-columns: repeat(2,1fr);
         width: 100%;
         align-items: center;
+        section{
+            img{
+                width: 100%;
+            }
+        }
         .textBio{
             padding: 0 4.5rem 0 4.5rem;
             h2{
@@ -25,7 +30,36 @@
             }
         }
         
-    }    
+    } 
+    @media only screen and (max-width: 43rem){
+        .mainBio{
+            gap: .5rem;
+            .textBio{
+                padding: 1.7rem;
+                p{
+                    font-size: 1.8rem;
+                    line-height: 2.2rem;
+                }
+            }
+        }
+    }  
+    @media only screen and (max-width: 86rem){
+        .mainBio{
+            grid-template-columns: 1fr;
+            width: 100%;
+            justify-items: center;
+            margin-bottom: 0;
+            padding: 4rem;
+            gap: 2.5rem;
+        }
+    }
+    @media only screen and (min-width: 86.1rem) and (max-width: 93rem){
+        .mainBio{
+            .textBio{
+                padding: 2.3rem 4.3rem;
+            }
+        }
+    }
 }
 
 

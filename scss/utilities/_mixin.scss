@@ -19,7 +19,7 @@
 //grid interior de tienda, bolsas, stickers, tazas
 @mixin grid-productos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(#{"min(100%, 27.5rem)"}, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(#{"min(100%, 28.4rem)"}, 1fr));
     grid-template-rows: auto;
     width: 100%;
     justify-items: center;

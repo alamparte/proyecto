@@ -47,4 +47,20 @@
             }
         }
     }
+    @media only screen and (max-width: 30rem){
+        .mainContacto{
+            .contacto{
+                font-size: 2.3rem;
+            }
+        }
+    }
+    @media only screen and (max-width: 63rem){
+        .mainContacto{
+            .contacto{
+                .contactoBoton{
+                    width: 100%;
+                }
+            }
+        }
+    }
 }

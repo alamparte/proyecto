@@ -7,6 +7,7 @@
     @include grid;
     .mainTazas{
         @include grid-productos;
+        padding: 0 2rem 0 2rem;
         .contenedorProducto{
             @extend %contenedor-producto;
             .imagenProducto{
@@ -14,16 +15,41 @@
             }
             .tituloProducto{
                 @extend %titulo-producto;
+                font-size: $s-text-medium;
             }
             .parrafoProducto{
                 @extend %parrafo-producto;
+                font-size: 1.4rem;
+                padding: 0 3rem 0 .2rem;
             }
             .precio{
                 @extend %precio;
+                font-size: $s-text-large;
             }            
             .botonProducto{
                 @extend %boton-producto;
             }                        
+        }
+    }
+    @media only screen and (max-width: 48rem){
+        .mainTazas{
+            padding: 0 2.8rem 0 2.8rem;
+        }
+    } 
+    @media only screen and (max-width: 59rem){
+        .mainTazas{
+            padding: 0 6rem 0 6rem;
+            .contenedorProducto{
+                .tituloProducto{
+                    font-size: $s-subtitle;
+                 }
+                .parrafoProducto{
+                    font-size: 1.7rem;
+                }
+                .precio{
+                    font-size: 1.7rem;
+                } 
+            }
         }
     }
 }
