@@ -1,0 +1,183 @@
+@import "../utilities/mixin";
+@import "../utilities/variables";
+@import "../utilities/maps";
+@import "../utilities/extend";
+
+// layout -> Grid
+.layoutIndex {
+  @include grid;
+  //bio index
+  .bioIndex {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    margin: 4rem 0 5rem 8rem;
+    column-gap: 6rem;
+    div {
+      h2 {
+        font-size: $s-h2;
+        color: map-get($map: $colores, $key: primario);
+      }
+      .bioTextIndex {
+        font-size: $s-text-large;
+        margin: 2.3rem 0 1.6rem 0;
+        line-height: 2rem;
+      }
+      button {
+        @extend %btn-index;
+        a {
+          text-decoration: none;
+          color: map-get($map: $colores, $key: lavanda);
+          &:hover {
+            color: map-get($map: $colores, $key: viole);
+          }
+        }
+      }
+    }
+  }
+  //productos index
+  .productosIndex {
+    @include flex(space-evenly, center, wrap);
+    gap: .8rem;
+    margin-bottom: 5rem;
+    img {
+      width: 100%;
+      border-radius: 0.20rem;
+    }
+    .productA {
+      position: relative;
+      width: 29rem;
+      button {
+        position: absolute;
+        top: 80%;
+        left: 23%;
+        @extend %btn-index;
+        &:hover {
+          background-color: map-get($map: $colores, $key: sombra);
+        }
+      }
+    }
+    .productB {
+      position: relative;
+      width: 29rem;
+      button {
+        position: absolute;
+        top: 80%;
+        left: 33%;
+        @extend %btn-index;
+        &:hover {
+          background-color: map-get($map: $colores, $key: sombra);
+        }
+      }
+    }
+    .productC {
+      position: relative;
+      width: 29rem;
+      button {
+        position: absolute;
+        top: 80%;
+        left: 35%;
+        @extend %btn-index;
+        &:hover {
+          background-color: map-get($map: $colores, $key: sombra);
+        }
+      }
+    }
+    button {
+      a {
+        text-decoration: none;
+        color: map-get($map: $colores, $key: lavanda);
+      }
+    }
+  }
+  //portafolio index
+  .portafolioIndex {
+    @include flex(center, center, wrap);
+    margin: 0 2.5rem 4rem 2.5rem;
+    img {
+      width: 17.5rem;
+      display: inline-block;
+      padding: 0.5rem;
+    }
+  }
+  @media only screen and (max-width: 48rem){
+    .bioIndex{
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      margin: 4rem 0;
+      gap: 3rem;
+      width: 100%;
+      div{
+        padding: 0 5rem;
+        .bioTextIndex{
+          font-size: 1.9rem;
+          line-height: 2.5rem;
+        }
+      }
+    }
+    .productosIndex{
+      gap: 2.5rem;
+      .productA{
+        width: 35rem;
+        button{
+          left: 28%;
+        }
+      }
+      .productB{
+        width: 35rem;
+        button{
+          left: 37%;
+        }
+      }
+      .productC{
+        width: 35rem;
+        button{
+          left: 40%;
+        }
+      }
+    }
+    .portafolioIndex{
+      flex-direction: column;
+      gap: 1.9rem;
+      img{
+        width: 70%;
+        padding: 0;
+      }
+    }
+  }
+  @media only screen and (min-width: 48.1rem) and (max-width: 64rem){
+    .bioIndex{
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      margin: 4rem 0;
+      gap: 3rem;
+      width: 100%;
+      div{
+        padding: 0 5rem;
+        .bioTextIndex{
+          font-size: 1.9rem;
+          line-height: 2.5rem;
+        }
+      }
+    }
+    .productosIndex{
+      gap: 3.5rem;
+    }
+    .portafolioIndex{
+      margin: 0 0 4rem 0;
+      gap: 1.9rem;
+      img{
+        padding: 0;
+      }
+    }
+  }
+  @media only screen and (min-width: 64.1rem) and (max-width: 82rem){
+    .bioIndex{
+        gap: 3rem;
+        margin: 4rem 2.6rem 5rem 4.5rem;
+    }
+  }
+}

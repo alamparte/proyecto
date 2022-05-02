@@ -1,0 +1,60 @@
+@import "utilities/maps";
+@import "utilities/variables";
+//botones del index
+%btn-index{
+    font-family: $font-principal;
+    background-color: map-get($map: $colores, $key: primario );
+    cursor: pointer;
+    font-size: 1.7rem;
+    text-transform: $t-transform;
+    border: none;
+    border-radius: 0.20rem;
+    padding: .9rem 1.4rem .9rem 1.4rem;
+}
+
+//productos de tienda, bolsas, stickers, tazas
+%contenedor-producto{
+    width: 90%;
+    transition: all .4s ease-in-out;
+            &:hover{
+                transform: scale(1.01);
+            }
+}
+%imagen-producto{
+    width: 100%;
+    border-radius: .25rem;
+}
+%titulo-producto{
+    font-weight: 600;
+    margin: 1.5rem 0 .8rem 0;
+    padding-left: .2rem;
+}
+%parrafo-producto{
+    line-height: 1.9rem;
+}
+%precio{
+    margin: 1rem 0 1.5rem 0;
+    padding-left: .2rem;
+}
+%boton-producto{
+    width: $width-completo;
+    font-size: $s-text-medium;
+    font-family: 'Hubballi', sans-serif;
+    border: none;
+    cursor: pointer;
+    background-color: #CBB5F5;
+    color: blueviolet;
+    padding: .7rem;
+    border-radius: .25rem;
+    &:hover{
+        color: lavender;
+    }
+}
+
+//contacto
+%contacto{
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: #CBB5F5 solid .1rem;
+}
+

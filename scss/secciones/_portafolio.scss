@@ -1,0 +1,26 @@
+@import "../utilities/maps";
+@import "../utilities/variables";
+@import "../utilities/extend";
+@import "../utilities/mixin";
+
+// layout -> Grid
+.layoutPortafolio{
+    @include grid;
+    .mainPortafolio{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(#{"min(80%, 23rem)"}, 1fr));
+        grid-template-rows: repeat(4,1fr);
+        gap: 2rem;
+        justify-items: center;
+        margin: 2rem 0;
+        padding: 2rem;
+        img{
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width: 51.94rem){
+        .mainPortafolio{
+            padding: 2rem 6rem 3rem 6rem;
+        }
+    }
+}

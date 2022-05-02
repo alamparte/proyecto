@@ -1,954 +1,1232 @@
-/*reset*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: 'Hubballi', sans-serif;
-}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-/*index*/
-/* layout -> Grid */
-.layoutIndex{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    height: 100vh;
-}
+body {
+  font-family: "Hubballi", sans-serif;
+  margin-bottom: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  line-height: normal; }
+  body p {
+    margin-block-start: 0;
+    margin-block-end: 0; }
+  body svg {
+    vertical-align: 0; }
+  body img {
+    vertical-align: 0; }
+  body .h1, body .h2, body .h3, body .h4, body .h5, body .h6, body h1, body h2, body h3, body h4, body h5, body h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 0;
+    line-height: normal; }
 
-/*nav bar*/
-/*propiedades del padre*/
-.containerMenu{
+.layoutIndex .bioIndex div button, .layoutIndex .productosIndex .productA button, .layoutIndex .productosIndex .productB button, .layoutIndex .productosIndex .productC button {
+  font-family: "Hubballi", sans-serif;
+  background-color: #c7aef5;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.20rem;
+  padding: .9rem 1.4rem .9rem 1.4rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto, .layoutStickers .mainStickers .contenedorProducto, .layoutTazas .mainTazas .contenedorProducto, .layoutTienda .mainTienda .contenedorProducto {
+  width: 90%;
+  transition: all .4s ease-in-out; }
+  .layoutBolsas .mainBolsas .contenedorProducto:hover, .layoutStickers .mainStickers .contenedorProducto:hover, .layoutTazas .mainTazas .contenedorProducto:hover, .layoutTienda .mainTienda .contenedorProducto:hover {
+    transform: scale(1.01); }
+
+.layoutBolsas .mainBolsas .contenedorProducto .imagenProducto, .layoutStickers .mainStickers .contenedorProducto .imagenProducto, .layoutTazas .mainTazas .contenedorProducto .imagenProducto, .layoutTienda .mainTienda .contenedorProducto .imagenProducto {
+  width: 100%;
+  border-radius: .25rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .tituloProducto, .layoutStickers .mainStickers .contenedorProducto .tituloProducto, .layoutTazas .mainTazas .contenedorProducto .tituloProducto, .layoutTienda .mainTienda .contenedorProducto .tituloProducto {
+  font-weight: 600;
+  margin: 1.5rem 0 .8rem 0;
+  padding-left: .2rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .parrafoProducto, .layoutStickers .mainStickers .contenedorProducto .parrafoProducto, .layoutTazas .mainTazas .contenedorProducto .parrafoProducto, .layoutTienda .mainTienda .contenedorProducto .parrafoProducto {
+  line-height: 1.9rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .precio, .layoutStickers .mainStickers .contenedorProducto .precio, .layoutTazas .mainTazas .contenedorProducto .precio, .layoutTienda .mainTienda .contenedorProducto .precio {
+  margin: 1rem 0 1.5rem 0;
+  padding-left: .2rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .botonProducto, .layoutStickers .mainStickers .contenedorProducto .botonProducto, .layoutTazas .mainTazas .contenedorProducto .botonProducto, .layoutTienda .mainTienda .contenedorProducto .botonProducto {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: 'Hubballi', sans-serif;
+  border: none;
+  cursor: pointer;
+  background-color: #CBB5F5;
+  color: blueviolet;
+  padding: .7rem;
+  border-radius: .25rem; }
+  .layoutBolsas .mainBolsas .contenedorProducto .botonProducto:hover, .layoutStickers .mainStickers .contenedorProducto .botonProducto:hover, .layoutTazas .mainTazas .contenedorProducto .botonProducto:hover, .layoutTienda .mainTienda .contenedorProducto .botonProducto:hover {
+    color: lavender; }
+
+.layoutContacto .mainContacto .contacto input, .layoutContacto .mainContacto .contacto textarea {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: #CBB5F5 solid .1rem; }
+
+header .containerMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: fixed;
+  top: 0;
+  background-color: #fdfdfd;
+  width: 100%;
+  height: 6.5rem;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  padding: 0rem 3.5rem;
+  z-index: 1; }
+  header .containerMenu input {
+    display: none; }
+  header .containerMenu .fa-bars {
+    display: none; }
+  header .containerMenu .fa-times {
+    display: none; }
+  header .containerMenu .menu {
+    margin-bottom: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    line-height: normal;
+    padding-left: 0;
+    list-style-type: none; }
+    header .containerMenu .menu li {
+      display: inline-block;
+      list-style: none;
+      z-index: 1;
+      font-size: 1.3rem;
+      margin: 2rem; }
+      header .containerMenu .menu li a {
+        text-decoration: none;
+        color: black; }
+        header .containerMenu .menu li a:hover {
+          color: #c7aef5; }
+      header .containerMenu .menu li:hover > .submenu {
+        visibility: visible;
+        opacity: 1; }
+      header .containerMenu .menu li .submenu {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        visibility: hidden;
+        opacity: 0;
+        transition: .5s;
+        background-color: #fdfdfd;
+        padding-top: 1.5rem;
+        padding-left: 0;
+        box-shadow: 0 1.5px 0 0 rgba(0, 0, 0, 0.1);
+        padding-inline-start: 0; }
+        header .containerMenu .menu li .submenu .outline {
+          padding-top: 1.5rem;
+          border-top: solid #CBB5F5 2px; }
+        header .containerMenu .menu li .submenu li {
+          margin: 1.1rem; }
+        header .containerMenu .menu li .submenu #liSub {
+          line-height: normal; }
+
+header h1 {
+  background-color: #e4e4f7;
+  margin-top: 6rem;
+  padding: 1.3rem .625rem .7rem .625rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #b99def;
+  font-weight: 450;
+  font-size: 2.4rem;
+  line-height: 2.35rem; }
+
+@media only screen and (max-width: 56.99rem) {
+  header .containerMenu {
+    position: relative;
     position: fixed;
-    top: 0;
-    background-color: rgb(253, 253, 253);
-    width: 100%;
-    height: 6.5rem;
-    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    padding: 0rem 3.5rem;
     z-index: 1;
-}
-/*propiedades del hijo*/
-.barsMenu{
-    display: none;
-}
-nav ul li{
-    display: inline-block;    
-    list-style: none;
-    z-index: 1;
-    font-size: 1.3rem; 
-    margin: 2rem;
-}
-nav ul li a{
-    text-decoration: none;
-    color: black; 
-}
-.menu a:hover{
-    color: #CBB5F5;
-}
-.submenu{
-    position: absolute;
     display: flex;
+    justify-content: right; }
+    header .containerMenu input[type="checkbox"] {
+      position: absolute;
+      box-sizing: border-box;
+      left: 0;
+      margin-left: 4.8rem;
+      width: 48px;
+      height: 48px;
+      opacity: 0; }
+    header .containerMenu input {
+      display: block; }
+      header .containerMenu input:checked ~ ul {
+        position: fixed;
+        display: block;
+        top: 5.625rem;
+        background-color: #fdfdfd;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+        right: 0;
+        left: 0;
+        padding: 0rem; }
+        header .containerMenu input:checked ~ ul li {
+          margin: 0rem;
+          display: block;
+          border-bottom: 0.1rem solid #CBB5F5;
+          padding: 1.3rem 1.3rem 1.3rem 4.6rem; }
+        header .containerMenu input:checked ~ ul .submenu {
+          background-color: transparent;
+          box-shadow: none;
+          padding: 0;
+          margin: 0; }
+          header .containerMenu input:checked ~ ul .submenu .outline {
+            padding-top: 1.5rem;
+            border: none; }
+          header .containerMenu input:checked ~ ul .submenu li {
+            padding: 1.5rem 0 1rem 0;
+            margin: 0rem;
+            border-top: 0.1rem solid #CBB5F5;
+            border-bottom: none; }
+      header .containerMenu input:checked ~ .fa-bars {
+        display: none; }
+      header .containerMenu input:not(:checked) ~ .fa-times {
+        display: none; }
+    header .containerMenu .fa-bars {
+      display: block;
+      position: absolute;
+      box-sizing: border-box;
+      left: 0;
+      padding-left: 5rem;
+      width: 48px;
+      height: 48px;
+      font-size: 48px;
+      pointer-events: none;
+      color: #c7aef5; }
+    header .containerMenu .fa-times {
+      display: block;
+      position: absolute;
+      box-sizing: border-box;
+      left: 0;
+      padding-left: 5rem;
+      width: 48px;
+      height: 48px;
+      font-size: 48px;
+      pointer-events: none;
+      color: #c7aef5; }
+    header .containerMenu .menu {
+      display: none; }
+      header .containerMenu .menu > li:hover > .submenu {
+        position: relative; } }
+
+@media only screen and (min-width: 57rem) and (max-width: 74.99rem) {
+  header .containerMenu {
     flex-direction: column;
-    visibility: hidden;
-    opacity: 0;
-    transition: .5s;
-    background-color: rgb(253, 253, 253);
-    border-top: #CBB5F5 solid;
-    margin-top: .15rem;
-}
-.submenu li{
-    margin: 1rem;
-}
-.menu li:hover .submenu{
-    visibility: visible;
-    opacity: 1;
-}
-h1{
-    background-color: lavender;
-    margin: 6rem 0 0 0;
-    padding: 1.4rem .625rem 1rem .625rem;
-    text-align: center;
-    text-transform: uppercase;
-    color: #CBB5F5;
-    font-weight: lighter;
-}
+    height: auto; }
+    header .containerMenu .menu li .submenu {
+      padding-top: .85rem; }
+  header h1 {
+    margin-top: 12.3rem; } }
 
-/*bio index*/
-/*propiedades del padre*/
-.bioIndex{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: 1fr;
-    align-items: center;
-    margin: 4rem 0 5rem 0;
-}
-/*propiedades del hijo*/
-.bioImagIndex{
-    justify-self: center;
-}
-.bioTextIndex{
-    margin-left: 7.5rem;
-}
-.bioTextIndex{
-    font-size: 1.5rem;
-    line-height: 2rem;
-}
-.bioIndex h2{
-    font-size: 2.5rem;
-    font-weight: lighter;
-    text-transform: uppercase;
-    color: #cbbde2;
-    margin-bottom: 2rem;
-}
-.bioIndex button{
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 1.7rem;
-    font-family: 'Hubballi', sans-serif;
-    border: none;
-    background-color: #CBB5F5;
-    color: lavender;
-    padding: .7rem 1.5rem .7rem 1.5rem;
-    margin-top: 2rem;
-}
-.bioIndex button:hover{
-    color: blueviolet;
-    background-color: lavender;
-}
-/*productos index*/
-.productosIndex{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-bottom: 4rem;
-}
-.productosIndex img{
-    width: 28.5rem;
-}
-.productosIndex div button a{
-    text-decoration: none;
-    list-style: none;
-    color: lavender;
-}
-.productUno{
-    position: relative;
-}
-.productUno button{
-    position: absolute;
-    top: 80%;
-    left: 25%;
-    text-transform: uppercase;
-    font-size: 1.7rem;
-    font-family: 'Hubballi', sans-serif;
-    border: solid 0.09rem lavender;
-    background-color: #CBB5F5;
-    padding: .7rem 1.5rem .7rem 1.5rem;
-}
-.productDos{
-    position: relative;
-}
-.productDos button{
-    position: absolute;
-    top: 80%;
-    left: 33%;
-    text-transform: uppercase;
-    font-size: 1.7rem;
-    font-family: 'Hubballi', sans-serif;
-    border: solid 0.09rem lavender;
-    background-color: #CBB5F5;
-    padding: .7rem 1.5rem .7rem 1.5rem;
-}
-.productTres{
-    position: relative;
-}
-.productTres button{
-    position: absolute;
-    top: 80%;
-    left: 35%;
-    text-transform: uppercase;
-    font-size: 1.7rem;
-    font-family: 'Hubballi', sans-serif;
-    border: solid 0.09rem lavender;
-    background-color: #CBB5F5;
-    padding: .7rem 1.5rem .7rem 1.5rem;
-}
-
-/*portafolio index*/
-.portafolioIndex{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 2.5rem 4rem 2.5rem;
-}
-.portafolioIndex img{
-    width: 17.5rem;
-    display: inline-block;
-    padding: 0.5rem;
-}
-
-
-/*bio*/
-/* layout -> Grid */
-.layoutBio{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    height: 100vh;
-}
-.mainBio{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    width: 100%;
-}
-.mainBio img{
-    display: inline-block;
-}
-.textBio{
-    padding: 0 4.5rem 0 4.5rem;
-}
-.mainBio h2{
-    font-size: 2.5rem;
-    padding: 2rem 0 2rem 0;
-}
-.mainBio p{
-    font-size: 1.5rem;
-    line-height: 2rem;
-}
-
-
-/*bolsas de tela*/
-/* layout -> Grid */
-.layoutBolsas{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    height: 100vh;
-}
-.mainBolsas{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    width: 100%;
-    justify-items: center;
-    margin: 4rem 0;
-    padding: 0 1rem 0 1rem;
-}
-.mainBolsas div{
-    transition: all .4s ease-in-out;
-}
-.mainBolsas div:hover{
-    transform: scale(1.02);
-}
-.mainBolsas div img{
-    width: 22.5rem;
-    border-radius: .20rem;    
-}
-.mainBolsas div p{
-    width: 22.5rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
-}
-.mainBolsas div button{
-    width: 100%;
-    font-size: 1.8rem;
-    font-family: 'Hubballi', sans-serif;
-    border: none;
-    cursor: pointer;
-    background-color: #cbbde2;
-    color: blueviolet;
-    padding: .7rem;
-    margin-top: .7rem;
-    border-radius: .20rem;
-}
-.mainBolsas div button:hover{
-    color: lavender;
-}
-
-/*stickers*/
-/* layout -> Grid */
-.layoutStickers{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    height: 100vh;
-}
-.mainStickers{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    width: 100%;
-    justify-items: center;
-    margin: 4rem 0;
-    padding: 0 1rem 0 1rem; 
-}
-.mainStickers div{
-    transition: all .4s ease-in-out; 
-}
-.mainStickers div:hover{
-    transform: scale(1.02);
-}
-.mainStickers div img{
-    width: 22.5rem;
-    border-radius: .20rem;
-}
-.mainStickers div p{
-    width: 22.5rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
-}
-.mainStickers div button{
-    width: 100%;
-    font-size: 1.8rem;
-    font-family: 'Hubballi', sans-serif;
-    border: none;
-    cursor: pointer;
-    background-color: #CBB5F5;
-    color: blueviolet;
-    padding: .7rem;
-    margin-top: .7rem;
-    border-radius: .20rem;
-}
-.mainStickers div button:hover{
-    color: lavender;
-}
-
-/*tazas*/
-/* layout -> Grid */
-.layoutTazas{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    height: 100vh;
-}
-.mainTazas{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    width: 100%;
-    justify-items: center;
-    margin: 4rem 0;
-    padding: 0 1rem 0 1rem; 
-}
-.mainTazas div{
-    transition: all .4s ease-in-out;
-}
-.mainTazas div:hover{
-    transform: scale(1.02);
-}
-.mainTazas div img{
-    width: 22.5rem;
-    border-radius: .20rem;
-}
-.mainTazas div p{
-    width: 22.5rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
-}
-.mainTazas div button{
-    width: 100%;
-    font-size: 1.8rem;
-    font-family: 'Hubballi', sans-serif;
-    border: none;
-    cursor: pointer;
-    background-color: #CBB5F5;
-    color: blueviolet;
-    padding: .7rem;
-    margin-top: .7rem;
-    border-radius: .20rem;
-}
-.mainTazas div button:hover{
-    color: lavender;
-}
-
-
-
-/*portafolio*/
-.layoutPortafolio{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    height: 100vh;
-}
-.mainPortafolio{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4,1fr);
-    width: 100%;
-    row-gap: 4rem;
-    column-gap: 1.5rem;
-    justify-items: center;
-    margin: 4rem 0;
-    padding: 0 1rem 0 1rem; 
-}
-.imgA{
-    justify-self: flex-end;
-}
-.imgB{
-    justify-self: flex-start;
-}
-
-
-/*contacto*/
-/* layout -> Grid */
-.layoutContacto{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    height: 100vh;
-}
-/*propiedades del padre*/
-.mainContacto{
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255,255,255,0.9)), url('../img/mandalaA.png') center center / cover no-repeat;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-/*propiedades del hijo*/
-.contacto{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;    
-    font-size: 2rem;
-    width: 70%;
-}
-.contacto input, .contacto textarea, .contactoBoton{
-    padding: 1rem;
-    font-size: 1.1rem;
-    border: #CBB5F5 solid .1rem;
-}
-.contacto label span{
-    background-color: rgb(255, 255, 255, 0.8);
-    border-radius: 1rem;
-    color: rgba(114, 36, 145, 0.993);
-    padding: .3rem 0rem;
-}
-.contacto textarea:focus,.contacto input:focus{
-    border-color: blueviolet;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    outline: 0 none;
-}
-form .contactoBoton{
-    width: 35%;
-    font-size: 1.7rem;
-    text-transform: uppercase;
-    font-family: 'Hubballi', sans-serif;
-    border: none;
-    background-color: #CBB5F5;
-    color: lavender;
-    cursor: pointer;
-}
-form .contactoBoton:hover{
-    color: blueviolet;
-    background-color: lavender;
-}
-
-
-/*footer*/
-/*propiedades del padre*/
-footer{
-    display: grid;
-    grid-template-areas: "contact contact contact"
-                         "containerLeft containerCenter containerRight"
-                         "derechos derechos derechos"; 
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-}
-/*propiedades de las areas*/
-.contact{
+footer {
+  display: grid;
+  grid-template-areas: "contact contact contact" "containerLeft containerCenter containerRight" "derechos derechos derechos";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto; }
+  footer .contact {
     grid-area: contact;
-    background-color: #CBB5F5;
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
+    background-color: #c7aef5;
+    color: white;
     height: 15rem;
-    padding: 0rem 7.5rem;
-}
-.containerLeft{
-    grid-area: containerLeft;
+    padding: 0rem 7.5rem; }
+    footer .contact .contactP {
+      grid-area: contact;
+      width: 26.5rem; }
+      footer .contact .contactP p {
+        grid-area: contact;
+        font-size: 1.5rem;
+        line-height: 2.2rem; }
+        footer .contact .contactP p a {
+          grid-area: contact;
+          color: #9DF5DD;
+          font-weight: bold; }
+    footer .contact .email {
+      grid-area: contact; }
+      footer .contact .email span {
+        color: #9DF5DD;
+        font-size: 1.875rem;
+        padding: 0.313rem; }
+      footer .contact .email a {
+        grid-area: contact;
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem; }
+  footer .containerLeft {
     background-color: lavender;
     height: 19rem;
-    row-gap: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 1rem 0 5rem;
-}
-.containerCenter{
-    grid-area: containerCenter;
+    grid-area: containerLeft;
+    row-gap: 1.5rem;
+    padding: 0 1rem 0 5.8rem; }
+    footer .containerLeft .tituloFooter {
+      text-transform: uppercase;
+      font-size: 2.1rem;
+      color: blueviolet;
+      font-weight: 400;
+      margin-bottom: .8rem;
+      grid-area: containerLeft; }
+    footer .containerLeft p {
+      grid-area: containerLeft;
+      font-size: 1.4rem;
+      line-height: 2rem; }
+  footer .containerCenter {
     background-color: lavender;
     height: 19rem;
-    row-gap: 2rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    grid-area: containerCenter;
+    row-gap: 2rem;
+    align-items: center;
+    padding-right: 1rem; }
+    footer .containerCenter .logoFooter {
+      grid-area: containerCenter;
+      animation-name: girar;
+      animation-iteration-count: infinite;
+      animation-duration: 98s; }
+
+@keyframes girar {
+  from {
+    transform: rotate(0); }
+  to {
+    transform: rotate(360deg); } }
+    footer .containerCenter .redesSociales {
+      grid-area: containerCenter; }
+      footer .containerCenter .redesSociales a {
+        grid-area: containerCenter;
+        text-decoration: none;
+        color: #872bdd;
+        font-size: 1.75rem;
+        background: #CBB5F5;
+        border-radius: 50%;
+        width: 3.125rem;
+        height: 3.125rem;
+        margin: 0rem .5rem;
+        line-height: 3.125rem;
+        text-align: center;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+        transition: all .4s ease-in-out; }
+        footer .containerCenter .redesSociales a:hover {
+          transform: scale(1.2); }
+  footer .containerRight {
+    background-color: lavender;
+    height: 19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: containerRight;
+    row-gap: 1.5rem;
+    padding: 0 5rem 0 4rem; }
+    footer .containerRight .tituloFooter {
+      text-transform: uppercase;
+      font-size: 2.1rem;
+      color: blueviolet;
+      font-weight: 400;
+      margin-bottom: .8rem;
+      grid-area: containerRight; }
+    footer .containerRight form {
+      grid-area: containerRight;
+      font-family: "Hubballi", sans-serif; }
+      footer .containerRight form input {
+        width: 100%;
+        padding: 1rem;
+        border: #CBB5F5 solid .1rem;
+        font-size: 1.18rem;
+        font-family: "Hubballi", sans-serif;
+        line-height: normal; }
+        footer .containerRight form input:focus {
+          border-color: #872bdd;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          outline: 0 none; }
+    footer .containerRight button {
+      grid-area: containerRight;
+      text-transform: uppercase;
+      cursor: pointer;
+      background-color: #c7aef5;
+      color: blueviolet;
+      border: none;
+      border-radius: 0.20rem;
+      padding: 1.5rem;
+      font-size: 1.5rem;
+      width: 100%;
+      font-family: "Hubballi", sans-serif;
+      line-height: 0; }
+      footer .containerRight button:hover {
+        color: #e4e4f7; }
+  footer .derechos {
+    grid-area: derechos;
+    background-color: #e4e4f7; }
+    footer .derechos .linie {
+      grid-area: derechos;
+      border-top: 0.063rem solid blueviolet;
+      height: 0.125rem;
+      max-width: 70%;
+      padding: 0;
+      margin: 0 auto 0 auto; }
+    footer .derechos p {
+      grid-area: derechos;
+      padding: 1.3rem;
+      font-size: 1.25rem;
+      text-align: center; }
+      footer .derechos p a {
+        grid-area: derechos;
+        text-decoration: none;
+        list-style: none;
+        color: black; }
+  @media only screen and (max-width: 68.68rem) {
+    footer {
+      display: grid;
+      grid-template-areas: "contact" "containerLeft" "containerCenter" "containerRight" "derechos";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      width: 100%; }
+      footer .contact {
+        justify-content: center;
+        height: 20rem; }
+        footer .contact .contactP {
+          padding: 3rem 0 3rem 0; }
+          footer .contact .contactP p {
+            text-align: center;
+            font-size: 2rem;
+            line-height: 2.6rem; }
+          footer .contact .contactP a {
+            padding-top: 1rem;
+            display: block; }
+        footer .contact .email {
+          display: none; }
+      footer .containerLeft {
+        padding: 0 5rem;
+        align-items: center;
+        height: 18rem; }
+        footer .containerLeft .tituloFooter {
+          font-size: 2.2rem; }
+        footer .containerLeft p {
+          text-align: center;
+          font-size: 2rem;
+          line-height: 2.6rem; }
+      footer .containerCenter {
+        padding: 0 2rem 1rem 2rem;
+        height: 15rem; }
+      footer .containerRight {
+        padding: 4rem;
+        text-align: center;
+        height: 18rem; }
+        footer .containerRight .tituloFooter {
+          font-size: 2.2rem; }
+        footer .containerRight form input {
+          font-size: 1.8rem; }
+        footer .containerRight button {
+          font-size: 1.8rem;
+          padding: 1.8rem; }
+      footer .derechos p {
+        font-size: 1.7rem;
+        padding: 1.8rem;
+        line-height: 2.6rem; } }
+  @media only screen and (min-width: 68.69rem) and (max-width: 87.44rem) {
+    footer .containerLeft {
+      padding: 3rem .5rem 3rem 4rem; }
+    footer .containerRight {
+      padding: 1.5rem 2.5rem 1.5rem 2.1rem; }
+    footer .containerCenter {
+      padding: 0; } }
+
+.layoutBio {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: 100vh; }
+  .layoutBio .mainBio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    align-items: center; }
+    .layoutBio .mainBio section img {
+      width: 100%; }
+    .layoutBio .mainBio .textBio {
+      padding: 0 4.5rem 0 4.5rem; }
+      .layoutBio .mainBio .textBio h2 {
+        font-size: 2.5rem;
+        padding: 0 0 2.5rem 0;
+        color: #c7aef5; }
+      .layoutBio .mainBio .textBio p {
+        font-size: 1.5rem;
+        line-height: 2rem; }
+        .layoutBio .mainBio .textBio p a {
+          color: #c7aef5; }
+  @media only screen and (max-width: 43rem) {
+    .layoutBio .mainBio {
+      gap: .5rem; }
+      .layoutBio .mainBio .textBio {
+        padding: 1.7rem; }
+        .layoutBio .mainBio .textBio p {
+          font-size: 1.8rem;
+          line-height: 2.2rem; } }
+  @media only screen and (max-width: 86rem) {
+    .layoutBio .mainBio {
+      grid-template-columns: 1fr;
+      width: 100%;
+      justify-items: center;
+      margin-bottom: 0;
+      padding: 4rem;
+      gap: 2.5rem; } }
+  @media only screen and (min-width: 86.1rem) and (max-width: 93rem) {
+    .layoutBio .mainBio .textBio {
+      padding: 2.3rem 4.3rem; } }
+
+.layoutIndex .bioIndex div button, .layoutIndex .productosIndex .productA button, .layoutIndex .productosIndex .productB button, .layoutIndex .productosIndex .productC button {
+  font-family: "Hubballi", sans-serif;
+  background-color: #c7aef5;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.20rem;
+  padding: .9rem 1.4rem .9rem 1.4rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto, .layoutStickers .mainStickers .contenedorProducto, .layoutTazas .mainTazas .contenedorProducto, .layoutTienda .mainTienda .contenedorProducto {
+  width: 90%;
+  transition: all .4s ease-in-out; }
+  .layoutBolsas .mainBolsas .contenedorProducto:hover, .layoutStickers .mainStickers .contenedorProducto:hover, .layoutTazas .mainTazas .contenedorProducto:hover, .layoutTienda .mainTienda .contenedorProducto:hover {
+    transform: scale(1.01); }
+
+.layoutBolsas .mainBolsas .contenedorProducto .imagenProducto, .layoutStickers .mainStickers .contenedorProducto .imagenProducto, .layoutTazas .mainTazas .contenedorProducto .imagenProducto, .layoutTienda .mainTienda .contenedorProducto .imagenProducto {
+  width: 100%;
+  border-radius: .25rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .tituloProducto, .layoutStickers .mainStickers .contenedorProducto .tituloProducto, .layoutTazas .mainTazas .contenedorProducto .tituloProducto, .layoutTienda .mainTienda .contenedorProducto .tituloProducto {
+  font-weight: 600;
+  margin: 1.5rem 0 .8rem 0;
+  padding-left: .2rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .parrafoProducto, .layoutStickers .mainStickers .contenedorProducto .parrafoProducto, .layoutTazas .mainTazas .contenedorProducto .parrafoProducto, .layoutTienda .mainTienda .contenedorProducto .parrafoProducto {
+  line-height: 1.9rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .precio, .layoutStickers .mainStickers .contenedorProducto .precio, .layoutTazas .mainTazas .contenedorProducto .precio, .layoutTienda .mainTienda .contenedorProducto .precio {
+  margin: 1rem 0 1.5rem 0;
+  padding-left: .2rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .botonProducto, .layoutStickers .mainStickers .contenedorProducto .botonProducto, .layoutTazas .mainTazas .contenedorProducto .botonProducto, .layoutTienda .mainTienda .contenedorProducto .botonProducto {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: 'Hubballi', sans-serif;
+  border: none;
+  cursor: pointer;
+  background-color: #CBB5F5;
+  color: blueviolet;
+  padding: .7rem;
+  border-radius: .25rem; }
+  .layoutBolsas .mainBolsas .contenedorProducto .botonProducto:hover, .layoutStickers .mainStickers .contenedorProducto .botonProducto:hover, .layoutTazas .mainTazas .contenedorProducto .botonProducto:hover, .layoutTienda .mainTienda .contenedorProducto .botonProducto:hover {
+    color: lavender; }
+
+.layoutContacto .mainContacto .contacto input, .layoutContacto .mainContacto .contacto textarea {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: #CBB5F5 solid .1rem; }
+
+.layoutBolsas {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: 100vh; }
+  .layoutBolsas .mainBolsas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 28.4rem), 1fr));
+    grid-template-rows: auto;
+    width: 100%;
+    justify-items: center;
+    row-gap: 4rem;
+    margin: 4rem 0 4rem 0;
+    padding: 0 2rem 0 2rem; }
+    .layoutBolsas .mainBolsas .contenedorProducto .tituloProducto {
+      font-size: 1.8rem; }
+    .layoutBolsas .mainBolsas .contenedorProducto .parrafoProducto {
+      font-size: 1.4rem;
+      padding: 0 3rem 0 .2rem; }
+    .layoutBolsas .mainBolsas .contenedorProducto .precio {
+      font-size: 1.5rem; }
+  @media only screen and (max-width: 48rem) {
+    .layoutBolsas .mainBolsas {
+      padding: 0 2.8rem 0 2.8rem; } }
+  @media only screen and (max-width: 59rem) {
+    .layoutBolsas .mainBolsas {
+      padding: 0 6rem 0 6rem; }
+      .layoutBolsas .mainBolsas .contenedorProducto .tituloProducto {
+        font-size: 2.1rem; }
+      .layoutBolsas .mainBolsas .contenedorProducto .parrafoProducto {
+        font-size: 1.7rem; }
+      .layoutBolsas .mainBolsas .contenedorProducto .precio {
+        font-size: 1.7rem; } }
+
+.layoutIndex .bioIndex div button, .layoutIndex .productosIndex .productA button, .layoutIndex .productosIndex .productB button, .layoutIndex .productosIndex .productC button {
+  font-family: "Hubballi", sans-serif;
+  background-color: #c7aef5;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.20rem;
+  padding: .9rem 1.4rem .9rem 1.4rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto, .layoutStickers .mainStickers .contenedorProducto, .layoutTazas .mainTazas .contenedorProducto, .layoutTienda .mainTienda .contenedorProducto {
+  width: 90%;
+  transition: all .4s ease-in-out; }
+  .layoutBolsas .mainBolsas .contenedorProducto:hover, .layoutStickers .mainStickers .contenedorProducto:hover, .layoutTazas .mainTazas .contenedorProducto:hover, .layoutTienda .mainTienda .contenedorProducto:hover {
+    transform: scale(1.01); }
+
+.layoutBolsas .mainBolsas .contenedorProducto .imagenProducto, .layoutStickers .mainStickers .contenedorProducto .imagenProducto, .layoutTazas .mainTazas .contenedorProducto .imagenProducto, .layoutTienda .mainTienda .contenedorProducto .imagenProducto {
+  width: 100%;
+  border-radius: .25rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .tituloProducto, .layoutStickers .mainStickers .contenedorProducto .tituloProducto, .layoutTazas .mainTazas .contenedorProducto .tituloProducto, .layoutTienda .mainTienda .contenedorProducto .tituloProducto {
+  font-weight: 600;
+  margin: 1.5rem 0 .8rem 0;
+  padding-left: .2rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .parrafoProducto, .layoutStickers .mainStickers .contenedorProducto .parrafoProducto, .layoutTazas .mainTazas .contenedorProducto .parrafoProducto, .layoutTienda .mainTienda .contenedorProducto .parrafoProducto {
+  line-height: 1.9rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .precio, .layoutStickers .mainStickers .contenedorProducto .precio, .layoutTazas .mainTazas .contenedorProducto .precio, .layoutTienda .mainTienda .contenedorProducto .precio {
+  margin: 1rem 0 1.5rem 0;
+  padding-left: .2rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .botonProducto, .layoutStickers .mainStickers .contenedorProducto .botonProducto, .layoutTazas .mainTazas .contenedorProducto .botonProducto, .layoutTienda .mainTienda .contenedorProducto .botonProducto {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: 'Hubballi', sans-serif;
+  border: none;
+  cursor: pointer;
+  background-color: #CBB5F5;
+  color: blueviolet;
+  padding: .7rem;
+  border-radius: .25rem; }
+  .layoutBolsas .mainBolsas .contenedorProducto .botonProducto:hover, .layoutStickers .mainStickers .contenedorProducto .botonProducto:hover, .layoutTazas .mainTazas .contenedorProducto .botonProducto:hover, .layoutTienda .mainTienda .contenedorProducto .botonProducto:hover {
+    color: lavender; }
+
+.layoutContacto .mainContacto .contacto input, .layoutContacto .mainContacto .contacto textarea {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: #CBB5F5 solid .1rem; }
+
+.layoutContacto {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: 100vh; }
+  .layoutContacto .mainContacto {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/mandalaA.png") center center/cover no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-.containerRight{
-    grid-area: containerRight;
-    background-color: lavender;
-    height: 19rem;
-    row-gap: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 5rem 0 4rem;
-}
-.derechos{
-    grid-area: derechos;
-    background-color: lavender;
-}
-.contactP{
-    grid-area: contact;
-    font-size: 1.4rem;
-    width: 25rem;
-    line-height: 1.813rem;
-}
-.email{
-    grid-area: contact;
-}
-.botonC{
-    margin-top: 1rem;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-.botonC a{
-    color: #9DF5DD;
-}
-.email a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.4rem;
-}
-.email span{
-    color: #9DF5DD;
-    font-size: 1.875rem;
-    padding: 0.313rem;
-}
-footer h2, h3{
-    text-transform: uppercase;
-    font-weight: lighter;  
-    font-size: 1.688rem;  
-    color: blueviolet;
-}
-.containerLeft h2{
-    grid-area: containerLeft;
-}
-.containerLeft p{
-    grid-area: containerLeft;
-    font-size: 1.313rem;
-    line-height: 1.75rem;
-}
-.logoFooter, .redesSociales{
-    grid-area: containerCenter;
-}
-.logoFooter{
-    animation-name: girar;
-    animation-iteration-count: infinite ;
-    animation-duration: 98s;
-}
-@keyframes girar{
-    from{
-        transform: rotate(0);
-    }
-    to{
-        transform: rotate(360deg);
-    }
-}
-.redesSociales a{
-    text-decoration: none;
-    color: blueviolet;
-    font-size: 1.75rem;
-    background: #CBB5F5;
-    border-radius: 50%;
-    width: 3.125rem;
-    height: 3.125rem;
-    margin: 0rem .5rem;
-    line-height: 3.125rem;
-    text-align: center;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0,.05);
-    transition: all .4s ease-in-out;
-}
-.redesSociales a:hover{
-transform: scale(1.2);
-}
-.containerRight h3, .containerRight form, .containerRight button{
-    grid-area: containerRight;
-}
-.containerRight input{
-    font-size: 0.938rem;
-    height: 2.75rem;
-    width: 100%;
-    padding: 1rem;
-    border: #CBB5F5 solid .1rem;
-}
-.containerRight input:focus{
-    border-color: blueviolet;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    outline: 0 none;
-}
-.containerRight button{
-    text-transform: uppercase;
-    background-color: #CBB5F5;
-    color: blueviolet;
-    border: none;
-    padding: 0.688rem 2.5rem;
-    font-size: .9rem;
-    width: 100%;
-}
-.containerRight button:hover{
-    color: lavender;
-}
-.linie{
-    border-top: 0.063rem solid blueviolet;
-    height: 0.125rem;
-    max-width: 70%;
-    padding: 0;
-    margin: 0 auto 0 auto;
-}
-.derechos p{
-    padding: 1.3rem;
-    font-size: large;
-    text-align: center;
-}
-.derechos a{
-    text-decoration: none;
-    list-style: none;
-    color: black;
-}
-
-
-
-/*media queries*/
-
-@media only screen and (min-width: 320px) and (max-width: 767px){
-    /*Barra de navegación*/
-    nav ul{
-        display: none;
-    }
-    .barsMenu{
-        display: inline-block;
-        font-size: 2rem;
+    flex-wrap: wrap; }
+    .layoutContacto .mainContacto .contacto {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-size: 2rem;
+      width: 70%;
+      line-height: normal; }
+      .layoutContacto .mainContacto .contacto label span {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 1rem;
+        color: rgba(114, 36, 145, 0.993);
+        padding: .3rem 0rem; }
+      .layoutContacto .mainContacto .contacto input:focus {
+        border-color: blueviolet;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        outline: 0 none; }
+      .layoutContacto .mainContacto .contacto textarea:focus {
+        border-color: blueviolet;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        outline: 0 none; }
+      .layoutContacto .mainContacto .contacto .contactoBoton {
+        width: 35%;
+        font-size: 1.7rem;
+        padding: 1rem;
+        text-transform: uppercase;
+        font-family: 'Hubballi', sans-serif;
         border: none;
-        background: none;
-        color: #CBB5F5;
-        text-align: right;  
-    }
-    h1{
-        font-size: 1.8rem;
-        padding: 1.2rem .625rem .7rem .625rem;
-    }
+        border-radius: 0.20rem;
+        background-color: #CBB5F5;
+        color: lavender;
+        cursor: pointer; }
+        .layoutContacto .mainContacto .contacto .contactoBoton:hover {
+          color: blueviolet;
+          background-color: lavender; }
+  @media only screen and (max-width: 30rem) {
+    .layoutContacto .mainContacto .contacto {
+      font-size: 2.3rem; } }
+  @media only screen and (max-width: 63rem) {
+    .layoutContacto .mainContacto .contacto .contactoBoton {
+      width: 100%; } }
 
-    /*bio*/
-    .mainBio{
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 100%;
-        justify-items: center;
-        margin-bottom: 4rem;
-    }
-    
-    /*bolsas de tela*/
-    .mainBolsas{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        row-gap: 3rem;
-    }
-    .mainBolsas div p{
-        font-size: 1.3rem;
-    }
-    .mainBolsas div button{
-        font-size: 1.5rem;
-    }
-    /*stickers*/
-    .mainStickers{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        row-gap: 3rem;
-    }
-    .mainStickers div p{
-        font-size: 1.3rem;
-    }
-    .mainStickers div button{
-        font-size: 1.5rem;
-    }
+.layoutIndex .bioIndex div button, .layoutIndex .productosIndex .productA button, .layoutIndex .productosIndex .productB button, .layoutIndex .productosIndex .productC button {
+  font-family: "Hubballi", sans-serif;
+  background-color: #c7aef5;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.20rem;
+  padding: .9rem 1.4rem .9rem 1.4rem; }
 
-    /*tazas*/
-    .mainTazas{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        row-gap: 3rem;
-    }
-    .mainTazas div p{
-        font-size: 1.3rem;
-    }
-    .mainTazas div button{
-        font-size: 1.5rem;
-    }
+.layoutBolsas .mainBolsas .contenedorProducto, .layoutStickers .mainStickers .contenedorProducto, .layoutTazas .mainTazas .contenedorProducto, .layoutTienda .mainTienda .contenedorProducto {
+  width: 90%;
+  transition: all .4s ease-in-out; }
+  .layoutBolsas .mainBolsas .contenedorProducto:hover, .layoutStickers .mainStickers .contenedorProducto:hover, .layoutTazas .mainTazas .contenedorProducto:hover, .layoutTienda .mainTienda .contenedorProducto:hover {
+    transform: scale(1.01); }
 
-    
+.layoutBolsas .mainBolsas .contenedorProducto .imagenProducto, .layoutStickers .mainStickers .contenedorProducto .imagenProducto, .layoutTazas .mainTazas .contenedorProducto .imagenProducto, .layoutTienda .mainTienda .contenedorProducto .imagenProducto {
+  width: 100%;
+  border-radius: .25rem; }
 
+.layoutBolsas .mainBolsas .contenedorProducto .tituloProducto, .layoutStickers .mainStickers .contenedorProducto .tituloProducto, .layoutTazas .mainTazas .contenedorProducto .tituloProducto, .layoutTienda .mainTienda .contenedorProducto .tituloProducto {
+  font-weight: 600;
+  margin: 1.5rem 0 .8rem 0;
+  padding-left: .2rem; }
 
-    /*portafolio*/
-    .mainPortafolio{
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 100%;
-    }
-    .imgA{
-        justify-self: center;
-    }
-    .imgB{
-        justify-self: center;
-    }
+.layoutBolsas .mainBolsas .contenedorProducto .parrafoProducto, .layoutStickers .mainStickers .contenedorProducto .parrafoProducto, .layoutTazas .mainTazas .contenedorProducto .parrafoProducto, .layoutTienda .mainTienda .contenedorProducto .parrafoProducto {
+  line-height: 1.9rem; }
 
+.layoutBolsas .mainBolsas .contenedorProducto .precio, .layoutStickers .mainStickers .contenedorProducto .precio, .layoutTazas .mainTazas .contenedorProducto .precio, .layoutTienda .mainTienda .contenedorProducto .precio {
+  margin: 1rem 0 1.5rem 0;
+  padding-left: .2rem; }
 
-    /*footer*/
-    .contacto{
-        font-size: 1.6rem;
-    }
-    .contacto input, .contacto textarea{
-        font-size: .8rem;
-    }
-    .contacto .contactoBoton{
-        font-size: 1.3rem;
-        width: 100%;
-    }
-    .mainContacto{
-        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255,255,255,0.9)), url('../img/mandalaA.png') center center / cover no-repeat;
-        height: 100vh;
-        width: 100%;
-    }
-    footer{
-        display: grid;
-        grid-template-areas: "contact"
-                             "containerLeft"
-                             "containerCenter"
-                             "containerRight"
-                             "derechos"; 
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        width: 100%;
-    }
-    .contact{
-        padding: 2rem;
-        justify-content: center;
-    }
-    .botonC{
-        font-size: 1.35rem;
-    }
-    .contactP{
-        text-align: center;
-        line-height: 2.1rem;
-    }
-    .email{
-        display: none; 
-    }
-    .containerLeft{
-        padding: 0 2rem;
-        text-align: center;
-        height: 12rem;
-    }
-    .containerLeft p{
-        line-height: 2.5rem;
-    }
-    .containerCenter{
-        padding: 0 2rem;
-        height: 17rem;
-    }
-    .containerRight{
-        padding: 0 2rem;
-        text-align: center;
-        height: 14rem;
-    }
-    .containerRight button{
-        width: 100%;
-    }
-}
-@media only screen and (min-width: 768px) and (max-width: 1023px){
-    /*barra de navegación*/
-    .containerMenu{
-        padding: 0 1.5rem;
-    }
-    nav ul li{
-        font-size: 1.3rem; 
-        margin: .6rem;
-    }
+.layoutBolsas .mainBolsas .contenedorProducto .botonProducto, .layoutStickers .mainStickers .contenedorProducto .botonProducto, .layoutTazas .mainTazas .contenedorProducto .botonProducto, .layoutTienda .mainTienda .contenedorProducto .botonProducto {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: 'Hubballi', sans-serif;
+  border: none;
+  cursor: pointer;
+  background-color: #CBB5F5;
+  color: blueviolet;
+  padding: .7rem;
+  border-radius: .25rem; }
+  .layoutBolsas .mainBolsas .contenedorProducto .botonProducto:hover, .layoutStickers .mainStickers .contenedorProducto .botonProducto:hover, .layoutTazas .mainTazas .contenedorProducto .botonProducto:hover, .layoutTienda .mainTienda .contenedorProducto .botonProducto:hover {
+    color: lavender; }
 
-    /*bio*/
-    .mainBio{
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 100%;
-        justify-items: center;
-        margin: 4rem 0 4rem 0;
-    }
+.layoutContacto .mainContacto .contacto input, .layoutContacto .mainContacto .contacto textarea {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: #CBB5F5 solid .1rem; }
 
-    /*bolsas de tela*/
-    .mainBolsas{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        row-gap: 3rem;
-        column-gap: 2rem;
-    }
-    /*stickers*/
-    .mainStickers{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        row-gap: 3rem;
-        column-gap: 2rem;
-    }
+.layoutIndex {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: 100vh; }
+  .layoutIndex .bioIndex {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    margin: 4rem 0 5rem 8rem;
+    column-gap: 6rem; }
+    .layoutIndex .bioIndex div h2 {
+      font-size: 2.9rem;
+      color: #c7aef5; }
+    .layoutIndex .bioIndex div .bioTextIndex {
+      font-size: 1.5rem;
+      margin: 2.3rem 0 1.6rem 0;
+      line-height: 2rem; }
+    .layoutIndex .bioIndex div button a {
+      text-decoration: none;
+      color: #e4e4f7; }
+      .layoutIndex .bioIndex div button a:hover {
+        color: #872bdd; }
+  .layoutIndex .productosIndex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .8rem;
+    margin-bottom: 5rem; }
+    .layoutIndex .productosIndex img {
+      width: 100%;
+      border-radius: 0.20rem; }
+    .layoutIndex .productosIndex .productA {
+      position: relative;
+      width: 29rem; }
+      .layoutIndex .productosIndex .productA button {
+        position: absolute;
+        top: 80%;
+        left: 23%; }
+        .layoutIndex .productosIndex .productA button:hover {
+          background-color: #bda1f0; }
+    .layoutIndex .productosIndex .productB {
+      position: relative;
+      width: 29rem; }
+      .layoutIndex .productosIndex .productB button {
+        position: absolute;
+        top: 80%;
+        left: 33%; }
+        .layoutIndex .productosIndex .productB button:hover {
+          background-color: #bda1f0; }
+    .layoutIndex .productosIndex .productC {
+      position: relative;
+      width: 29rem; }
+      .layoutIndex .productosIndex .productC button {
+        position: absolute;
+        top: 80%;
+        left: 35%; }
+        .layoutIndex .productosIndex .productC button:hover {
+          background-color: #bda1f0; }
+    .layoutIndex .productosIndex button a {
+      text-decoration: none;
+      color: #e4e4f7; }
+  .layoutIndex .portafolioIndex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 2.5rem 4rem 2.5rem; }
+    .layoutIndex .portafolioIndex img {
+      width: 17.5rem;
+      display: inline-block;
+      padding: 0.5rem; }
+  @media only screen and (max-width: 48rem) {
+    .layoutIndex .bioIndex {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      margin: 4rem 0;
+      gap: 3rem;
+      width: 100%; }
+      .layoutIndex .bioIndex div {
+        padding: 0 5rem; }
+        .layoutIndex .bioIndex div .bioTextIndex {
+          font-size: 1.9rem;
+          line-height: 2.5rem; }
+    .layoutIndex .productosIndex {
+      gap: 2.5rem; }
+      .layoutIndex .productosIndex .productA {
+        width: 35rem; }
+        .layoutIndex .productosIndex .productA button {
+          left: 28%; }
+      .layoutIndex .productosIndex .productB {
+        width: 35rem; }
+        .layoutIndex .productosIndex .productB button {
+          left: 37%; }
+      .layoutIndex .productosIndex .productC {
+        width: 35rem; }
+        .layoutIndex .productosIndex .productC button {
+          left: 40%; }
+    .layoutIndex .portafolioIndex {
+      flex-direction: column;
+      gap: 1.9rem; }
+      .layoutIndex .portafolioIndex img {
+        width: 70%;
+        padding: 0; } }
+  @media only screen and (min-width: 48.1rem) and (max-width: 64rem) {
+    .layoutIndex .bioIndex {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      margin: 4rem 0;
+      gap: 3rem;
+      width: 100%; }
+      .layoutIndex .bioIndex div {
+        padding: 0 5rem; }
+        .layoutIndex .bioIndex div .bioTextIndex {
+          font-size: 1.9rem;
+          line-height: 2.5rem; }
+    .layoutIndex .productosIndex {
+      gap: 3.5rem; }
+    .layoutIndex .portafolioIndex {
+      margin: 0 0 4rem 0;
+      gap: 1.9rem; }
+      .layoutIndex .portafolioIndex img {
+        padding: 0; } }
+  @media only screen and (min-width: 64.1rem) and (max-width: 82rem) {
+    .layoutIndex .bioIndex {
+      gap: 3rem;
+      margin: 4rem 2.6rem 5rem 4.5rem; } }
 
-    /*tazas*/
-    .mainTazas{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        row-gap: 3rem;
-        column-gap: 2rem;
-    }
-    
+.layoutIndex .bioIndex div button, .layoutIndex .productosIndex .productA button, .layoutIndex .productosIndex .productB button, .layoutIndex .productosIndex .productC button {
+  font-family: "Hubballi", sans-serif;
+  background-color: #c7aef5;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.20rem;
+  padding: .9rem 1.4rem .9rem 1.4rem; }
 
-    /*portafolio*/
-    .mainPortafolio{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        width: 100%;
-    }
-    .imgA{
-        justify-self: center;
-    }
-    .imgB{
-        justify-self: center;
-    }
+.layoutBolsas .mainBolsas .contenedorProducto, .layoutStickers .mainStickers .contenedorProducto, .layoutTazas .mainTazas .contenedorProducto, .layoutTienda .mainTienda .contenedorProducto {
+  width: 90%;
+  transition: all .4s ease-in-out; }
+  .layoutBolsas .mainBolsas .contenedorProducto:hover, .layoutStickers .mainStickers .contenedorProducto:hover, .layoutTazas .mainTazas .contenedorProducto:hover, .layoutTienda .mainTienda .contenedorProducto:hover {
+    transform: scale(1.01); }
 
+.layoutBolsas .mainBolsas .contenedorProducto .imagenProducto, .layoutStickers .mainStickers .contenedorProducto .imagenProducto, .layoutTazas .mainTazas .contenedorProducto .imagenProducto, .layoutTienda .mainTienda .contenedorProducto .imagenProducto {
+  width: 100%;
+  border-radius: .25rem; }
 
-    /*footer*/
-    .contacto{
-        font-size: 1.8rem;
-    }
-    .contacto input, .contacto textarea{
-        font-size: .9rem;
-    }
-    .contacto .contactoBoton{
-        font-size: 1.5rem;
-        width: 100%;
-    }
-    .mainContacto{
-        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255,255,255,0.9)), url('../img/mandalaA.png') center center / cover no-repeat;
-        height: 100vh;
-        width: 100%;
-    }
-    footer{
-        display: grid;
-        grid-template-areas: "contact"
-                             "containerLeft"
-                             "containerCenter"
-                             "containerRight"
-                             "derechos"; 
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        width: 100%;
-    }
-    .contact{
-        padding: 2rem;
-        justify-content: center;
-    }
-    .botonC{
-        font-size: 1.35rem;
-    }
-    .contactP{
-        text-align: center;
-        line-height: 2.1rem;
-    }
-    .email{
-        display: none; 
-    }
-    .containerLeft{
-        padding: 0 2rem;
-        text-align: center;
-        height: 12rem;
-    }
-    .containerLeft p{
-        line-height: 2.5rem;
-    }
-    .containerCenter{
-        padding: 0 2rem;
-        height: 17rem;
-    }
-    .containerRight{
-        padding: 0 2rem;
-        text-align: center;
-        height: 14rem;
-    }
-}
+.layoutBolsas .mainBolsas .contenedorProducto .tituloProducto, .layoutStickers .mainStickers .contenedorProducto .tituloProducto, .layoutTazas .mainTazas .contenedorProducto .tituloProducto, .layoutTienda .mainTienda .contenedorProducto .tituloProducto {
+  font-weight: 600;
+  margin: 1.5rem 0 .8rem 0;
+  padding-left: .2rem; }
 
-@media only screen and (min-width: 1023px) and (max-width: 1199px){
-    /*barra de navegación*/
-    nav ul li{
-        font-size: 1.3rem; 
-        margin: 1rem;
-    }
+.layoutBolsas .mainBolsas .contenedorProducto .parrafoProducto, .layoutStickers .mainStickers .contenedorProducto .parrafoProducto, .layoutTazas .mainTazas .contenedorProducto .parrafoProducto, .layoutTienda .mainTienda .contenedorProducto .parrafoProducto {
+  line-height: 1.9rem; }
 
-    /*bio*/
-    .mainBio{
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 100%;
-        justify-items: center;
-        margin: 4rem 0 4rem 0;
-    }
+.layoutBolsas .mainBolsas .contenedorProducto .precio, .layoutStickers .mainStickers .contenedorProducto .precio, .layoutTazas .mainTazas .contenedorProducto .precio, .layoutTienda .mainTienda .contenedorProducto .precio {
+  margin: 1rem 0 1.5rem 0;
+  padding-left: .2rem; }
 
-    /*bolsas de tela*/
-    .mainBolsas{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        row-gap: 3rem;
-    }
-    /*stickers*/
-    .mainStickers{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        row-gap: 3rem;
-    }
+.layoutBolsas .mainBolsas .contenedorProducto .botonProducto, .layoutStickers .mainStickers .contenedorProducto .botonProducto, .layoutTazas .mainTazas .contenedorProducto .botonProducto, .layoutTienda .mainTienda .contenedorProducto .botonProducto {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: 'Hubballi', sans-serif;
+  border: none;
+  cursor: pointer;
+  background-color: #CBB5F5;
+  color: blueviolet;
+  padding: .7rem;
+  border-radius: .25rem; }
+  .layoutBolsas .mainBolsas .contenedorProducto .botonProducto:hover, .layoutStickers .mainStickers .contenedorProducto .botonProducto:hover, .layoutTazas .mainTazas .contenedorProducto .botonProducto:hover, .layoutTienda .mainTienda .contenedorProducto .botonProducto:hover {
+    color: lavender; }
 
-    /*tazas*/
-    .mainTazas{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        row-gap: 3rem;
-    }
+.layoutContacto .mainContacto .contacto input, .layoutContacto .mainContacto .contacto textarea {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: #CBB5F5 solid .1rem; }
 
-    /*portafolio*/
-    .mainPortafolio{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        width: 100%;
-    }
-    .imgA{
-        justify-self: center;
-    }
-    .imgB{
-        justify-self: center;
-    }
-    
-    /*footer*/
-    .contacto .contactoBoton{
-        font-size: 1.4rem;
-        width: 40%;
-    }
-    .contact{
-        padding: 0 2.5rem;
-    }
-    .containerLeft{
-        padding: 0 2.5rem;
-    }
-    .containerRight{
-        padding: 0 2.5rem;
-    }
-}
+.layoutPortafolio {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: 100vh; }
+  .layoutPortafolio .mainPortafolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(80%, 23rem), 1fr));
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    margin: 2rem 0;
+    padding: 2rem; }
+    .layoutPortafolio .mainPortafolio img {
+      width: 100%; }
+  @media only screen and (max-width: 51.94rem) {
+    .layoutPortafolio .mainPortafolio {
+      padding: 2rem 6rem 3rem 6rem; } }
+
+.layoutIndex .bioIndex div button, .layoutIndex .productosIndex .productA button, .layoutIndex .productosIndex .productB button, .layoutIndex .productosIndex .productC button {
+  font-family: "Hubballi", sans-serif;
+  background-color: #c7aef5;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.20rem;
+  padding: .9rem 1.4rem .9rem 1.4rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto, .layoutStickers .mainStickers .contenedorProducto, .layoutTazas .mainTazas .contenedorProducto, .layoutTienda .mainTienda .contenedorProducto {
+  width: 90%;
+  transition: all .4s ease-in-out; }
+  .layoutBolsas .mainBolsas .contenedorProducto:hover, .layoutStickers .mainStickers .contenedorProducto:hover, .layoutTazas .mainTazas .contenedorProducto:hover, .layoutTienda .mainTienda .contenedorProducto:hover {
+    transform: scale(1.01); }
+
+.layoutBolsas .mainBolsas .contenedorProducto .imagenProducto, .layoutStickers .mainStickers .contenedorProducto .imagenProducto, .layoutTazas .mainTazas .contenedorProducto .imagenProducto, .layoutTienda .mainTienda .contenedorProducto .imagenProducto {
+  width: 100%;
+  border-radius: .25rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .tituloProducto, .layoutStickers .mainStickers .contenedorProducto .tituloProducto, .layoutTazas .mainTazas .contenedorProducto .tituloProducto, .layoutTienda .mainTienda .contenedorProducto .tituloProducto {
+  font-weight: 600;
+  margin: 1.5rem 0 .8rem 0;
+  padding-left: .2rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .parrafoProducto, .layoutStickers .mainStickers .contenedorProducto .parrafoProducto, .layoutTazas .mainTazas .contenedorProducto .parrafoProducto, .layoutTienda .mainTienda .contenedorProducto .parrafoProducto {
+  line-height: 1.9rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .precio, .layoutStickers .mainStickers .contenedorProducto .precio, .layoutTazas .mainTazas .contenedorProducto .precio, .layoutTienda .mainTienda .contenedorProducto .precio {
+  margin: 1rem 0 1.5rem 0;
+  padding-left: .2rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .botonProducto, .layoutStickers .mainStickers .contenedorProducto .botonProducto, .layoutTazas .mainTazas .contenedorProducto .botonProducto, .layoutTienda .mainTienda .contenedorProducto .botonProducto {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: 'Hubballi', sans-serif;
+  border: none;
+  cursor: pointer;
+  background-color: #CBB5F5;
+  color: blueviolet;
+  padding: .7rem;
+  border-radius: .25rem; }
+  .layoutBolsas .mainBolsas .contenedorProducto .botonProducto:hover, .layoutStickers .mainStickers .contenedorProducto .botonProducto:hover, .layoutTazas .mainTazas .contenedorProducto .botonProducto:hover, .layoutTienda .mainTienda .contenedorProducto .botonProducto:hover {
+    color: lavender; }
+
+.layoutContacto .mainContacto .contacto input, .layoutContacto .mainContacto .contacto textarea {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: #CBB5F5 solid .1rem; }
+
+.layoutStickers {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: 100vh; }
+  .layoutStickers .mainStickers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 28.4rem), 1fr));
+    grid-template-rows: auto;
+    width: 100%;
+    justify-items: center;
+    row-gap: 4rem;
+    margin: 4rem 0 4rem 0;
+    padding: 0 2rem 0 2rem; }
+    .layoutStickers .mainStickers .contenedorProducto .tituloProducto {
+      font-size: 1.8rem; }
+    .layoutStickers .mainStickers .contenedorProducto .parrafoProducto {
+      font-size: 1.4rem;
+      padding: 0 3rem 0 .2rem; }
+    .layoutStickers .mainStickers .contenedorProducto .precio {
+      font-size: 1.5rem; }
+  @media only screen and (max-width: 48rem) {
+    .layoutStickers .mainStickers {
+      padding: 0 2.8rem 0 2.8rem; } }
+  @media only screen and (max-width: 59rem) {
+    .layoutStickers .mainStickers {
+      padding: 0 6rem 0 6rem; }
+      .layoutStickers .mainStickers .contenedorProducto .tituloProducto {
+        font-size: 2.1rem; }
+      .layoutStickers .mainStickers .contenedorProducto .parrafoProducto {
+        font-size: 1.7rem; }
+      .layoutStickers .mainStickers .contenedorProducto .precio {
+        font-size: 1.7rem; } }
+
+.layoutIndex .bioIndex div button, .layoutIndex .productosIndex .productA button, .layoutIndex .productosIndex .productB button, .layoutIndex .productosIndex .productC button {
+  font-family: "Hubballi", sans-serif;
+  background-color: #c7aef5;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.20rem;
+  padding: .9rem 1.4rem .9rem 1.4rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto, .layoutStickers .mainStickers .contenedorProducto, .layoutTazas .mainTazas .contenedorProducto, .layoutTienda .mainTienda .contenedorProducto {
+  width: 90%;
+  transition: all .4s ease-in-out; }
+  .layoutBolsas .mainBolsas .contenedorProducto:hover, .layoutStickers .mainStickers .contenedorProducto:hover, .layoutTazas .mainTazas .contenedorProducto:hover, .layoutTienda .mainTienda .contenedorProducto:hover {
+    transform: scale(1.01); }
+
+.layoutBolsas .mainBolsas .contenedorProducto .imagenProducto, .layoutStickers .mainStickers .contenedorProducto .imagenProducto, .layoutTazas .mainTazas .contenedorProducto .imagenProducto, .layoutTienda .mainTienda .contenedorProducto .imagenProducto {
+  width: 100%;
+  border-radius: .25rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .tituloProducto, .layoutStickers .mainStickers .contenedorProducto .tituloProducto, .layoutTazas .mainTazas .contenedorProducto .tituloProducto, .layoutTienda .mainTienda .contenedorProducto .tituloProducto {
+  font-weight: 600;
+  margin: 1.5rem 0 .8rem 0;
+  padding-left: .2rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .parrafoProducto, .layoutStickers .mainStickers .contenedorProducto .parrafoProducto, .layoutTazas .mainTazas .contenedorProducto .parrafoProducto, .layoutTienda .mainTienda .contenedorProducto .parrafoProducto {
+  line-height: 1.9rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .precio, .layoutStickers .mainStickers .contenedorProducto .precio, .layoutTazas .mainTazas .contenedorProducto .precio, .layoutTienda .mainTienda .contenedorProducto .precio {
+  margin: 1rem 0 1.5rem 0;
+  padding-left: .2rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .botonProducto, .layoutStickers .mainStickers .contenedorProducto .botonProducto, .layoutTazas .mainTazas .contenedorProducto .botonProducto, .layoutTienda .mainTienda .contenedorProducto .botonProducto {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: 'Hubballi', sans-serif;
+  border: none;
+  cursor: pointer;
+  background-color: #CBB5F5;
+  color: blueviolet;
+  padding: .7rem;
+  border-radius: .25rem; }
+  .layoutBolsas .mainBolsas .contenedorProducto .botonProducto:hover, .layoutStickers .mainStickers .contenedorProducto .botonProducto:hover, .layoutTazas .mainTazas .contenedorProducto .botonProducto:hover, .layoutTienda .mainTienda .contenedorProducto .botonProducto:hover {
+    color: lavender; }
+
+.layoutContacto .mainContacto .contacto input, .layoutContacto .mainContacto .contacto textarea {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: #CBB5F5 solid .1rem; }
+
+.layoutTazas {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: 100vh; }
+  .layoutTazas .mainTazas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 28.4rem), 1fr));
+    grid-template-rows: auto;
+    width: 100%;
+    justify-items: center;
+    row-gap: 4rem;
+    margin: 4rem 0 4rem 0;
+    padding: 0 2rem 0 2rem; }
+    .layoutTazas .mainTazas .contenedorProducto .tituloProducto {
+      font-size: 1.8rem; }
+    .layoutTazas .mainTazas .contenedorProducto .parrafoProducto {
+      font-size: 1.4rem;
+      padding: 0 3rem 0 .2rem; }
+    .layoutTazas .mainTazas .contenedorProducto .precio {
+      font-size: 1.5rem; }
+  @media only screen and (max-width: 48rem) {
+    .layoutTazas .mainTazas {
+      padding: 0 2.8rem 0 2.8rem; } }
+  @media only screen and (max-width: 59rem) {
+    .layoutTazas .mainTazas {
+      padding: 0 6rem 0 6rem; }
+      .layoutTazas .mainTazas .contenedorProducto .tituloProducto {
+        font-size: 2.1rem; }
+      .layoutTazas .mainTazas .contenedorProducto .parrafoProducto {
+        font-size: 1.7rem; }
+      .layoutTazas .mainTazas .contenedorProducto .precio {
+        font-size: 1.7rem; } }
+
+.layoutIndex .bioIndex div button, .layoutIndex .productosIndex .productA button, .layoutIndex .productosIndex .productB button, .layoutIndex .productosIndex .productC button {
+  font-family: "Hubballi", sans-serif;
+  background-color: #c7aef5;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.20rem;
+  padding: .9rem 1.4rem .9rem 1.4rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto, .layoutStickers .mainStickers .contenedorProducto, .layoutTazas .mainTazas .contenedorProducto, .layoutTienda .mainTienda .contenedorProducto {
+  width: 90%;
+  transition: all .4s ease-in-out; }
+  .layoutBolsas .mainBolsas .contenedorProducto:hover, .layoutStickers .mainStickers .contenedorProducto:hover, .layoutTazas .mainTazas .contenedorProducto:hover, .layoutTienda .mainTienda .contenedorProducto:hover {
+    transform: scale(1.01); }
+
+.layoutBolsas .mainBolsas .contenedorProducto .imagenProducto, .layoutStickers .mainStickers .contenedorProducto .imagenProducto, .layoutTazas .mainTazas .contenedorProducto .imagenProducto, .layoutTienda .mainTienda .contenedorProducto .imagenProducto {
+  width: 100%;
+  border-radius: .25rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .tituloProducto, .layoutStickers .mainStickers .contenedorProducto .tituloProducto, .layoutTazas .mainTazas .contenedorProducto .tituloProducto, .layoutTienda .mainTienda .contenedorProducto .tituloProducto {
+  font-weight: 600;
+  margin: 1.5rem 0 .8rem 0;
+  padding-left: .2rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .parrafoProducto, .layoutStickers .mainStickers .contenedorProducto .parrafoProducto, .layoutTazas .mainTazas .contenedorProducto .parrafoProducto, .layoutTienda .mainTienda .contenedorProducto .parrafoProducto {
+  line-height: 1.9rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .precio, .layoutStickers .mainStickers .contenedorProducto .precio, .layoutTazas .mainTazas .contenedorProducto .precio, .layoutTienda .mainTienda .contenedorProducto .precio {
+  margin: 1rem 0 1.5rem 0;
+  padding-left: .2rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .botonProducto, .layoutStickers .mainStickers .contenedorProducto .botonProducto, .layoutTazas .mainTazas .contenedorProducto .botonProducto, .layoutTienda .mainTienda .contenedorProducto .botonProducto {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: 'Hubballi', sans-serif;
+  border: none;
+  cursor: pointer;
+  background-color: #CBB5F5;
+  color: blueviolet;
+  padding: .7rem;
+  border-radius: .25rem; }
+  .layoutBolsas .mainBolsas .contenedorProducto .botonProducto:hover, .layoutStickers .mainStickers .contenedorProducto .botonProducto:hover, .layoutTazas .mainTazas .contenedorProducto .botonProducto:hover, .layoutTienda .mainTienda .contenedorProducto .botonProducto:hover {
+    color: lavender; }
+
+.layoutContacto .mainContacto .contacto input, .layoutContacto .mainContacto .contacto textarea {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: #CBB5F5 solid .1rem; }
+
+.layoutTienda {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: 100vh; }
+  .layoutTienda .mainTienda {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 28.4rem), 1fr));
+    grid-template-rows: auto;
+    width: 100%;
+    justify-items: center;
+    row-gap: 4rem;
+    margin: 4rem 0 4rem 0;
+    padding: 0 2rem 0 2rem; }
+    .layoutTienda .mainTienda .contenedorProducto .tituloProducto {
+      font-size: 1.8rem; }
+    .layoutTienda .mainTienda .contenedorProducto .parrafoProducto {
+      font-size: 1.4rem;
+      padding: 0 3rem 0 .2rem; }
+    .layoutTienda .mainTienda .contenedorProducto .precio {
+      font-size: 1.5rem; }
+  @media only screen and (max-width: 48rem) {
+    .layoutTienda .mainTienda {
+      padding: 0 2.8rem 0 2.8rem; } }
+  @media only screen and (max-width: 59rem) {
+    .layoutTienda .mainTienda {
+      padding: 0 6rem 0 6rem; }
+      .layoutTienda .mainTienda .contenedorProducto .tituloProducto {
+        font-size: 2.1rem; }
+      .layoutTienda .mainTienda .contenedorProducto .parrafoProducto {
+        font-size: 1.7rem; }
+      .layoutTienda .mainTienda .contenedorProducto .precio {
+        font-size: 1.7rem; } }
+
+.layoutIndex .bioIndex div button, .layoutIndex .productosIndex .productA button, .layoutIndex .productosIndex .productB button, .layoutIndex .productosIndex .productC button {
+  font-family: "Hubballi", sans-serif;
+  background-color: #c7aef5;
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.20rem;
+  padding: .9rem 1.4rem .9rem 1.4rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto, .layoutStickers .mainStickers .contenedorProducto, .layoutTazas .mainTazas .contenedorProducto, .layoutTienda .mainTienda .contenedorProducto {
+  width: 90%;
+  transition: all .4s ease-in-out; }
+  .layoutBolsas .mainBolsas .contenedorProducto:hover, .layoutStickers .mainStickers .contenedorProducto:hover, .layoutTazas .mainTazas .contenedorProducto:hover, .layoutTienda .mainTienda .contenedorProducto:hover {
+    transform: scale(1.01); }
+
+.layoutBolsas .mainBolsas .contenedorProducto .imagenProducto, .layoutStickers .mainStickers .contenedorProducto .imagenProducto, .layoutTazas .mainTazas .contenedorProducto .imagenProducto, .layoutTienda .mainTienda .contenedorProducto .imagenProducto {
+  width: 100%;
+  border-radius: .25rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .tituloProducto, .layoutStickers .mainStickers .contenedorProducto .tituloProducto, .layoutTazas .mainTazas .contenedorProducto .tituloProducto, .layoutTienda .mainTienda .contenedorProducto .tituloProducto {
+  font-weight: 600;
+  margin: 1.5rem 0 .8rem 0;
+  padding-left: .2rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .parrafoProducto, .layoutStickers .mainStickers .contenedorProducto .parrafoProducto, .layoutTazas .mainTazas .contenedorProducto .parrafoProducto, .layoutTienda .mainTienda .contenedorProducto .parrafoProducto {
+  line-height: 1.9rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .precio, .layoutStickers .mainStickers .contenedorProducto .precio, .layoutTazas .mainTazas .contenedorProducto .precio, .layoutTienda .mainTienda .contenedorProducto .precio {
+  margin: 1rem 0 1.5rem 0;
+  padding-left: .2rem; }
+
+.layoutBolsas .mainBolsas .contenedorProducto .botonProducto, .layoutStickers .mainStickers .contenedorProducto .botonProducto, .layoutTazas .mainTazas .contenedorProducto .botonProducto, .layoutTienda .mainTienda .contenedorProducto .botonProducto {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: 'Hubballi', sans-serif;
+  border: none;
+  cursor: pointer;
+  background-color: #CBB5F5;
+  color: blueviolet;
+  padding: .7rem;
+  border-radius: .25rem; }
+  .layoutBolsas .mainBolsas .contenedorProducto .botonProducto:hover, .layoutStickers .mainStickers .contenedorProducto .botonProducto:hover, .layoutTazas .mainTazas .contenedorProducto .botonProducto:hover, .layoutTienda .mainTienda .contenedorProducto .botonProducto:hover {
+    color: lavender; }
+
+.layoutContacto .mainContacto .contacto input, .layoutContacto .mainContacto .contacto textarea {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: #CBB5F5 solid .1rem; }

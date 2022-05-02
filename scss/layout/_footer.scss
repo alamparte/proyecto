@@ -1,0 +1,256 @@
+@import "../utilities/variables";
+@import "../utilities/mixin";
+@import "../utilities/maps";
+
+footer{
+    display: grid;
+    grid-template-areas: "contact contact contact"
+                         "containerLeft containerCenter containerRight"
+                         "derechos derechos derechos"; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    .contact{
+        grid-area: contact;
+        @include flex (space-between, center, nowrap);
+        background-color: map-get($map: $colores, $key: primario );
+        color: white;
+        height: 15rem;
+        padding: 0rem 7.5rem;
+        .contactP{
+            grid-area: contact;
+            width: 26.5rem;
+            p{
+                grid-area: contact;
+                font-size: $s-text-large;
+                line-height: 2.2rem;
+                a{
+                    grid-area: contact;
+                    color: map-get($map: $colores, $key: adds );
+                    font-weight: bold;
+                }
+            }  
+        }
+        .email{
+            grid-area: contact;
+            span{
+                color: map-get($map: $colores, $key: adds );
+                font-size: 1.875rem;
+                padding: 0.313rem;
+            }
+            a{
+                grid-area: contact;
+                text-decoration: none;
+                color: white;
+                font-size: $s-text-large;
+            }
+        }
+    }
+    .containerLeft{
+        @include cajaFooter;
+        grid-area: containerLeft;
+        row-gap: 1.5rem;
+        padding: 0 1rem 0 5.8rem;
+        .tituloFooter{
+            @include tFooter;
+            grid-area: containerLeft;
+        }
+        p{
+            grid-area: containerLeft;
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+    }
+    .containerCenter{
+        @include cajaFooter;
+        grid-area: containerCenter;
+        row-gap: 2rem;
+        align-items: center;
+        padding-right: 1rem;
+        .logoFooter{
+            grid-area: containerCenter;
+            animation-name: girar;
+            animation-iteration-count: infinite ;
+            animation-duration: 98s;
+            @keyframes girar{
+                from{
+                    transform: rotate(0);
+                }
+                to{
+                    transform: rotate(360deg);
+                }
+            }                     
+        }
+        .redesSociales{
+            grid-area: containerCenter;
+            a{
+                grid-area: containerCenter;
+                text-decoration: none;
+                color: map-get($map: $colores, $key: viole );
+                font-size: 1.75rem;
+                background: #CBB5F5;
+                border-radius: 50%;
+                width: 3.125rem;
+                height: 3.125rem;
+                margin: 0rem .5rem;
+                line-height: 3.125rem;
+                text-align: center;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0,.05);
+                transition: all .4s ease-in-out;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }          
+        } 
+    }
+    .containerRight{
+        @include cajaFooter;
+        grid-area: containerRight;
+        row-gap: 1.5rem;
+        padding: 0 5rem 0 4rem;
+        .tituloFooter{
+            @include tFooter;
+            grid-area: containerRight;
+        }
+        form{
+            grid-area: containerRight;
+            font-family: $font-principal;
+            input{
+                width: $width-completo;
+                padding: 1rem;
+                border: #CBB5F5 solid .1rem;
+                font-size: 1.18rem;
+                font-family: $font-principal;
+                line-height: normal;
+                &:focus{
+                    border-color: map-get($map: $colores, $key: viole );
+                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                    outline: 0 none;
+                }
+            }
+        }
+        button{
+            grid-area: containerRight;
+            text-transform: $t-transform;
+            cursor: pointer;
+            background-color: map-get($map: $colores, $key: primario );
+            color: blueviolet;
+            border: none;
+            border-radius: 0.20rem;
+            padding: 1.5rem;
+            font-size: $s-text-large;
+            width: $width-completo;
+            font-family: $font-principal;
+            line-height: 0;
+            &:hover{
+                color: map-get($map: $colores, $key: lavanda );
+            }
+        }
+        
+    }
+    .derechos{
+        grid-area: derechos;
+        background-color: map-get($map: $colores, $key: lavanda );
+        .linie{
+            grid-area: derechos;
+            border-top: 0.063rem solid blueviolet;
+            height: 0.125rem;
+            max-width: 70%;
+            padding: 0;
+            margin: 0 auto 0 auto;
+        }
+        p{
+            grid-area: derechos;
+            padding: 1.3rem;
+            font-size: 1.25rem;
+            text-align: center;
+            a{
+                grid-area: derechos;
+                text-decoration: none;
+                list-style: none;
+                color: black;
+            }
+        }
+    }
+    @media only screen and (max-width: 68.68rem){
+        
+            display: grid;
+            grid-template-areas: "contact"
+                                 "containerLeft"
+                                 "containerCenter"
+                                 "containerRight"
+                                 "derechos"; 
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            width: 100%;
+            .contact{
+                justify-content: center;
+                height: 20rem;
+                .contactP{
+                    padding: 3rem 0 3rem 0;
+                    p{
+                        text-align: center;
+                        font-size: $s-text-small;
+                        line-height: $l-height-small;
+                    }
+                    a{
+                        padding-top: 1rem;
+                        display: block;
+                    }
+                }
+                .email{
+                    display: none;
+                }
+            }
+            .containerLeft{
+                padding: 0 5rem;
+                align-items: center;
+                height: 18rem;
+                .tituloFooter{
+                    font-size: $smq-title-footer;
+                }
+                p{
+                    text-align: center;
+                    font-size: $s-text-small;
+                    line-height: $l-height-small;
+                }
+            }
+            .containerCenter{
+                padding: 0 2rem 1rem 2rem;
+                height: 15rem;
+            }
+            .containerRight{
+                padding: 4rem;
+                text-align: center;
+                height: 18rem;
+                .tituloFooter{
+                    font-size: $smq-title-footer;
+                }
+                form{
+                    input{font-size: $s-text-medium;
+                    }
+                }
+                button{
+                    font-size: $s-text-medium;
+                    padding: 1.8rem;
+                }
+            }
+            .derechos{
+                p{
+                    font-size: 1.7rem;
+                    padding: 1.8rem;
+                    line-height: $l-height-small;
+                }
+            }
+    }
+    @media only screen and (min-width: 68.69rem) and (max-width: 87.44rem){
+        .containerLeft{
+            padding: 3rem .5rem 3rem 4rem;
+        }
+        .containerRight{
+            padding: 1.5rem 2.5rem 1.5rem 2.1rem;
+        }
+        .containerCenter{
+            padding: 0;
+        }
+    }
+}
